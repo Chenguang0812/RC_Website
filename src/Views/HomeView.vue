@@ -6,11 +6,13 @@
   <ForkChannel />
   <ContactUS />
   <Footer />
+  <Sidebar />
 </template>
 
 <script>
 
 import Navbar from "@/components/Navbar.vue"
+import Sidebar from '@/components//Sidebar.vue'
 import Hero from "@/components/Hero.vue"
 import AboutUS from "@/components/AboutUS.vue"
 import News from "@/components/News.vue"
@@ -22,6 +24,7 @@ export default {
   name: 'Home',
   components: {
     Navbar,
+    Sidebar,
     Hero,
     AboutUS,
     News,
