@@ -5,20 +5,18 @@
   <News />
   <ForkChannel />
   <ContactUS />
-  <Footer />
   <Sidebar />
 </template>
 
 <script>
 
 import Navbar from "@/components/Navbar.vue"
-import Sidebar from '@/components//Sidebar.vue'
-import Hero from "@/components/Hero.vue"
-import AboutUS from "@/components/AboutUS.vue"
-import News from "@/components/News.vue"
-import ForkChannel from "@/components/ForkChannel.vue"
-import ContactUS from "@/components/ContactUS.vue"
-import Footer from "@/components/Footer.vue"
+import Sidebar from '@/components/Sidebar.vue'
+import Hero from "@/components/Home/Hero.vue"
+import AboutUS from "@/components/Home/AboutUS.vue"
+import News from "@/components/Home/News.vue"
+import ForkChannel from "@/components/Home/ForkChannel.vue"
+import ContactUS from "@/components/Home/ContactUS.vue"
 
 export default {
   name: 'Home',
@@ -30,7 +28,6 @@ export default {
     News,
     ForkChannel,
     ContactUS,
-    Footer
   },
   methods: {
     goToAbout() {

@@ -2,23 +2,17 @@
   <!-- <HomeView /> -->
   <!-- <RouterView /> -->
   <router-view></router-view>
+  <Footer />
 </template>
 
 <script>
-// import RouterView from './Views/HomeView.vue'
-
-// export default {
-//   components: {
-//     RouterView,
-//   },
-//   data () {
-//     return {
-//       // Your data properties here
-//     }
-//   }
-// }
+import Footer from "@/components/Footer.vue"
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Footer
+  },
+
 }
 </script>
