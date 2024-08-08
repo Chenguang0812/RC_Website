@@ -86,7 +86,7 @@ export default {
   }
 }
 </script>
-
+  
 <style scoped>
 @keyframes wave {
   0%, 100% { transform: translateY(0); }

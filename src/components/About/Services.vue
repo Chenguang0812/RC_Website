@@ -1,6 +1,5 @@
 <template>
-  <div class="my-12 bg-white py-16 rounded-lg shadow-xl overflow-hidden">
-    
+  <div class="my-12 bg-white py-16 rounded-lg shadow-xl overflow-hidden"> 
     <h2 class="text-4xl font-bold mb-12 text-[#E25353] text-center">我們的服務</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
       <div v-for="service in services" :key="service.id"
