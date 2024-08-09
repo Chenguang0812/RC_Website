@@ -1,18 +1,17 @@
 <template>
   <!-- <HomeView /> -->
   <!-- <RouterView /> -->
-  <router-view></router-view>
-  <Footer />
+  <router-view />
+  <AppFooter />
 </template>
 
 <script>
-import Footer from "@/components/Footer.vue"
+import AppFooter from "@/components/AppFooter.vue"
 
 export default {
   name: 'App',
   components: {
-    Footer
-  },
-
+    AppFooter
+  }
 }
 </script>

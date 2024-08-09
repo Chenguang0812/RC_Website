@@ -1,12 +1,13 @@
 <template>
-    <Navbar />
-    <router-view ></router-view>
+  <Navbar />
+  <router-view />
 </template>
 <script>
 import Navbar from "@/components/Navbar.vue"
 export default {
-  name: 'News',
+  name: 'NewsPage',
   components: {
     Navbar
-}};
+  }
+}
 </script>

@@ -2,20 +2,33 @@
   <!-- 主容器：設置整體布局和樣式 -->
   <div class="my-12 bg-white py-16 rounded-lg shadow-xl overflow-hidden">
     <!-- 標題：顯示 "我們的服務" -->
-    <h2 class="text-4xl font-bold mb-12 text-[#E25353] text-center">我們的服務</h2>
+    <h2 class="text-4xl font-bold mb-12 text-[#E25353] text-center">
+      我們的服務
+    </h2>
     <!-- 服務卡片網格：根據屏幕大小調整列數 -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
       <!-- 服務卡片：使用 v-for 遍歷 services 數組 -->
-      <div v-for="service in services" :key="service.id"
-        class="bg-gradient-to-br from-[#E25353] to-[#E99797] shadow-lg rounded-lg p-6 text-white flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl service-card">
+      <div
+        v-for="service in services"
+        :key="service.id"
+        class="bg-gradient-to-br from-[#E25353] to-[#E99797] shadow-lg rounded-lg p-6 text-white flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl service-card"
+      >
         <!-- 服務圖標容器 -->
         <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 service-icon">
           <!-- 服務圖標 -->
-          <img :src="service.icon" :alt="service.name" class="w-8 h-8">
+          <img
+            :src="service.icon"
+            :alt="service.name"
+            class="w-8 h-8"
+          >
         </div>
         <!-- 文字 -->
-        <h3 class="text-2xl font-bold mb-4">{{ service.name }}</h3>
-        <p class="text-sm">{{ service.description }}</p>
+        <h3 class="text-2xl font-bold mb-4">
+          {{ service.name }}
+        </h3>
+        <p class="text-sm">
+          {{ service.description }}
+        </p>
       </div>
     </div>
   </div>
@@ -23,7 +36,7 @@
 
 <script>
 export default {
-  name: 'Services',
+  name: 'ServicesSection',
   data() {
     return {
       services: [

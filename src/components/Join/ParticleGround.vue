@@ -1,6 +1,9 @@
 <template>
-    <div class="particle-ground" ref="particleGround"></div>
-  </template>
+  <div
+    ref="particleGround"
+    class="particle-ground"
+  />
+</template>
   
   <script>
   export default {
@@ -17,7 +20,7 @@
       this.initParticles()
       window.addEventListener('resize', this.handleResize)
     },
-    beforeDestroy() {
+    beforeUnmount() {
       window.removeEventListener('resize', this.handleResize)
       if (this.animationFrameId) {
         cancelAnimationFrame(this.animationFrameId)

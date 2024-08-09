@@ -1,31 +1,31 @@
 <template>
-  <Hero />
-  <Navbar />
+  <HeroSection />
+  <NavbarSection />
   <AboutUS />
-  <News />
+  <NewsSection />
   <ForkChannel />
   <ContactUS />
-  <Sidebar />
+  <SidebarSection />
 </template>
 
 <script>
 
-import Navbar from "@/components/Navbar.vue"
-import Sidebar from '@/components/Sidebar.vue'
-import Hero from "@/components/Home/Hero.vue"
+import NavbarSection from "@/components/NavbarSection.vue"
+import SidebarSection from '@/components/SidebarSection.vue'
+import HeroSection from "@/components/Home/HeroSection.vue"
 import AboutUS from "@/components/Home/AboutUS.vue"
-import News from "@/components/Home/News.vue"
+import NewsSection from "@/components/Home/NewsSection.vue"
 import ForkChannel from "@/components/Home/ForkChannel.vue"
 import ContactUS from "@/components/Home/ContactUS.vue"
 
 export default {
-  name: 'Home',
+  name: 'HomePage',
   components: {
-    Navbar,
-    Sidebar,
-    Hero,
+    NavbarSection,
+    SidebarSection,
+    HeroSection,
     AboutUS,
-    News,
+    NewsSection,
     ForkChannel,
     ContactUS,
   },
@@ -33,7 +33,6 @@ export default {
     goToAbout() {
       this.$router.push('/')
     },
-  },
-
+  }
 }
 </script>

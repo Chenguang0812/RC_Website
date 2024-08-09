@@ -2,9 +2,11 @@
   <div class="bg-[#E3E3E3] p-10 flex flex-col md:flex-row items-start">
     <div class="flex-1 mt-4">
       <div class="flex items-center mb-4">
-        <div class="w-2 h-10 bg-[#E25353] mr-4"></div>
+        <div class="w-2 h-10 bg-[#E25353] mr-4" />
         <div>
-          <p class="text-[#000000] text-4xl font-bold">關於我們</p>
+          <p class="text-[#000000] text-4xl font-bold">
+            關於我們
+          </p>
         </div>
       </div>
       <div>
@@ -15,7 +17,11 @@
       </div>
     </div>
     <div class="w-32 h-32 mt-2  md:mx-0 ">
-      <img src="/LOGO.png" alt="Logo" class="w-full h-full object-contain" />
+      <img
+        src="/LOGO.png"
+        alt="Logo"
+        class="w-full h-full object-contain"
+      >
     </div>
   </div>
 </template>

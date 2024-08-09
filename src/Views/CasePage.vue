@@ -3,23 +3,26 @@
     <HeroSection />
     <NavbarSection />
     <SidebarSection />
-    <JoinSection />
+    <VideoSection />
+    <EvaluateSection />
   </div>
 </template>
 
 <script>
 import NavbarSection from '@/components/NavbarSection.vue'
 import SidebarSection from '@/components/SidebarSection.vue'
-import HeroSection from "@/components/Join/JoinHero.vue"
-import JoinSection from "@/components/Join/JoinUS.vue"
+import HeroSection from "@/components/Case/CaseHero.vue"
+import VideoSection from "@/components/Case/VideoSection.vue"
+import EvaluateSection from "@/components/Case/EvaluateSection.vue"
 
 export default {
-  name: 'JoinUS',
+  name: 'CasePage',
   components: {
     HeroSection,
     NavbarSection,
     SidebarSection,
-    JoinSection
+    EvaluateSection,
+    VideoSection,
   }
 }
 </script>

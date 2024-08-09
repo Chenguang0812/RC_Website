@@ -1,25 +1,37 @@
 <template>
   <!-- 成就展示區域：使用 ref 獲取 DOM 元素 -->
-  <div ref="achievementsSection" class="my-12 bg-white py-16 rounded-lg shadow-xl overflow-hidden">
+  <div
+    ref="achievementsSection"
+    class="my-12 bg-white py-16 rounded-lg shadow-xl overflow-hidden"
+  >
     <!-- 標題 -->
-    <h2 class="text-4xl font-bold mb-10 text-[#E25353] text-center">我們的成就</h2>
+    <h2 class="text-4xl font-bold mb-10 text-[#E25353] text-center">
+      我們的成就
+    </h2>
     <!-- 成就項目網格：響應式布局 -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
       <!-- 遍歷成就項目 -->
-      <div v-for="achievement in achievements" :key="achievement.id" 
-           class="text-center achievement-item"
-           :class="{ 'animate': isVisible }">
+      <div
+        v-for="achievement in achievements"
+        :key="achievement.id"
+        class="text-center achievement-item"
+        :class="{ 'animate': isVisible }"
+      >
         <!-- 圓形背景 -->
-        <div class="bg-gradient-to-br from-[#E25353] to-[#E99797] rounded-full w-40 h-40 mx-auto flex items-center justify-center mb-6 shadow-lg relative overflow-hidden">
+        <div
+          class="bg-gradient-to-br from-[#E25353] to-[#E99797] rounded-full w-40 h-40 mx-auto flex items-center justify-center mb-6 shadow-lg relative overflow-hidden"
+        >
           <!-- 動畫圓圈 -->
-          <div class="achievement-circle"></div>
+          <div class="achievement-circle" />
           <!-- 數值顯示 -->
           <div class="text-5xl font-bold text-white relative z-10">
             <span>{{ achievement.currentValue }}</span>{{ achievement.suffix }}
           </div>
         </div>
         <!-- 成就標籤 -->
-        <div class="text-[#E25353] font-semibold text-xl">{{ achievement.label }}</div>
+        <div class="text-[#E25353] font-semibold text-xl">
+          {{ achievement.label }}
+        </div>
       </div>
     </div>
   </div>
@@ -27,7 +39,7 @@
 
 <script>
 export default {
-  name: 'Achievements',
+  name: 'AchievementsSection',
   data() {
     return {
       // 控制動畫是否可見
@@ -40,6 +52,15 @@ export default {
         { id: 4, value: 10, suffix: '+', label: '員工人數', currentValue: 0 }
       ]
     }
+  },
+  mounted() {
+    // 組件掛載後添加滾動監聽器並檢查可見性
+    window.addEventListener('scroll', this.checkVisibility)
+    this.checkVisibility()
+  },
+  beforeUnmount() {
+    // 組件卸載前移除滾動監聽器
+    window.removeEventListener('scroll', this.checkVisibility)
   },
   methods: {
     // 數值動畫函數
@@ -78,15 +99,6 @@ export default {
         })
       }
     }
-  },
-  mounted() {
-    // 組件掛載後添加滾動監聽器並檢查可見性
-    window.addEventListener('scroll', this.checkVisibility)
-    this.checkVisibility()
-  },
-  beforeUnmount() {
-    // 組件卸載前移除滾動監聽器
-    window.removeEventListener('scroll', this.checkVisibility)
   }
 }
 </script>
@@ -97,6 +109,7 @@ export default {
   0% {
     clip-path: circle(0% at 50% 50%);
   }
+
   100% {
     clip-path: circle(100% at 50% 50%);
   }
@@ -109,7 +122,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
   animation: circleAnimation 1.5s ease-out forwards;
 }
 
@@ -127,10 +140,21 @@ export default {
 }
 
 /* 為每個成就項目設置不同的延遲時間，創造階梯效果 */
-.achievement-item:nth-child(1) { transition-delay: 0.1s; }
-.achievement-item:nth-child(2) { transition-delay: 0.2s; }
-.achievement-item:nth-child(3) { transition-delay: 0.3s; }
-.achievement-item:nth-child(4) { transition-delay: 0.4s; }
+.achievement-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.achievement-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.achievement-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.achievement-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
 
 /* 懸停效果 */
 .achievement-item:hover .rounded-full {

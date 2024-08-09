@@ -1,30 +1,30 @@
 <template>
   <div class="relative w-full h-screen">
     <img
-      src="/premiere.png" 
+      src="/premiere.png"
       alt="Premiere Image"
       class="w-full h-full object-cover"
     >
     <div class="absolute inset-0 bg-[#44474B] bg-opacity-60" />
     <div class="absolute inset-0 text-[#F0F0F0] flex flex-col items-center justify-center px-4">
       <h1 class="font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center animate-fade-in-down">
-        加入玫瑰
+        RC Studio
       </h1>
       <p class="font-semibold text-xl sm:text-2xl mt-4 text-center animate-fade-in-up">
-        加入我們的帝國<br>
-        我們擁有最先進的武器及糧食<br>
-        以及非常強勢的武力、軍隊
+        專業的影片剪輯工作室
       </p>
+      <button
+        class="mt-8 bg-[#E99797] text-white py-2 px-6 rounded-full hover:bg-[#e57f7f] transition-colors duration-300 animate-bounce"
+        @click="scrollToContent"
+      >
+        了解更多
+      </button>
     </div>
   </div>
 </template>
 
 <script>
-// import ParticleGround from './ParticleGround.vue';
 export default {
-  components: {
-    // ParticleGround
-  },
   methods: {
     scrollToContent() {
       const windowHeight = window.innerHeight;

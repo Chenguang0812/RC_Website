@@ -4,43 +4,69 @@
     <!-- 彩色紙屑背景容器 -->
     <div class="absolute inset-0 overflow-hidden">
       <!-- 生成50個彩色紙屑 -->
-      <div v-for="n in 50" :key="n" 
-           class="absolute w-3 h-8 opacity-70 confetti"
-           :class="randomConfettiColor()"
-           :style="confettiStyle(n)">
-      </div>
+      <div
+        v-for="n in 50"
+        :key="n"
+        class="absolute w-3 h-8 opacity-70 confetti"
+        :class="randomConfettiColor()"
+        :style="confettiStyle(n)"
+      />
     </div>
     <!-- 內容容器 -->
     <div class="container mx-auto px-4 relative z-10">
       <!-- 標題 -->
-      <h2 class="text-4xl font-bold text-center text-white mb-12 soft-glow">用戶評價</h2>
+      <h2 class="text-4xl font-bold text-center text-white mb-12 soft-glow">
+        用戶評價
+      </h2>
       <!-- 評價輪播容器 -->
       <div class="relative w-full max-w-3xl mx-auto">
         <div class="overflow-hidden">
           <!-- 評價卡片容器：使用 flex 和 transform 實現輪播效果 -->
-          <div class="flex transition-transform duration-500 ease-in-out" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+          <div
+            class="flex transition-transform duration-500 ease-in-out"
+            :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
+          >
             <!-- 遍歷評價數據生成評價卡片 -->
-            <div v-for="(review, index) in reviews" :key="index" class="w-full flex-shrink-0 px-4">
+            <div
+              v-for="(review, index) in reviews"
+              :key="index"
+              class="w-full flex-shrink-0 px-4"
+            >
               <!-- 評價卡片 -->
-              <div class="bg-white p-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:rotate-1">
+              <div
+                class="bg-white p-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:rotate-1"
+              >
                 <!-- 用戶信息部分 -->
                 <div class="flex items-center mb-4">
                   <!-- 用戶頭像 -->
-                  <img :src="review.avatar" :alt="review.name" class="w-16 h-16 rounded-full mr-4 border-2 border-[#E25353] animate-bounce">
+                  <img
+                    :src="review.avatar"
+                    :alt="review.name"
+                    class="w-16 h-16 rounded-full mr-4 border-2 border-[#E25353] animate-bounce"
+                  >
                   <div>
                     <!-- 用戶名稱 -->
-                    <h3 class="text-[#E25353] text-xl font-semibold">{{ review.name }}</h3>
+                    <h3 class="text-[#E25353] text-xl font-semibold">
+                      {{ review.name }}
+                    </h3>
                     <!-- 用戶頭銜 -->
-                    <p class="text-gray-600">{{ review.title }}</p>
+                    <p class="text-gray-600">
+                      {{ review.title }}
+                    </p>
                   </div>
                 </div>
                 <!-- 評價內容 -->
-                <p class="text-gray-800 italic mb-4">"{{ review.content }}"</p>
+                <p class="text-gray-800 italic mb-4">
+                  "{{ review.content }}"
+                </p>
                 <!-- 評分星星 -->
                 <div class="flex justify-center">
-                  <span v-for="star in 5" :key="star" 
-                        class="text-yellow-400 text-2xl transform transition-all duration-300 hover:scale-125" 
-                        :class="{ 'text-gray-300': star > review.rating }">★</span>
+                  <span
+                    v-for="star in 5"
+                    :key="star"
+                    class="text-yellow-400 text-2xl transform transition-all duration-300 hover:scale-125"
+                    :class="{ 'text-gray-300': star > review.rating }"
+                  >★</span>
                 </div>
               </div>
             </div>
@@ -119,6 +145,7 @@ export default {
   0% {
     transform: translateY(-10px) rotate(0deg);
   }
+
   100% {
     transform: translateY(100vh) rotate(360deg);
   }
@@ -126,7 +153,7 @@ export default {
 
 /* 標題的柔和發光效果 */
 .soft-glow {
-  text-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.3);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 /* 三種不同形狀的彩色紙屑 */
