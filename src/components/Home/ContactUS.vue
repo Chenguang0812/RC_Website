@@ -10,10 +10,27 @@
 
       <form @submit.prevent="submitForm" class="space-y-6">
         <!-- 表單字段 -->
-        <div v-for="(field, index) in fields" :key="index">
-          <label :for="field.id" class="block text-sm font-medium text-gray-700">{{ field.label }} *</label>
-          <component :is="field.type === 'textarea' ? 'textarea' : 'input'" v-model="form[field.model]"
-            :type="field.type" :id="field.id" :rows="field.rows" required
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">名稱 *</label>
+          <textarea v-model="form.name" id="name" rows="1" required
+            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white" />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">電子信箱 *</label>
+          <textarea v-model="form.email" id="email" rows="1" required
+            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white" />
+        </div>
+
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700">連絡電話 *</label>
+          <textarea v-model="form.phone" id="phone" rows="1" required
+            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white" />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">需求說明 *</label>
+          <textarea v-model="form.message" id="message" rows="4" required
             class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white" />
         </div>
 
@@ -28,6 +45,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'ContactForm',
   data() {
@@ -37,20 +56,41 @@ export default {
         email: '',
         phone: '',
         message: ''
-      },
-      fields: [
-        { label: '名稱', type: 'text', id: 'name', model: 'name' },
-        { label: '電子信箱', type: 'email', id: 'email', model: 'email' },
-        { label: '連絡電話', type: 'tel', id: 'phone', model: 'phone' },
-        { label: '需求說明', type: 'textarea', id: 'message', model: 'message', rows: 4 }
-      ]
+      }
     }
   },
   methods: {
-    submitForm() {
-      // 提交後提示用戶
-      alert('表單已提交！');
-      this.resetForm();
+    async submitForm() {
+      const webhookUrl = 'https://discordapp.com/api/webhooks/1271522136837591081/j8jOWK3SolTwzty0WdSIvZ8CNsYXTus0554loD7IBAN9l2UDRavREQH_FLbSFvYwdHXr';
+
+      // 構建 Discord 消息的格式
+      const message = {
+        content: `**聯絡我們表單提交**\n\n` +
+                 `**名稱:** ${this.form.name}\n` +
+                 `**電子信箱:** ${this.form.email}\n` +
+                 `**連絡電話:** ${this.form.phone}\n` +
+                 `**需求說明:** ${this.form.message}`
+      };
+
+      console.log('發送的數據:', message);
+      try {
+        const response = await axios.post(webhookUrl, message, {
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+
+        if (response.status === 204) {  // Discord Webhook 成功时返回状态码 204
+          alert('表單已提交！');
+          this.resetForm();
+        } else {
+          console.log('响应错误:', response);
+          throw new Error('提交失敗');
+        }
+      } catch (error) {
+        console.error('提交錯誤:', error);
+        alert('提交時發生錯誤，請稍後再試。');
+      }
     },
     resetForm() {
       for (let key in this.form) {
