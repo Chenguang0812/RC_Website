@@ -12,19 +12,19 @@
         <!-- 表單字段 -->
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700">名稱 *</label>
-          <textarea v-model="form.name" id="name" rows="1" required
+          <input v-model="form.name" id="name" type="text" required
             class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white" />
         </div>
 
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700">電子信箱 *</label>
-          <textarea v-model="form.email" id="email" rows="1" required
+          <input v-model="form.email" id="email" type="email" required
             class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white" />
         </div>
 
         <div>
           <label for="phone" class="block text-sm font-medium text-gray-700">連絡電話 *</label>
-          <textarea v-model="form.phone" id="phone" rows="1" required
+          <input v-model="form.phone"  id="phone" type="tel" required
             class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white" />
         </div>
 
