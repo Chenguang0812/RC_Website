@@ -117,7 +117,7 @@
     },
     methods: {
       async submitForm() {
-        const webhookUrl = 'https://discordapp.com/api/webhooks/1271519682020773958/r7p1FxLu0N1plBiJ54tOHbEkPnT8XwpGTrc6EQCpq49m7rNodHQWAHbYDK59Agk0HziR';
+        const webhookUrl = 'https://discordapp.com/api/webhooks/1271524771615477894/X_B-9Y2c-QiOWVE-c1BrAGn0vQfmb_utN6gG8QQTvkMy_WT9IgJT5_WFBqGcUjdaef-W';
   
         // 構建 Discord 消息的格式
         const message = {
