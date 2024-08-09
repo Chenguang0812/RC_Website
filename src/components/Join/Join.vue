@@ -117,20 +117,36 @@
     },
     methods: {
       async submitForm() {
-        const apiUrl = 'http://localhost:3000/submit';
+        const webhookUrl = 'https://discordapp.com/api/webhooks/1271519682020773958/r7p1FxLu0N1plBiJ54tOHbEkPnT8XwpGTrc6EQCpq49m7rNodHQWAHbYDK59Agk0HziR';
+  
+        // 構建 Discord 消息的格式
+        const message = {
+          content: `**表單提交**\n\n` +
+                   `**姓名:** ${this.form.name}\n` +
+                   `**年齡:** ${this.form.age}\n` +
+                   `**性別:** ${this.form.gender}\n` +
+                   `**工作經驗:** ${this.form.experience}\n` +
+                   `**作品集:** ${this.form.portfolio}\n` +
+                   `**目前工作:** ${this.form.currentJob}\n` +
+                   `**專業技能:** ${this.form.skills.join(', ')}\n` +
+                   `**應徵職務:** ${this.form.position}\n` +
+                   `**自我介紹:** ${this.form.introduction}\n` +
+                   `**可上線時間:** ${this.form.availableTime}\n` +
+                   `**聯絡方式:** ${this.form.contact}\n` +
+                   `**問題:** ${this.form.questions || '無'}`
+        };
   
         try {
-          const response = await fetch(apiUrl, {
+          const response = await fetch(webhookUrl, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify(this.form),
+            body: JSON.stringify(message),
           });
   
           if (response.ok) {
-            const result = await response.json();
-            alert(result.message);
+            alert('表單提交成功！');
             this.resetForm();
           } else {
             throw new Error('提交失敗');
@@ -160,6 +176,7 @@
     }
   }
   </script>
+  
   
   
 
