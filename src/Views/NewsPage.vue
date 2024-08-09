@@ -1,13 +1,13 @@
 <template>
-  <Navbar />
+  <NavbarSection />
   <router-view />
 </template>
 <script>
-import Navbar from "@/components/Navbar.vue"
+import NavbarSection from "@/components/NavbarSection.vue"
 export default {
   name: 'NewsPage',
   components: {
-    Navbar
+    NavbarSection
   }
 }
 </script>
