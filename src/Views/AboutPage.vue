@@ -4,7 +4,6 @@
     <NavbarSection />
     <SidebarSection />
     <div class="container mx-auto px-4 py-8">
-      <ThemeSection />
       <TimelineSection />
       <TeamMembers />
       <ServicesSection />
@@ -21,7 +20,6 @@ import TeamMembers from '@/components/About/TeamMembers.vue'
 import ServicesSection from '@/components/About/ServicesSection.vue'
 import AchievementsSection from '@/components/About/AchievementsSection.vue'
 import HeroSection from "@/components/About/AboutHero.vue"
-import ThemeSection from "@/components/ThemeSection.vue"
 
 export default {
   name: 'AboutPage',
@@ -33,7 +31,6 @@ export default {
     TeamMembers,
     ServicesSection,
     AchievementsSection,
-    ThemeSection
   }
 }
 </script>
