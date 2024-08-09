@@ -40,7 +40,7 @@
           </svg>
           合作案例
         </button>
-        <button @click="navigateTo('/join')"
+        <button @click="navigateTo('/joinUS')"
           class="flex items-center py-3 px-4 rounded-lg hover:bg-[#555555] transition-colors mt-2">
           <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">

@@ -1,0 +1,236 @@
+<template>
+    <div class="join-component relative bg-gradient-to-br from-[#F0F0F0] to-[#E3E3E3] text-[#0C1014] overflow-hidden">
+      <ParticleGround />
+  
+      <div class="container mx-auto px-4 py-24 relative z-10">
+        <h2 class="text-6xl font-bold mb-16 text-center relative z-10 text-[#E25353]">
+          加入玫瑰帝國
+        </h2>
+  
+        <div
+          class="max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-3xl transform hover:scale-[1.02] relative z-10">
+          <div class="p-12 space-y-8">
+            <form @submit.prevent="submitForm" class="space-y-8">
+              <div v-for="question in questions" :key="question.key" class="space-y-2">
+                <label class="block text-lg font-medium text-[#0C1014]">
+                  {{ question.label }}{{ question.required ? ' *' : '' }}
+                </label>
+                <div v-if="question.component === 'textarea'">
+                  <textarea :rows="question.rows" :class="inputClasses" v-model="form[question.key]" />
+                </div>
+                <div v-if="question.component === 'select'">
+                  <select :class="inputClasses" v-model="form[question.key]">
+                    <option value="" disabled>請選擇</option>
+                    <option v-for="option in question.options" :key="option.value" :value="option.value">
+                      {{ option.label }}
+                    </option>
+                  </select>
+                </div>
+                <div v-if="question.component === 'checkbox'">
+                  <div class="space-y-1">
+                    <label v-for="option in question.options" :key="option.value" class="inline-flex items-center mr-6 mb-2">
+                      <input 
+                        type="checkbox" 
+                        v-model="form[question.key]" 
+                        :value="option.value" 
+                        class="form-checkbox h-5 w-5 text-[#E25353] border-[#E25353]"
+                      >
+                      <span class="ml-2 text-base">{{ option.label }}</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="flex items-center justify-center pt-6">
+                <button type="submit"
+                  class="px-8 py-4 bg-[#E25353] text-white text-lg font-semibold rounded-md shadow-md hover:bg-[#E99797] focus:outline-none focus:ring-2 focus:ring-[#E25353] focus:ring-opacity-50 transform hover:scale-110 transition-all duration-300">
+                  提交申請
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  import ParticleGround from './ParticleGround.vue';
+  
+  export default {
+    components: {
+      ParticleGround
+    },
+    data() {
+      return {
+        form: {
+          name: '',
+          age: '',
+          gender: '',
+          experience: '',
+          portfolio: '',
+          currentJob: '',
+          skills: [],
+          position: '',
+          introduction: '',
+          availableTime: '',
+          contact: '',
+          questions: ''
+        },
+        questions: [
+          { key: 'name', label: '您的姓名', component: 'textarea', rows: 1, required: true },
+          { key: 'age', label: '您的年齡', component: 'textarea', rows: 1, required: true },
+          {
+            key: 'gender', label: '性別', component: 'select', options: [
+              { value: '男', label: '男' },
+              { value: '女', label: '女' },
+              { value: '其他', label: '其他' }
+            ], required: true
+          },
+          { key: 'experience', label: '工作經驗（若無工作經驗請填"無"）', component: 'textarea', rows: 3, required: true },
+          { key: 'portfolio', label: '作品集（有的話請附網址，沒有則填「無」）', component: 'textarea', rows: 1, required: true },
+          { key: 'currentJob', label: '目前的工作和負責的崗位（如無則填「待業中」）', component: 'textarea', rows: 1, required: true },
+          {
+            key: 'skills', label: '專業技能（可複選）', component: 'checkbox', options: [
+              { value: '無', label: '無' },
+              { value: 'Office', label: 'Office' },
+              { value: 'Premiere', label: 'Premiere' },
+              { value: 'Photoshop', label: 'Photoshop' },
+              { value: 'After Effects', label: 'After Effects' },
+              { value: 'Illustrator', label: 'Illustrator' },
+              { value: '其他', label: '其他' }
+            ], required: true
+          },
+          { 
+            key: 'position', label: '應徵職務', component: 'select', options: [
+              { value: '剪輯師', label: '剪輯師' },
+              { value: '實習生', label: '實習生' }
+            ], required: true 
+          },
+          { key: 'introduction', label: '自我介紹（興趣、特色、專長、經歷、其他事宜）', component: 'textarea', rows: 4, required: true },
+          { key: 'availableTime', label: '每週約莫可上線的時間', component: 'textarea', rows: 1, required: true },
+          { key: 'contact', label: '聯絡方式（Email、Discord、LINE、手機號碼皆可）', component: 'textarea', rows: 1, required: true },
+          { key: 'questions', label: '有什麼問題想問我們的嗎?', component: 'textarea', rows: 3, required: false }
+        ],
+        inputClasses: 'mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-[#0C1014] text-lg p-3'
+      };
+    },
+    methods: {
+      async submitForm() {
+        const apiUrl = 'http://localhost:3000/submit';
+  
+        try {
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(this.form),
+          });
+  
+          if (response.ok) {
+            const result = await response.json();
+            alert(result.message);
+            this.resetForm();
+          } else {
+            throw new Error('提交失敗');
+          }
+        } catch (error) {
+          console.error('提交錯誤:', error);
+          alert('提交時發生錯誤，請稍後再試。');
+        }
+      },
+  
+      resetForm() {
+        this.form = {
+          name: '',
+          age: '',
+          gender: '',
+          experience: '',
+          portfolio: '',
+          currentJob: '',
+          skills: [],
+          position: '',
+          introduction: '',
+          availableTime: '',
+          contact: '',
+          questions: ''
+        };
+      }
+    }
+  }
+  </script>
+  
+  
+
+
+<style scoped>
+.join-component {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.particle-container canvas {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes glowingOrb {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+.glowing-orbs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glowing-orbs::before,
+.glowing-orbs::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(226, 83, 83, 0.3) 0%, rgba(226, 83, 83, 0) 70%);
+    animation: glowingOrb 8s infinite;
+}
+
+.glowing-orbs::before {
+    top: 10%;
+    left: 10%;
+}
+
+.glowing-orbs::after {
+    bottom: 10%;
+    right: 10%;
+    animation-delay: 4s;
+}
+</style>
