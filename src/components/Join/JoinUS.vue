@@ -1,9 +1,15 @@
 <template>
+  <div class="h-16"/>
   <div class="join-component relative bg-gradient-to-br from-[#F0F0F0] to-[#E3E3E3] text-[#0C1014] overflow-hidden">
     <ParticleGround />
     <div class="container mx-auto px-4 py-24 relative z-10">
-      <h2 class="text-6xl font-bold mb-16 text-center relative z-10 text-[#E25353]">
+      <h2 class="text-6xl font-bold mb-5 text-center relative z-10 text-[#E25353]">
         加入玫瑰帝國
+      </h2>
+      <h2 class="text-2xl font-bold mb-16 text-center relative z-10 text-[#E25353]">
+        加入玫瑰帝國，<br>
+        我們擁有良好的軍事裝備及糧食，<br>
+        抵抗林德豐攻擊。
       </h2>
 
       <div

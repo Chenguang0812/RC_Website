@@ -1,25 +1,16 @@
 <template>
-  <!-- 主容器：設置漸變背景、內邊距和相對定位，並監聽鼠標移動事件 -->
-  <div
-    ref="container"
+  <div class="h-16" />
+  <div ref="container"
     class="bg-gradient-to-br from-[#E25353] via-[#E99797] to-[#FFC0CB] py-16 overflow-hidden relative"
-    @mousemove="handleMouseMove"
-  >
+    @mousemove="handleMouseMove">
     <!-- 浮動元素 -->
-    <div
-      v-for="(particle, index) in particles"
-      :key="index"
-      class="absolute text-2xl transition-all duration-1000 ease-out"
-      :style="getParticleStyle(particle)"
-    >
+    <div v-for="(particle, index) in particles" :key="index"
+      class="absolute text-2xl transition-all duration-1000 ease-out" :style="getParticleStyle(particle)">
       {{ particle.icon }}
     </div>
 
     <!-- 標題 -->
-    <h2
-      class="text-4xl font-bold text-center text-white mb-12 relative z-10 animate-glitch"
-      data-text="影視專欄"
-    >
+    <h2 class="text-4xl font-bold text-center text-white mb-12 relative z-10 animate-glitch" data-text="影視專欄">
       影視專欄
     </h2>
 
@@ -28,26 +19,18 @@
       <!-- 視頻卡片網格 -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         <!-- 視頻卡片 -->
-        <div
-          v-for="(video, index) in videos"
-          :key="index"
-          class="video-card transform transition duration-300 hover:rotate-2 hover:-translate-y-2"
-        >
+        <div v-for="(video, index) in videos" :key="index"
+          class="video-card transform transition duration-300 hover:rotate-2 hover:-translate-y-2">
           <div class="rounded-lg shadow-lg bg-white max-w-sm overflow-hidden group">
             <!-- 視頻嵌入區域 -->
             <div class="relative pb-[56.25%] h-0 overflow-hidden">
-              <iframe
-                class="absolute top-0 left-0 w-full h-full"
-                :src="video.link"
-                title="YouTube video player"
+              <iframe class="absolute top-0 left-0 w-full h-full" :src="video.link" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              />
+                allowfullscreen />
               <!-- 懸停播放圖標 -->
               <div
-                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
+                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <i class="fas fa-play text-white text-4xl animate-pulse" />
               </div>
             </div>
@@ -60,17 +43,12 @@
                 {{ video.Description }}
               </p>
               <!-- "觀看完整影片" 按鈕 -->
-              <a
-                class="inline-block px-6 py-2.5 bg-[#E25353] text-white text-xs uppercase rounded hover:bg-[#E99797] transition-all duration-300 transform hover:scale-110 hover:rotate-3 relative overflow-hidden"
-                :href="video.button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a class="inline-block px-6 py-2.5 bg-[#E25353] text-white text-xs uppercase rounded hover:bg-[#E99797] transition-all duration-300 transform hover:scale-110 hover:rotate-3 relative overflow-hidden"
+                :href="video.button" target="_blank" rel="noopener noreferrer">
                 <span class="relative z-10">觀看完整影片</span>
                 <!-- 按鈕懸停效果 -->
                 <span
-                  class="absolute inset-0 h-full w-full bg-gradient-to-r from-pink-500 to-yellow-500 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
-                />
+                  class="absolute inset-0 h-full w-full bg-gradient-to-r from-pink-500 to-yellow-500 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
               </a>
             </div>
           </div>
@@ -208,11 +186,8 @@ export default {
   }
 }
 
-.animate-glitch {
-  animation: glitch 500ms infinite;
-}
 
-.animate-glitch::before,
+
 .animate-glitch::after {
   content: attr(data-text);
   position: absolute;

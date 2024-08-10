@@ -1,24 +1,18 @@
 <template>
   <div class="bg-[#E3E3E3] min-h-screen text-[#FFFFFF]">
-    <HeroSection />
     <NavbarSection />
-    <SidebarSection />
     <JoinSection />
   </div>
 </template>
 
 <script>
 import NavbarSection from '@/components/NavbarSection.vue'
-import SidebarSection from '@/components/SidebarSection.vue'
-import HeroSection from "@/components/Join/JoinHero.vue"
 import JoinSection from "@/components/Join/JoinUS.vue"
 
 export default {
   name: 'JoinUS',
   components: {
-    HeroSection,
     NavbarSection,
-    SidebarSection,
     JoinSection
   }
 }

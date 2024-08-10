@@ -1,17 +1,15 @@
 <template>
-  <HeroSection />
   <NavbarSection />
+  <HeroSection />
   <AboutUS />
   <NewsSection />
   <ForkChannel />
   <ContactUS />
-  <SidebarSection />
 </template>
 
 <script>
 
 import NavbarSection from "@/components/NavbarSection.vue"
-import SidebarSection from '@/components/SidebarSection.vue'
 import HeroSection from "@/components/Home/HeroSection.vue"
 import AboutUS from "@/components/Home/AboutUS.vue"
 import NewsSection from "@/components/Home/NewsSection.vue"
@@ -22,7 +20,6 @@ export default {
   name: 'HomePage',
   components: {
     NavbarSection,
-    SidebarSection,
     HeroSection,
     AboutUS,
     NewsSection,

@@ -1,5 +1,6 @@
 <template>
-  <div class="relative w-full h-screen">
+  <div class="h-16"></div>
+  <div class="relative w-full h-[83vh]">
     <img
       src="/premiere.png"
       alt="Premiere Image"
@@ -7,10 +8,13 @@
     >
     <div class="absolute inset-0 bg-[#44474B] bg-opacity-60" />
     <div class="absolute inset-0 text-[#F0F0F0] flex flex-col items-center justify-center px-4">
-      <h1 class="font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center animate-fade-in-down">
+      <h1 class="font-semibold text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-center animate-fade-in-down">
         RC Studio
       </h1>
-      <p class="font-semibold text-xl sm:text-2xl mt-4 text-center animate-fade-in-up">
+      <p class="font-semibold text-3xl sm:text-2xl mt-4 text-center animate-fade-in-up">
+        Re-Created it.
+      </p>
+      <p class="font-semibold text-xl sm:text-lg mt-4 text-center animate-fade-in-up">
         專業的影片剪輯工作室
       </p>
       <button
@@ -20,6 +24,8 @@
         了解更多
       </button>
     </div>
+
+
   </div>
 </template>
 

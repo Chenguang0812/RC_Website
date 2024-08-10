@@ -1,4 +1,5 @@
 <template>
+  
   <div class="bg-[#E3E3E3] p-10 flex flex-col md:flex-row items-start">
     <div class="flex-1 mt-4">
       <div class="flex items-center mb-4">
