@@ -36,6 +36,7 @@
       </div>
     </div>
   </div>
+  <p>HI</p>
 </template>
 
 <script>
