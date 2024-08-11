@@ -3,6 +3,7 @@
     <NavbarSection />
     <Contact />
   </div>
+  <div />
 </template>
 
 <script>
