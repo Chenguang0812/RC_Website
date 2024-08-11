@@ -5,3 +5,25 @@
 body{
     margin: 0;
 }
+
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative;
+  }
+  
+  #app {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative;
+  }
+  
+  * {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
