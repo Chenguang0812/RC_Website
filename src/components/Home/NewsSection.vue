@@ -3,18 +3,13 @@
     <div class="max-w-4xl mx-auto">
       <div class="mb-12 relative flex justify-center">
         <div class="bg-[#E0E0E0] -skew-x-12 inline-block">
-          <p
-            class="text-3xl font-bold py-2 px-8 skew-x-12 inline-block relative z-10"
-          >
+          <p class="text-3xl font-bold py-2 px-8 skew-x-12 inline-block relative z-10">
             最新消息
           </p>
           <div class="absolute bottom-0 right-0 w-full h-1 bg-[#E99797]" />
         </div>
       </div>
-      <div
-        ref="newsContainer"
-        class="h-[400px] overflow-y-auto custom-scrollbar"
-      >
+      <div ref="newsContainer" class="h-[400px] overflow-y-auto custom-scrollbar">
         <div ref="newsWrapper">
           <div
             v-for="item in newsItems"
@@ -53,42 +48,43 @@
 
 <script>
 export default {
-  name: 'NewsSection',
+  name: "NewsSection",
   data() {
     return {
       newsItems: [
         {
           id: 1,
-          title: '最新》林德豐一部片剪了27天，跳抖肩舞懺悔。',
-          image: '/道歉.png',
-          date: '2024年8月5日 週六 下午1:15',
-          link: 'https://drive.google.com/file/d/1hi5-lJv-x7WlovFzi7CSeaU6G1PQWe9K/view?usp=sharing',
+          title: "最新》林德豐一部片剪了27天，跳抖肩舞懺悔。",
+          image: "/道歉.png",
+          date: "2024年8月5日 週六 下午1:15",
+          link:
+            "https://drive.google.com/file/d/1hi5-lJv-x7WlovFzi7CSeaU6G1PQWe9K/view?usp=sharing",
         },
         {
           id: 2,
-          title: '最新》林德豐新影片上線，揭示剪輯背後的辛酸。',
-          image: '/小鬼風.png',
-          date: '2024年8月3日 週六 下午2:00',
-          link: 'https://rcstudio.tw/No',
+          title: "最新》林德豐新影片上線，揭示剪輯背後的辛酸。",
+          image: "/小鬼風.png",
+          date: "2024年8月3日 週六 下午2:00",
+          link: "https://rcstudio.tw/No",
         },
         {
           id: 3,
-          title: 'RC Studio擴大團隊，招募新人才。',
-          image: '/阿烜.png',
-          date: '2024年8月2日 週五 上午10:15',
-          link: 'https://rcstudio.tw/joinUS',
+          title: "RC Studio擴大團隊，招募新人才。",
+          image: "/阿烜.png",
+          date: "2024年8月2日 週五 上午10:15",
+          link: "https://rcstudio.tw/joinUS",
         },
         {
           id: 4,
-          title: 'RC Studio擴大營業項目：唱、跳、RAP、籃球',
-          image: '/亞洲舞王蔡徐坤.png',
-          date: '2024年8月1日 週四 下午4:37',
-          link: 'https://www.youtube.com/watch?v=GLu5YwiAtC4',
+          title: "RC Studio擴大營業項目：唱、跳、RAP、籃球",
+          image: "/亞洲舞王蔡徐坤.png",
+          date: "2024年8月1日 週四 下午4:37",
+          link: "https://www.youtube.com/watch?v=GLu5YwiAtC4",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>
