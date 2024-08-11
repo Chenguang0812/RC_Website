@@ -115,7 +115,7 @@ export default {
         },
         { key: 'introduction', label: '自我介紹（興趣、特色、專長、經歷、其他事宜）', component: 'textarea', rows: 4, required: true },
         { key: 'availableTime', label: '每週約莫可上線的時間', component: 'textarea', rows: 1, required: true },
-        { key: 'contact', label: '聯絡方式（Email、LINE、Discord、手機號碼皆可）', component: 'textarea', rows: 1, required: true },
+        { key: ' contact', label: '聯絡方式（Email、LINE、Discord、手機號碼皆可）', component: 'textarea', rows: 1, required: true },
         { key: 'questions', label: '有什麼問題想問我們的嗎？', component: 'textarea', rows: 3, required: false }
       ],
       inputClasses: 'mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-[#0C1014] text-lg p-3'
