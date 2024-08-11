@@ -11,7 +11,7 @@ import NavbarSection from "@/components/NavbarSection.vue";
 import Contact from "@/components/ContactUS/ContactUS.vue";
 
 export default {
-  name: "CasePage",
+  name: "Contact",
   components: {
     NavbarSection,
     Contact,
