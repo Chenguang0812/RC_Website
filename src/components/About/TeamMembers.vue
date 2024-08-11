@@ -4,27 +4,21 @@
       <!-- 背景動畫元素 -->
       <div class="absolute inset-0 bg-gradient-to-r from-[#E25353] to-[#E99797] opacity-10 animate-wave" />
 
-      <!-- 標題 -->
+
       <h2 class="text-4xl font-bold my-8 text-[#E25353] text-center relative z-10">
         我們的團隊
       </h2>
 
       <!-- 團隊成員卡片 -->
-      <div ref="containerRef" class="flex flex-wrap justify-center gap-8 relative z-10 max-h-[620px] overflow-y-auto px-6 pb-8">
-        <div
-          v-for="member in teamMembers"
-          :key="member.id"
-          :ref="el => { if (el) memberRefs[member.id] = el }"
+      <div ref="containerRef"
+        class="flex flex-wrap justify-center gap-8 relative z-10 max-h-[620px] overflow-y-auto px-6 pb-8">
+        <div v-for="member in teamMembers" :key="member.id" :ref="el => { if (el) memberRefs[member.id] = el }"
           class="w-80 bg-white rounded-lg p-6 shadow-lg transform transition duration-500 hover:scale-105 hover:rotate-2"
-          :class="{ 'animate-slideIn': member.isVisible }"
-        >
+          :class="{ 'animate-slideIn': member.isVisible }">
           <!-- 成員圖片 -->
           <div class="w-full h-80 flex items-center justify-center mb-6 overflow-hidden rounded-lg">
-            <img
-              :src="member.image"
-              :alt="member.name"
-              class="object-cover h-full w-full transition duration-500 hover:scale-110"
-            >
+            <img :src="member.image" :alt="member.name"
+              class="object-cover h-full w-full transition duration-500 hover:scale-110">
           </div>
           <!-- 成員姓名 -->
           <h3 class="text-2xl font-bold mb-2 text-[#E25353]">
@@ -102,6 +96,7 @@ export default {
     transform: translateY(50px) rotate(-5deg);
     opacity: 0;
   }
+
   to {
     transform: translateY(0) rotate(0deg);
     opacity: 1;
