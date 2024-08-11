@@ -4,6 +4,7 @@ import AboutPage from '../Views/AboutPage.vue';
 import CasePage from '../Views/CasePage.vue'
 import JoinUS from '../Views/JoinUS.vue';
 import ContactUS from '../Views/ContactUS.vue'
+import No from '../Views/No.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/ContactUS',
     name: 'ContactUS',
     component: ContactUS
+  },
+  {
+    path: '/No',
+    name: 'No',
+    component: No
   },
   {
     path: "/news",

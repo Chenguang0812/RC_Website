@@ -21,10 +21,11 @@
                 {{ question.label }}{{ question.required ? ' *' : '' }}
               </label>
               <div v-if="question.component === 'textarea'">
-                <textarea v-model="form[question.key]" :rows="question.rows" :class="inputClasses" />
+                <textarea v-model="form[question.key]" :rows="question.rows" :class="inputClasses"
+                  :required="question.required" />
               </div>
               <div v-if="question.component === 'select'">
-                <select v-model="form[question.key]" :class="inputClasses">
+                <select v-model="form[question.key]" :class="inputClasses" :required="question.required">
                   <option value="" disabled>
                     請選擇
                   </option>
@@ -38,7 +39,8 @@
                   <label v-for="option in question.options" :key="option.value"
                     class="inline-flex items-center mr-6 mb-2">
                     <input v-model="form[question.key]" type="checkbox" :value="option.value"
-                      class="form-checkbox h-5 w-5 text-[#E25353] border-[#E25353]">
+                      class="form-checkbox h-5 w-5 text-[#E25353] border-[#E25353]"
+                      :required="question.required && form[question.key].length === 0">
                     <span class="ml-2 text-base">{{ option.label }}</span>
                   </label>
                 </div>
@@ -82,7 +84,7 @@ export default {
         questions: ''
       },
       questions: [
-        { key: 'name', label: '您的姓名', component: 'textarea', rows: 1, required: true },
+        { key: 'name', label: '您的姓名（可附上藝名）', component: 'textarea', rows: 1, required: true },
         { key: 'age', label: '您的年齡', component: 'textarea', rows: 1, required: true },
         {
           key: 'gender', label: '性別', component: 'select', options: [
@@ -91,30 +93,30 @@ export default {
             { value: '其他', label: '其他' }
           ], required: true
         },
-        { key: 'experience', label: '工作經驗（若無工作經驗請填"無"）', component: 'textarea', rows: 3, required: true },
+        { key: 'experience', label: '工作經驗（若無工作經驗請填「無」）', component: 'textarea', rows: 3, required: true },
         { key: 'portfolio', label: '作品集（有的話請附網址，沒有則填「無」）', component: 'textarea', rows: 1, required: true },
         { key: 'currentJob', label: '目前的工作和負責的崗位（如無則填「待業中」）', component: 'textarea', rows: 1, required: true },
         {
           key: 'skills', label: '專業技能（可複選）', component: 'checkbox', options: [
-            { value: '無', label: '無' },
             { value: 'Office', label: 'Office' },
+            { value: 'Excel', label: 'Excel' },
             { value: 'Premiere', label: 'Premiere' },
             { value: 'Photoshop', label: 'Photoshop' },
             { value: 'After Effects', label: 'After Effects' },
-            { value: 'Illustrator', label: 'Illustrator' },
+            { value: '無', label: '無' },
             { value: '其他', label: '其他' }
           ], required: true
         },
         {
-          key: 'position', label: '應徵職務', component: 'select', options: [
+          key: 'position', label: '應徵職務（若無明確目標則填「實習生」）', component: 'select', options: [
             { value: '剪輯師', label: '剪輯師' },
             { value: '實習生', label: '實習生' }
           ], required: true
         },
         { key: 'introduction', label: '自我介紹（興趣、特色、專長、經歷、其他事宜）', component: 'textarea', rows: 4, required: true },
         { key: 'availableTime', label: '每週約莫可上線的時間', component: 'textarea', rows: 1, required: true },
-        { key: 'contact', label: '聯絡方式（Email、Discord、LINE、手機號碼皆可）', component: 'textarea', rows: 1, required: true },
-        { key: 'questions', label: '有什麼問題想問我們的嗎?', component: 'textarea', rows: 3, required: false }
+        { key: 'contact', label: '聯絡方式（Email、LINE、Discord、手機號碼皆可）', component: 'textarea', rows: 1, required: true },
+        { key: 'questions', label: '有什麼問題想問我們的嗎？', component: 'textarea', rows: 3, required: false }
       ],
       inputClasses: 'mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-[#0C1014] text-lg p-3'
     };
@@ -150,7 +152,7 @@ export default {
         });
 
         if (response.ok) {
-          alert('表單提交成功！');
+          alert('表單提交成功！若於一個月內無收到面試通知，代表本專案不適合您，恕不另行通知，請勿重複投稿。');
           this.resetForm();
         } else {
           throw new Error('提交失敗');

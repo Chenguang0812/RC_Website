@@ -7,14 +7,15 @@
           旗下頻道
         </h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <a v-for="channel in visibleChannels" :key="channel.id" v-scroll-animation :href="channel.url" target="_blank"
-          rel="noopener noreferrer"
-          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-500 aspect-square flex flex-col items-center justify-center p-6 opacity-0 translate-y-10">
-          <img :src="channel.image" :alt="channel.name"
-            class="w-full h-auto max-w-[150px] max-h-[150px] rounded-lg mb-6">
-          <p class="text-center font-bold text-xl md:text-2xl">{{ channel.name }}</p>
-        </a>
+      <div class="overflow-x-scroll custom-scrollbar" ref="channelContainer">
+        <div class="flex space-x-6 pb-4 inline-flex">
+          <a v-for="channel in channels" :key="channel.id" :href="channel.url" target="_blank" rel="noopener noreferrer"
+            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-500 flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-6">
+            <img :src="channel.image" :alt="channel.name"
+              class="w-full h-auto max-w-[150px] max-h-[150px] rounded-lg mb-6 object-cover">
+            <p class="text-center font-bold text-xl">{{ channel.name }}</p>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -30,32 +31,59 @@ export default {
         { id: 2, name: '實況Online', image: '/實況Online.jpg', url: 'https://www.youtube.com/@RCStudio' },
         { id: 3, name: 'BANWE', image: '/BANWE.jpg', url: 'https://www.youtube.com/@BANWE' },
         { id: 4, name: '玫瑰雲端', image: '/玫瑰雲端.jpg', url: 'https://www.youtube.com/@RC_Drive' },
-
+        { id: 5, name: '尤教授的烤肉實驗室', image: '/烤肉.jpg', url: 'https://www.youtube.com/@holoXman/featured' },
+        { id: 6, name: 'BANWE的歌', image: '/BANWE的歌.jpg', url: 'https://www.youtube.com/watch?v=x0xpQMGGesg' },
+        { id: 7, name: '瑞克搖', image: '/瑞克.jpg', url: 'https://www.youtube.com/watch?v=xvFZjo5PgG0' },
+        { id: 8, name: '阿偉的狗', image: '/阿偉的狗.png', url: 'https://www.youtube.com/watch?v=09y0tPAeLG0' },
       ]
     }
   },
-  computed: {
-    visibleChannels() {
-      return window.innerWidth < 640 ? this.channels.slice(0, 2) : this.channels;
-    }
-  },
   mounted() {
-    window.addEventListener('resize', this.updateVisibleChannels);
-  },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.updateVisibleChannels);
+    this.enableHorizontalScroll();
   },
   methods: {
-    updateVisibleChannels() {
-      this.visibleChannels = window.innerWidth < 640 ? this.channels.slice(0, 2) : this.channels;
+    enableHorizontalScroll() {
+      const container = this.$refs.channelContainer;
+      container.addEventListener('wheel', (e) => {
+        if (e.deltaY !== 0) {
+          e.preventDefault();
+          container.scrollLeft += e.deltaY;
+        }
+      });
     }
   }
 }
 </script>
 
 <style scoped>
-.animate {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+.overflow-x-scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #E25353;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d14141;
+}
+
+/* 針對Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #E25353 #f1f1f1;
 }
 </style>

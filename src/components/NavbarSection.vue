@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex-shrink-0 w-1/4">
-          <button @click="navigateTo('/')" class="fixed left-3 top-5 text-[#44474B] font-bold text-xl">
+          <button @click="navigateTo('/')" class="fixed left-7 top-5 text-[#44474B] font-bold text-xl">
             {{ title }}
           </button>
         </div>

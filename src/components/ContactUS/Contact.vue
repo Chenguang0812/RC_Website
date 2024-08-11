@@ -28,7 +28,7 @@
                         </div>
 
                         <div class="form-group space-y-2">
-                            連絡電話 *
+                            聯繫方式（電話、LINE、Discord）*
                             <input v-model="form.phone" id="phone" type="tel" required
                                 class="mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-[#0C1014] text-lg p-3">
                         </div>

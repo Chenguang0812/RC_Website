@@ -55,7 +55,7 @@
                 <i class="fab fa-youtube text-xl text-gray-700 group-hover:text-white transition-colors duration-300" />
               </div>
             </a>
-            <a href="#" target="_blank" class="group">
+            <a href="www.rcstudio.tw/no" target="_blank" class="group">
               <div
                 class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300">
                 <i
@@ -63,11 +63,23 @@
               </div>
             </a>
 
-            <a href="https://instagram.com" target="_blank" class="group">
+            <a href="www.rcstudio.tw/no" target="_blank" class="group">
               <div
                 class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300">
                 <i
                   class="fab fa-instagram text-xl text-gray-700 group-hover:text-white transition-colors duration-300" />
+              </div>
+            </a>
+            <a href="www.rcstudio.tw/no" target="_blank" class="group">
+              <div
+                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300">
+                <i class="fab fa-twitter text-xl text-gray-700 group-hover:text-white transition-colors duration-300" />
+              </div>
+            </a>
+            <a href="www.rcstudio.tw/no" target="_blank" class="group">
+              <div
+                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300">
+                <i class="fab fa-twitch text-xl text-gray-700 group-hover:text-white transition-colors duration-300" />
               </div>
             </a>
 
