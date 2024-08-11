@@ -43,7 +43,7 @@
                     :src="review.avatar"
                     :alt="review.name"
                     class="w-16 h-16 rounded-full mr-4 border-2 border-[#E25353] animate-bounce"
-                  >
+                  />
                   <div>
                     <!-- 用戶名稱 -->
                     <h3 class="text-[#E25353] text-xl font-semibold">
@@ -56,9 +56,7 @@
                   </div>
                 </div>
                 <!-- 評價內容 -->
-                <p class="text-gray-800 italic mb-4">
-                  "{{ review.content }}"
-                </p>
+                <p class="text-gray-800 italic mb-4">"{{ review.content }}"</p>
                 <!-- 評分星星 -->
                 <div class="flex justify-center">
                   <span
@@ -66,7 +64,8 @@
                     :key="star"
                     class="text-yellow-400 text-2xl transform transition-all duration-300 hover:scale-125"
                     :class="{ 'text-gray-300': star > review.rating }"
-                  >★</span>
+                    >★</span
+                  >
                 </div>
               </div>
             </div>
@@ -85,36 +84,54 @@ export default {
       currentIndex: 0,
       // 評價數據數組
       reviews: [
-        { name: "林德豐", title: "畜生", avatar: "/小風.jpg", content: "RC Studio的老闆很坑，我才拖片20幾天就扣我薪水。", rating: 5 },
-        { name: "林奕綸", title: "性平委員", avatar: "/綸弟.png", content: "雖然我被性平，但還是很喜歡RC Studio。", rating: 4 },
-        { name: "蔡小姐", title: "啊啊啊", avatar: "/卡卡.png", content: "啊啊啊啊啊啊啊啊啊，啊啊啊啊啊啊啊啊啊！", rating: 5 },
+        {
+          name: '林德豐',
+          title: '畜生',
+          avatar: '/小風.jpg',
+          content: 'RC Studio的老闆很坑，我才拖片20幾天就扣我薪水。',
+          rating: 5,
+        },
+        {
+          name: '林奕綸',
+          title: '性平委員',
+          avatar: '/綸弟.png',
+          content: '雖然我被性平，但還是很喜歡RC Studio。',
+          rating: 4,
+        },
+        {
+          name: '蔡小姐',
+          title: '啊啊啊',
+          avatar: '/卡卡.png',
+          content: '啊啊啊啊啊啊啊啊啊，啊啊啊啊啊啊啊啊啊！',
+          rating: 5,
+        },
       ],
       // 自動播放定時器
-      autoplayInterval: null
+      autoplayInterval: null,
     }
   },
   mounted() {
     // 組件掛載後啟動自動播放
-    this.startAutoplay();
+    this.startAutoplay()
   },
   beforeUnmount() {
     // 組件卸載前停止自動播放
-    this.stopAutoplay();
+    this.stopAutoplay()
   },
   methods: {
     // 開始自動播放
     startAutoplay() {
       this.autoplayInterval = setInterval(() => {
-        this.nextSlide();
-      }, 5000);
+        this.nextSlide()
+      }, 5000)
     },
     // 停止自動播放
     stopAutoplay() {
-      clearInterval(this.autoplayInterval);
+      clearInterval(this.autoplayInterval)
     },
     // 切換到下一張幻燈片
     nextSlide() {
-      this.currentIndex = (this.currentIndex + 1) % this.reviews.length;
+      this.currentIndex = (this.currentIndex + 1) % this.reviews.length
     },
     // 生成彩色紙屑的樣式
     confettiStyle(n) {
@@ -123,15 +140,23 @@ export default {
         top: `-${Math.random() * 20 + 10}%`,
         transform: `rotate(${Math.random() * 360}deg)`,
         animationDelay: `${Math.random() * 5}s`,
-        animationDuration: `${Math.random() * 3 + 5}s`
-      };
+        animationDuration: `${Math.random() * 3 + 5}s`,
+      }
     },
     // 隨機選擇彩色紙屑的顏色
     randomConfettiColor() {
-      const colors = ['bg-red-500', 'bg-yellow-500', 'bg-green-500', 'bg-blue-500', 'bg-indigo-500', 'bg-purple-500', 'bg-pink-500'];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-  }
+      const colors = [
+        'bg-red-500',
+        'bg-yellow-500',
+        'bg-green-500',
+        'bg-blue-500',
+        'bg-indigo-500',
+        'bg-purple-500',
+        'bg-pink-500',
+      ]
+      return colors[Math.floor(Math.random() * colors.length)]
+    },
+  },
 }
 </script>
 
@@ -153,7 +178,9 @@ export default {
 
 /* 標題的柔和發光效果 */
 .soft-glow {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 /* 三種不同形狀的彩色紙屑 */

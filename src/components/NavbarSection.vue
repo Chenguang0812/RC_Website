@@ -1,5 +1,7 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 bg-white z-50 shadow-md shadow-gray-500/50">
+  <nav
+    class="fixed top-0 left-0 right-0 bg-white z-50 shadow-md shadow-gray-500/50"
+  >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex-shrink-0 w-1/4">
@@ -85,20 +87,20 @@ export default {
   data() {
     return {
       isOpen: false,
-      title: "RC Studio",
-      navItems: ["回到主頁", "關於我們", "整合行銷", "加入我們", "聯絡我們"],
-      navPaths: ["/", "/about", "/case", "/joinUS", "/contactUS"],
-    };
+      title: 'RC Studio',
+      navItems: ['回到主頁', '關於我們', '整合行銷', '加入我們', '聯絡我們'],
+      navPaths: ['/', '/about', '/case', '/joinUS', '/contactUS'],
+    }
   },
   methods: {
     toggleNavbar() {
-      this.isOpen = !this.isOpen;
+      this.isOpen = !this.isOpen
     },
     navigateTo(path) {
-      this.$router.push(path);
-      window.scrollTo(0, 0);
-      this.isOpen = false;
+      this.$router.push(path)
+      window.scrollTo(0, 0)
+      this.isOpen = false
     },
   },
-};
+}
 </script>

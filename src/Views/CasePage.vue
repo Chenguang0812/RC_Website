@@ -8,8 +8,8 @@
 
 <script>
 import NavbarSection from '@/components/NavbarSection.vue'
-import VideoSection from "@/components/Case/VideoSection.vue"
-import EvaluateSection from "@/components/Case/EvaluateSection.vue"
+import VideoSection from '@/components/Case/VideoSection.vue'
+import EvaluateSection from '@/components/Case/EvaluateSection.vue'
 
 export default {
   name: 'CasePage',
@@ -17,6 +17,6 @@ export default {
     NavbarSection,
     EvaluateSection,
     VideoSection,
-  }
+  },
 }
 </script>

@@ -31,77 +31,77 @@
 
 <script>
 export default {
-  name: "AffiliatedChannels",
+  name: 'AffiliatedChannels',
   data() {
     return {
       channels: [
         {
           id: 6,
-          name: "RC Studio工作室",
-          image: "/RC.jpg",
-          url: "https://www.youtube.com/@RC_Studio",
+          name: 'RC Studio工作室',
+          image: '/RC.jpg',
+          url: 'https://www.youtube.com/@RC_Studio',
         },
         {
           id: 1,
-          name: "亦凌YiLing",
-          image: "/亦凌.jpg",
-          url: "https://www.youtube.com/@10_YiLing",
+          name: '亦凌YiLing',
+          image: '/亦凌.jpg',
+          url: 'https://www.youtube.com/@10_YiLing',
         },
         {
           id: 2,
-          name: "實況Online",
-          image: "/實況Online.jpg",
-          url: "https://www.youtube.com/@PalyerOnline",
+          name: '實況Online',
+          image: '/實況Online.jpg',
+          url: 'https://www.youtube.com/@PalyerOnline',
         },
         {
           id: 5,
-          name: "尤教授的烤肉實驗室",
-          image: "/烤肉.jpg",
-          url: "https://www.youtube.com/@holoXman/featured",
+          name: '尤教授的烤肉實驗室',
+          image: '/烤肉.jpg',
+          url: 'https://www.youtube.com/@holoXman/featured',
         },
         {
           id: 3,
-          name: "BANWE",
-          image: "/BANWE.jpg",
-          url: "https://www.youtube.com/@BANWE",
+          name: 'BANWE',
+          image: '/BANWE.jpg',
+          url: 'https://www.youtube.com/@BANWE',
         },
         {
           id: 4,
-          name: "玫瑰雲端",
-          image: "/玫瑰雲端.jpg",
-          url: "https://www.youtube.com/@RC_Drive",
+          name: '玫瑰雲端',
+          image: '/玫瑰雲端.jpg',
+          url: 'https://www.youtube.com/@RC_Drive',
         },
 
         {
           id: 7,
-          name: "我是一隻浣熊",
-          image: "/浣熊.png",
-          url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+          name: '我是一隻浣熊',
+          image: '/浣熊.png',
+          url: 'https://www.youtube.com/watch?v=xvFZjo5PgG0',
         },
         {
           id: 8,
-          name: "阿偉的狗",
-          image: "/阿偉的狗.png",
-          url: "https://www.youtube.com/watch?v=09y0tPAeLG0",
+          name: '阿偉的狗',
+          image: '/阿偉的狗.png',
+          url: 'https://www.youtube.com/watch?v=09y0tPAeLG0',
         },
       ],
-    };
+    }
   },
   mounted() {
-    this.enableHorizontalScroll();
+    this.enableHorizontalScroll()
   },
   methods: {
     enableHorizontalScroll() {
-      const container = this.$refs.channelContainer;
-      container.addEventListener("wheel", (e) => {
+      const container = this.$refs.channelContainer
+      container.addEventListener('wheel', (e) => {
         if (e.deltaY !== 0) {
-          e.preventDefault();
-          container.scrollLeft += e.deltaY;
+          e.preventDefault()
+          container.scrollLeft += e.deltaY
         }
-      });
+      })
     },
   },
-};
+}
 </script>
 
 <style scoped>

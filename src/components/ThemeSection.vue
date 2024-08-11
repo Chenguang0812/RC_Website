@@ -25,30 +25,30 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import { usePreferredDark, useStorage } from '@vueuse/core';
+import { ref, onMounted } from 'vue'
+import { usePreferredDark, useStorage } from '@vueuse/core'
 
-const preferredDark = usePreferredDark();
-const theme = useStorage('theme', preferredDark.value ? 'dark' : 'light');
-const isDarkMode = ref(theme.value === 'dark');
-const mounted = ref(false);
+const preferredDark = usePreferredDark()
+const theme = useStorage('theme', preferredDark.value ? 'dark' : 'light')
+const isDarkMode = ref(theme.value === 'dark')
+const mounted = ref(false)
 
 const setThemeClass = () => {
   if (isDarkMode.value) {
-    document.documentElement.classList.add('dark');
+    document.documentElement.classList.add('dark')
   } else {
-    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.remove('dark')
   }
-};
+}
 
 onMounted(() => {
-  mounted.value = true;
-  setThemeClass();
-});
+  mounted.value = true
+  setThemeClass()
+})
 
 const toggleTheme = () => {
-  theme.value = theme.value === 'dark' ? 'light' : 'dark';
-  isDarkMode.value = theme.value === 'dark';
-  setThemeClass();
-};
+  theme.value = theme.value === 'dark' ? 'light' : 'dark'
+  isDarkMode.value = theme.value === 'dark'
+  setThemeClass()
+}
 </script>

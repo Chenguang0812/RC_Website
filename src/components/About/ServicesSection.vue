@@ -3,7 +3,9 @@
   <!-- 主容器：設置整體布局和樣式 -->
   <div class="my-12 bg-white py-16 rounded-lg shadow-xl overflow-hidden">
     <!-- 標題：顯示 "我們的服務" -->
-    <h2 class="text-4xl font-bold mb-12 text-[#E25353] text-center">我們的服務</h2>
+    <h2 class="text-4xl font-bold mb-12 text-[#E25353] text-center">
+      我們的服務
+    </h2>
     <!-- 服務卡片網格：根據屏幕大小調整列數 -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
       <!-- 服務卡片：使用 v-for 遍歷 services 數組 -->
@@ -33,40 +35,40 @@
 
 <script>
 export default {
-  name: "ServicesSection",
+  name: 'ServicesSection',
   data() {
     return {
       services: [
         {
           id: 1,
-          name: "影片剪輯",
-          description: "專業的影片剪輯服務，為您的作品賦予生命力。",
-          icon: "/trim.png",
+          name: '影片剪輯',
+          description: '專業的影片剪輯服務，為您的作品賦予生命力。',
+          icon: '/trim.png',
         },
         {
           id: 2,
-          name: "特效製作",
-          description: "高品質的視覺特效，讓您的影片更具吸引力。",
-          icon: "/magic-wand.png",
+          name: '特效製作',
+          description: '高品質的視覺特效，讓您的影片更具吸引力。',
+          icon: '/magic-wand.png',
         },
         {
           id: 3,
-          name: "後期製作",
-          description: "全方位的後期製作服務，為您的專案錦上添花。",
-          icon: "/video.png",
+          name: '後期製作',
+          description: '全方位的後期製作服務，為您的專案錦上添花。',
+          icon: '/video.png',
         },
       ],
-    };
+    }
   },
   mounted() {
     // 組件掛載後添加滾動動畫
-    this.addScrollAnimation();
+    this.addScrollAnimation()
   },
   methods: {
     // 添加滾動動畫方法
     addScrollAnimation() {
       // 選擇所有服務卡片元素
-      const cards = document.querySelectorAll(".service-card");
+      const cards = document.querySelectorAll('.service-card')
       // 創建 Intersection Observer 實例
       const observer = new IntersectionObserver(
         (entries) => {
@@ -74,23 +76,23 @@ export default {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               // 當卡片進入視窗時，添加動畫類
-              entry.target.classList.add("animate");
+              entry.target.classList.add('animate')
             } else {
               // 當卡片離開視窗時，移除動畫類
-              entry.target.classList.remove("animate");
+              entry.target.classList.remove('animate')
             }
-          });
+          })
         },
-        { threshold: 0.1 }
-      ); // 設置觸發閾值為 10% 可見
+        { threshold: 0.1 },
+      ) // 設置觸發閾值為 10% 可見
 
       // 對每個卡片添加觀察
       cards.forEach((card) => {
-        observer.observe(card);
-      });
+        observer.observe(card)
+      })
     },
   },
-};
+}
 </script>
 
 <style scoped>

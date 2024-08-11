@@ -1,6 +1,8 @@
 <template>
   <div class="my-12 p-4 sm:p-8 bg-white">
-    <h2 class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-16 text-[#E25353] text-center">
+    <h2
+      class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-16 text-[#E25353] text-center"
+    >
       關於我們
     </h2>
 
@@ -24,7 +26,9 @@
               class="w-5/12 py-4"
               :class="[index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left']"
             >
-              <h3 class="text-3xl font-bold mb-2 text-[#E25353]">{{ event.date }}</h3>
+              <h3 class="text-3xl font-bold mb-2 text-[#E25353]">
+                {{ event.date }}
+              </h3>
               <p class="text-xl text-gray-600">{{ event.description }}</p>
             </div>
             <div class="w-2/12 flex justify-center items-center relative">
@@ -48,17 +52,25 @@
         <div
           class="diamond absolute left-0 top-0 w-6 h-6 bg-[#E25353] rotate-45 transform -translate-x-1/2 -translate-y-1/2"
         ></div>
-        <div class="timeline-line absolute left-0 top-0 bottom-0 w-px bg-[#E25353]"></div>
+        <div
+          class="timeline-line absolute left-0 top-0 bottom-0 w-px bg-[#E25353]"
+        ></div>
         <div class="timeline-items space-y-8">
           <div
             v-for="(item, index) in timeline"
             :key="index"
             class="timeline-item relative pl-8 transform transition-all duration-500 ease-out"
-            :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'"
+            :class="
+              isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-16'
+            "
             :style="{ transitionDelay: `${index * 200}ms` }"
           >
             <div class="timeline-content">
-              <h3 class="text-xl font-bold text-[#E25353] mb-2">{{ item.date }}</h3>
+              <h3 class="text-xl font-bold text-[#E25353] mb-2">
+                {{ item.date }}
+              </h3>
               <p class="text-gray-600">{{ item.description }}</p>
             </div>
             <div
@@ -73,63 +85,65 @@
 
 <script>
 export default {
-  name: "ResponsiveTimeline",
+  name: 'ResponsiveTimeline',
   data() {
     return {
       timeline: [
         {
-          date: "企業理念",
-          description: "用創意打造新媒體高峰，為每位客戶創造獨一無二的影片品質",
+          date: '企業理念',
+          description: '用創意打造新媒體高峰，為每位客戶創造獨一無二的影片品質',
         },
         {
-          date: "經營理念",
+          date: '經營理念',
           description:
-            "精益求精，貫徹責任。遇到挑戰愈發堅強精神，遵守時間觀念，獲得顧客之信賴",
+            '精益求精，貫徹責任。遇到挑戰愈發堅強精神，遵守時間觀念，獲得顧客之信賴',
         },
         {
-          date: "誠信正直",
+          date: '誠信正直',
           description:
-            "真誠對待每位員工、客戶。我們只負責的，只做對的事。誠中同業者，公平且合理的競爭",
+            '真誠對待每位員工、客戶。我們只負責的，只做對的事。誠中同業者，公平且合理的競爭',
         },
         {
-          date: "創意影片交給專業",
-          description: "維持品質是基本，創意是專業的堅持",
+          date: '創意影片交給專業',
+          description: '維持品質是基本，創意是專業的堅持',
         },
         {
-          date: "與客戶友善溝通",
-          description: "客戶是我們的夥伴，維護與客戶的良好關係，是互相成長的關鍵",
+          date: '與客戶友善溝通',
+          description:
+            '客戶是我們的夥伴，維護與客戶的良好關係，是互相成長的關鍵',
         },
       ],
       isVisible: false,
-    };
+    }
   },
   mounted() {
-    window.addEventListener("scroll", this.checkVisibility);
-    this.checkVisibility();
+    window.addEventListener('scroll', this.checkVisibility)
+    this.checkVisibility()
   },
   beforeUnmount() {
-    window.removeEventListener("scroll", this.checkVisibility);
+    window.removeEventListener('scroll', this.checkVisibility)
   },
   methods: {
     checkVisibility() {
       const element =
         window.innerWidth >= 640
           ? this.$refs.desktopTimelineWrapper
-          : this.$refs.mobileTimelineWrapper;
+          : this.$refs.mobileTimelineWrapper
       if (element) {
-        const rect = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        const rect = element.getBoundingClientRect()
+        const windowHeight =
+          window.innerHeight || document.documentElement.clientHeight
         if (rect.top <= windowHeight && rect.bottom >= 0) {
-          this.isVisible = true;
-          element.classList.add("animate");
+          this.isVisible = true
+          element.classList.add('animate')
         } else {
-          this.isVisible = false;
-          element.classList.remove("animate");
+          this.isVisible = false
+          element.classList.remove('animate')
         }
       }
     },
   },
-};
+}
 </script>
 
 <style scoped>

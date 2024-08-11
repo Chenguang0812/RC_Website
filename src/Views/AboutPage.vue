@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-primary-white-100 dark:bg-primary-black-100 min-h-screen text-primary-white-100">
+  <div
+    class="bg-primary-white-100 dark:bg-primary-black-100 min-h-screen text-primary-white-100"
+  >
     <NavbarSection />
     <div class="container mx-auto px-4 py-8">
       <TimelineSection />
@@ -25,6 +27,6 @@ export default {
     TeamMembers,
     ServicesSection,
     AchievementsSection,
-  }
+  },
 }
 </script>

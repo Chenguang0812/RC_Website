@@ -15,7 +15,7 @@
         v-for="achievement in achievements"
         :key="achievement.id"
         class="text-center achievement-item"
-        :class="{ 'animate': isVisible }"
+        :class="{ animate: isVisible }"
       >
         <!-- 圓形背景 -->
         <div
@@ -25,7 +25,8 @@
           <div class="achievement-circle" />
           <!-- 數值顯示 -->
           <div class="text-5xl font-bold text-white relative z-10">
-            <span>{{ achievement.currentValue }}</span>{{ achievement.suffix }}
+            <span>{{ achievement.currentValue }}</span
+            >{{ achievement.suffix }}
           </div>
         </div>
         <!-- 成就標籤 -->
@@ -49,8 +50,8 @@ export default {
         { id: 1, value: 500, suffix: '+', label: '完成專案', currentValue: 0 },
         { id: 2, value: 3, suffix: '+', label: '行業經驗', currentValue: 0 },
         { id: 3, value: 50, suffix: '+', label: '長期客戶', currentValue: 0 },
-        { id: 4, value: 10, suffix: '+', label: '員工人數', currentValue: 0 }
-      ]
+        { id: 4, value: 10, suffix: '+', label: '員工人數', currentValue: 0 },
+      ],
     }
   },
   mounted() {
@@ -85,7 +86,8 @@ export default {
       if (!this.$refs.achievementsSection) return
 
       const rect = this.$refs.achievementsSection.getBoundingClientRect()
-      const isCurrentlyVisible = rect.top < window.innerHeight && rect.bottom >= 0
+      const isCurrentlyVisible =
+        rect.top < window.innerHeight && rect.bottom >= 0
 
       if (isCurrentlyVisible && !this.isVisible) {
         this.isVisible = true
@@ -94,12 +96,12 @@ export default {
         })
       } else if (!isCurrentlyVisible && this.isVisible) {
         this.isVisible = false
-        this.achievements.forEach(achievement => {
+        this.achievements.forEach((achievement) => {
           achievement.currentValue = 0
         })
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -122,7 +124,11 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
   animation: circleAnimation 1.5s ease-out forwards;
 }
 
@@ -130,7 +136,9 @@ export default {
 .achievement-item {
   transform: translateY(50px);
   opacity: 0;
-  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition:
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* 成就項目動畫後樣式 */

@@ -1,7 +1,11 @@
 <template>
   <div class="h-16" />
   <div class="relative w-full h-[78vh]">
-    <img src="/premiere.png" alt="Premiere Image" class="w-full h-full object-cover" />
+    <img
+      src="/premiere.png"
+      alt="Premiere Image"
+      class="w-full h-full object-cover"
+    />
     <div class="absolute inset-0 bg-[#44474B] bg-opacity-60" />
     <div
       class="absolute inset-0 text-[#F0F0F0] flex flex-col items-center justify-center px-4"
@@ -11,10 +15,14 @@
       >
         RC Studio
       </h1>
-      <p class="font-semibold text-2xl sm:text-2xl mt-4 text-center animate-fade-in-up">
+      <p
+        class="font-semibold text-2xl sm:text-2xl mt-4 text-center animate-fade-in-up"
+      >
         Re-Created it.
       </p>
-      <p class="font-semibold text-lg sm:text-lg mt-4 text-center animate-fade-in-up">
+      <p
+        class="font-semibold text-lg sm:text-lg mt-4 text-center animate-fade-in-up"
+      >
         專業的影片剪輯工作室
       </p>
       <button
@@ -31,14 +39,14 @@
 export default {
   methods: {
     scrollToContent() {
-      const windowHeight = window.innerHeight;
+      const windowHeight = window.innerHeight
       window.scrollTo({
         top: windowHeight,
-        behavior: "smooth",
-      });
+        behavior: 'smooth',
+      })
     },
   },
-};
+}
 </script>
 
 <style scoped>
@@ -75,6 +83,6 @@ export default {
 }
 
 .font-pacifico {
-  font-family: "Allura", cursive;
+  font-family: 'Allura', cursive;
 }
 </style>

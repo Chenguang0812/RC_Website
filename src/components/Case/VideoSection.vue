@@ -37,7 +37,9 @@
           :key="index"
           class="video-card transform transition duration-300 hover:rotate-2 hover:-translate-y-2"
         >
-          <div class="rounded-lg shadow-lg bg-white max-w-sm overflow-hidden group">
+          <div
+            class="rounded-lg shadow-lg bg-white max-w-sm overflow-hidden group"
+          >
             <!-- 視頻嵌入區域 -->
             <div class="relative pb-[56.25%] h-0 overflow-hidden">
               <iframe
@@ -90,7 +92,7 @@
 
 <script>
 export default {
-  name: "VideoColumn",
+  name: 'VideoColumn',
   data() {
     return {
       // 存儲鼠標位置
@@ -99,103 +101,111 @@ export default {
       particles: [],
       videos: [
         {
-          link:
-            "https://www.youtube.com/embed/k2_3Ka3_IEw?si=ZD0XGX17JLe-gRCI&amp;controls=0",
-          title: "反骨柔柔",
-          Description: "公開超渣前男友!!各位姐妹小心👻手機裡竟然都是跟別人的影片...😨",
-          button: "https://www.youtube.com/watch?v=k2_3Ka3_IEw",
+          link: 'https://www.youtube.com/embed/k2_3Ka3_IEw?si=ZD0XGX17JLe-gRCI&amp;controls=0',
+          title: '反骨柔柔',
+          Description:
+            '公開超渣前男友!!各位姐妹小心👻手機裡竟然都是跟別人的影片...😨',
+          button: 'https://www.youtube.com/watch?v=k2_3Ka3_IEw',
         },
         {
-          link:
-            "https://www.youtube.com/embed/LWL2i_uW7do?si=gLJPmd4DgZx3sdaT&amp;controls=0",
-          title: "雪兔",
-          Description: "【空之要塞：啟航】創新跑酷與射擊玩法一定要來體驗！！",
-          button: "https://www.youtube.com/watch?v=LWL2i_uW7do",
+          link: 'https://www.youtube.com/embed/LWL2i_uW7do?si=gLJPmd4DgZx3sdaT&amp;controls=0',
+          title: '雪兔',
+          Description: '【空之要塞：啟航】創新跑酷與射擊玩法一定要來體驗！！',
+          button: 'https://www.youtube.com/watch?v=LWL2i_uW7do',
         },
         {
-          link:
-            "https://www.youtube.com/embed/7H7rtiTh4m0?si=_-BjDHIiJbh-Iez7&amp;controls=0",
-          title: "小妞",
-          Description: "我被床戰隊友陷害了，哈哈哈哈哈哈哈哈哈哈哈哈哈",
-          button: "https://www.youtube.com/watch?v=7H7rtiTh4m0",
+          link: 'https://www.youtube.com/embed/7H7rtiTh4m0?si=_-BjDHIiJbh-Iez7&amp;controls=0',
+          title: '小妞',
+          Description: '我被床戰隊友陷害了，哈哈哈哈哈哈哈哈哈哈哈哈哈',
+          button: 'https://www.youtube.com/watch?v=7H7rtiTh4m0',
         },
         {
-          link:
-            "https://www.youtube.com/embed/_HHXvDfXfug?si=Pl1WQDx1zsXWFPNQ&amp;controls=0",
-          title: "ROALX",
-          Description: "你可以只用輪盤上轉到的槍枝獲得勝利嗎？？？？",
-          button: "https://www.youtube.com/watch?v=_HHXvDfXfug",
+          link: 'https://www.youtube.com/embed/_HHXvDfXfug?si=Pl1WQDx1zsXWFPNQ&amp;controls=0',
+          title: 'ROALX',
+          Description: '你可以只用輪盤上轉到的槍枝獲得勝利嗎？？？？',
+          button: 'https://www.youtube.com/watch?v=_HHXvDfXfug',
         },
         {
-          link:
-            "https://www.youtube.com/embed/fzngN3zOWHU?si=iymtoDCF0haqdFBS&amp;controls=0",
-          title: "RY",
-          Description: "【RY】不存在的樓層？嚇到螢幕都在抖！| 蛋仔派對",
-          button: "https://www.youtube.com/watch?v=fzngN3zOWHU",
+          link: 'https://www.youtube.com/embed/fzngN3zOWHU?si=iymtoDCF0haqdFBS&amp;controls=0',
+          title: 'RY',
+          Description: '【RY】不存在的樓層？嚇到螢幕都在抖！| 蛋仔派對',
+          button: 'https://www.youtube.com/watch?v=fzngN3zOWHU',
         },
         {
-          link:
-            "https://www.youtube.com/embed/0iDJ7agNpsc?si=D3vJE5v8F8-g04mH&amp;controls=0",
-          title: "WuWei無為",
-          Description: "為什麼這遊戲還沒倒！混亂不堪但又好笑好玩的環境就是我們要的啦！",
-          button: "https://www.youtube.com/watch?v=0iDJ7agNpsc",
+          link: 'https://www.youtube.com/embed/0iDJ7agNpsc?si=D3vJE5v8F8-g04mH&amp;controls=0',
+          title: 'WuWei無為',
+          Description:
+            '為什麼這遊戲還沒倒！混亂不堪但又好笑好玩的環境就是我們要的啦！',
+          button: 'https://www.youtube.com/watch?v=0iDJ7agNpsc',
         },
       ],
       // 定義浮動元素和背景元素
       floatingElements: [
-        "🎭",
-        "🎬",
-        "🎥",
-        "📽️",
-        "🍿",
-        "🎞️",
-        "📺",
-        "🎙️",
-        "🎵",
-        "🦄",
-        "✨",
-        "💫",
+        '🎭',
+        '🎬',
+        '🎥',
+        '📽️',
+        '🍿',
+        '🎞️',
+        '📺',
+        '🎙️',
+        '🎵',
+        '🦄',
+        '✨',
+        '💫',
       ],
-      backgroundElements: ["🎈", "🎊", "🎉", "🌟", "🎀", "🧨", "🪅", "🎇", "🎆"],
-    };
+      backgroundElements: [
+        '🎈',
+        '🎊',
+        '🎉',
+        '🌟',
+        '🎀',
+        '🧨',
+        '🪅',
+        '🎇',
+        '🎆',
+      ],
+    }
   },
   mounted() {
     // 組件掛載時創建粒子
-    this.createParticles();
+    this.createParticles()
   },
   methods: {
     // 處理鼠標移動事件
     handleMouseMove(event) {
-      const rect = this.$refs.container.getBoundingClientRect();
+      const rect = this.$refs.container.getBoundingClientRect()
       this.mousePosition = {
         x: event.clientX - rect.left,
         y: event.clientY - rect.top,
-      };
+      }
     },
     // 創建浮動粒子
     createParticles() {
-      const allElements = [...this.floatingElements, ...this.backgroundElements];
+      const allElements = [...this.floatingElements, ...this.backgroundElements]
       for (let i = 0; i < 50; i++) {
         this.particles.push({
           x: Math.random() * 100,
           y: Math.random() * 100,
           icon: allElements[Math.floor(Math.random() * allElements.length)],
           speed: 0.5 + Math.random() * 1,
-        });
+        })
       }
     },
     // 計算粒子樣式
     getParticleStyle(particle) {
       const dx =
-        (this.mousePosition.x / this.$refs.container.offsetWidth) * 100 - particle.x;
+        (this.mousePosition.x / this.$refs.container.offsetWidth) * 100 -
+        particle.x
       const dy =
-        (this.mousePosition.y / this.$refs.container.offsetHeight) * 100 - particle.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-      const maxDistance = Math.sqrt(10000); // 最大距離（100^2 + 100^2）的平方根
-      const scale = 1 - distance / maxDistance; // 距離越近，scale越大
+        (this.mousePosition.y / this.$refs.container.offsetHeight) * 100 -
+        particle.y
+      const distance = Math.sqrt(dx * dx + dy * dy)
+      const maxDistance = Math.sqrt(10000) // 最大距離（100^2 + 100^2）的平方根
+      const scale = 1 - distance / maxDistance // 距離越近，scale越大
 
       // 稍微增加移動幅度
-      const moveFactor = 1.5;
+      const moveFactor = 1.5
 
       return {
         left: `${particle.x}%`,
@@ -204,10 +214,10 @@ export default {
           dy * scale * moveFactor
         }px) scale(${0.5 + scale * 0.5})`,
         opacity: 0.3 + scale * 0.7,
-      };
+      }
     },
   },
-};
+}
 </script>
 
 <style scoped>
@@ -256,7 +266,9 @@ export default {
 
 .animate-glitch::after {
   left: -2px;
-  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  text-shadow:
+    -2px 0 #00fff9,
+    2px 2px #ff00c1;
   animation: glitch-anim2 1s infinite linear alternate-reverse;
 }
 

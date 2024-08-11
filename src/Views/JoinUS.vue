@@ -7,13 +7,13 @@
 
 <script>
 import NavbarSection from '@/components/NavbarSection.vue'
-import JoinSection from "@/components/Join/JoinUS.vue"
+import JoinSection from '@/components/Join/JoinUS.vue'
 
 export default {
   name: 'JoinUS',
   components: {
     NavbarSection,
-    JoinSection
-  }
+    JoinSection,
+  },
 }
 </script>
