@@ -3,8 +3,7 @@ import HomeView from '../Views/HomeView.vue';
 import AboutPage from '../Views/AboutPage.vue';
 import CasePage from '../Views/CasePage.vue'
 import JoinUS from '../Views/JoinUS.vue';
-import ContactUS from '../Views/ContactUS.vue'
-import No from '../Views/No.vue'
+import No from '../Views/no.vue'
 
 const routes = [
   {
@@ -28,9 +27,9 @@ const routes = [
     component: JoinUS
   },
   {
-    path: '/ContactUS',
+    path: '/contactUS',
     name: 'ContactUS',
-    component: ContactUS
+    component: () => import('../Views/ContactUS.vue') // 确保路径正确
   },
   {
     path: '/No',

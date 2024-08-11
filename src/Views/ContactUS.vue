@@ -1,17 +1,14 @@
 <template>
-  <div class="bg-[#E3E3E3] min-h-screen text-[#FFFFFF]">
-    <NavbarSection />
-    <Contact />
-  </div>
-  <div />
+  <NavbarSection />
+  <Contact />
 </template>
 
 <script>
 import NavbarSection from "@/components/NavbarSection.vue";
-import Contact from "@/components/ContactUS/Contact.vue";
+import Contact from "@/components/ContactUS/666.vue";
 
 export default {
-  name: "Contact",
+  name: "AboutPage",
   components: {
     NavbarSection,
     Contact,

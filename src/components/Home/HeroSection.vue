@@ -1,13 +1,11 @@
 <template>
   <div class="h-16" />
   <div class="relative w-full h-[78vh]">
-    <img
-      src="/premiere.png"
-      alt="Premiere Image"
-      class="w-full h-full object-cover"
-    >
+    <img src="/premiere.png" alt="Premiere Image" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-[#44474B] bg-opacity-60" />
-    <div class="absolute inset-0 text-[#F0F0F0] flex flex-col items-center justify-center px-4">
+    <div
+      class="absolute inset-0 text-[#F0F0F0] flex flex-col items-center justify-center px-4"
+    >
       <h1
         class="font-pacifico font-semibold text-xl sm:text-5xl md:text-6xl lg:text-7xl text-center animate-fade-in-down"
       >
@@ -36,11 +34,11 @@ export default {
       const windowHeight = window.innerHeight;
       window.scrollTo({
         top: windowHeight,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -77,6 +75,6 @@ export default {
 }
 
 .font-pacifico {
-  font-family: 'Allura', cursive;
+  font-family: "Allura", cursive;
 }
 </style>

@@ -153,7 +153,7 @@ export default {
         },
         {
           key: "skills",
-          label: "專業技能（可複選）",
+          label: "專業技能（可複選）（其他請填在自我介紹）",
           component: "checkbox",
           options: [
             { value: "Office", label: "Office" },

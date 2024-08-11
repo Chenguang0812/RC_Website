@@ -74,8 +74,8 @@ export default {
 
         {
           id: 7,
-          name: "瑞克搖",
-          image: "/瑞克.jpg",
+          name: "我是一隻浣熊",
+          image: "/浣熊.png",
           url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
         },
         {
