@@ -7,14 +7,14 @@
       class="absolute inset-0 text-[#F0F0F0] flex flex-col items-center justify-center px-4"
     >
       <h1
-        class="font-pacifico font-semibold text-xl sm:text-5xl md:text-6xl lg:text-7xl text-center animate-fade-in-down"
+        class="font-pacifico font-semibold text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-center animate-fade-in-down"
       >
         RC Studio
       </h1>
-      <p class="font-semibold text-3xl sm:text-2xl mt-4 text-center animate-fade-in-up">
+      <p class="font-semibold text-2xl sm:text-2xl mt-4 text-center animate-fade-in-up">
         Re-Created it.
       </p>
-      <p class="font-semibold text-xl sm:text-lg mt-4 text-center animate-fade-in-up">
+      <p class="font-semibold text-lg sm:text-lg mt-4 text-center animate-fade-in-up">
         專業的影片剪輯工作室
       </p>
       <button
