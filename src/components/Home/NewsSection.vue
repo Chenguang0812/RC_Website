@@ -56,7 +56,7 @@ export default {
           id: 1,
           title: "最新》林德豐一部片剪了27天，跳抖肩舞懺悔。",
           image: "/道歉.png",
-          date: "2024年8月3日 週六 下午2:00",
+          date: "2024年8月5日 週六 下午1:15",
           link:
             "https://drive.google.com/file/d/1hi5-lJv-x7WlovFzi7CSeaU6G1PQWe9K/view?usp=sharing",
         },
