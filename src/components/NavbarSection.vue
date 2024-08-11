@@ -3,48 +3,28 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex-shrink-0 w-1/4">
-          <button @click="navigateTo('/')" class="text-[#44474B] font-bold text-xl">
+          <button @click="navigateTo('/')" class="fixed left-3 top-5 text-[#44474B] font-bold text-xl">
             {{ title }}
           </button>
         </div>
         <div class="hidden md:flex flex-grow justify-center w-1/2">
           <div class="flex items-center justify-center space-x-4">
-            <button
-              v-for="(item, index) in navItems"
-              :key="item"
-              @click="navigateTo(navPaths[index])"
-              class="text-[#44474B] hover:bg-gray-100 px-3 py-2 rounded-md text-lg font-bold"
-            >
+            <button v-for="(item, index) in navItems" :key="item" @click="navigateTo(navPaths[index])"
+              class="text-[#44474B] hover:bg-gray-100 px-3 py-2 rounded-md text-lg font-bold">
               {{ item }}
             </button>
           </div>
         </div>
         <div class="flex-shrink-0 w-1/4 flex justify-end">
-          <button
-            @click="toggleNavbar"
-            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#44474B] hover:text-[#44474B] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-          >
+          <button @click="toggleNavbar"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#44474B] hover:text-[#44474B] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
             <span class="sr-only">Open main menu</span>
-            <svg
-              :class="{ 'hidden': isOpen, 'block': !isOpen }"
-              class="h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
+            <svg :class="{ 'hidden': isOpen, 'block': !isOpen }" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <svg
-              :class="{ 'block': isOpen, 'hidden': !isOpen }"
-              class="h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
+            <svg :class="{ 'block': isOpen, 'hidden': !isOpen }" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -54,12 +34,8 @@
 
     <div :class="{ 'block': isOpen, 'hidden': !isOpen }" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <button
-          v-for="(item, index) in navItems"
-          :key="item"
-          @click="navigateTo(navPaths[index])"
-          class="text-[#44474B] hover:bg-gray-100 block px-3 py-2 rounded-md text-base w-full text-left"
-        >
+        <button v-for="(item, index) in navItems" :key="item" @click="navigateTo(navPaths[index])"
+          class="text-[#44474B] hover:bg-gray-100 block px-3 py-2 rounded-md text-base w-full text-left">
           {{ item }}
         </button>
       </div>
@@ -73,8 +49,8 @@ export default {
     return {
       isOpen: false,
       title: 'RC Studio',
-      navItems: ['首頁', '關於我們', '合作案例', '加入我們', '聯絡我們'],
-      navPaths: ['/', '/about', '/case', '/joinUS', '/contact']
+      navItems: ['首頁', '關於我們', '整合行銷', '加入我們', '聯絡我們'],
+      navPaths: ['/', '/about', '/case', '/joinUS', '/contactUS']
     };
   },
   methods: {

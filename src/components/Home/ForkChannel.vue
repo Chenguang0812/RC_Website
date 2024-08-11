@@ -8,20 +8,11 @@
         </h2>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <a
-          v-for="channel in visibleChannels"
-          :key="channel.id"
-          v-scroll-animation
-          :href="channel.url"
-          target="_blank"
+        <a v-for="channel in visibleChannels" :key="channel.id" v-scroll-animation :href="channel.url" target="_blank"
           rel="noopener noreferrer"
-          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-500 aspect-square flex flex-col items-center justify-center p-6 opacity-0 translate-y-10"
-        >
-          <img
-            :src="channel.image"
-            :alt="channel.name"
-            class="w-full h-auto max-w-[150px] max-h-[150px] rounded-lg mb-6"
-          >
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-500 aspect-square flex flex-col items-center justify-center p-6 opacity-0 translate-y-10">
+          <img :src="channel.image" :alt="channel.name"
+            class="w-full h-auto max-w-[150px] max-h-[150px] rounded-lg mb-6">
           <p class="text-center font-bold text-xl md:text-2xl">{{ channel.name }}</p>
         </a>
       </div>
@@ -38,7 +29,8 @@ export default {
         { id: 1, name: '亦凌YiLing', image: '/亦凌.jpg', url: 'https://www.youtube.com/@10_YiLing' },
         { id: 2, name: '實況Online', image: '/實況Online.jpg', url: 'https://www.youtube.com/@RCStudio' },
         { id: 3, name: 'BANWE', image: '/BANWE.jpg', url: 'https://www.youtube.com/@BANWE' },
-        { id: 4, name: '玫瑰雲端', image: '/玫瑰雲端.jpg', url: 'https://www.youtube.com/@RC_Drive' }
+        { id: 4, name: '玫瑰雲端', image: '/玫瑰雲端.jpg', url: 'https://www.youtube.com/@RC_Drive' },
+
       ]
     }
   },

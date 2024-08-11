@@ -1,5 +1,5 @@
 <template>
-  <div class="h-16"/>
+  <div class="h-16" />
   <div class="join-component relative bg-gradient-to-br from-[#F0F0F0] to-[#E3E3E3] text-[#0C1014] overflow-hidden">
     <ParticleGround />
     <div class="container mx-auto px-4 py-24 relative z-10">
@@ -13,61 +13,32 @@
       </h2>
 
       <div
-        class="max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-3xl transform hover:scale-[1.02] relative z-10"
-      >
+        class="max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden transition-all duration-500 hover:shadow-3xl transform hover:scale-[1.02] relative z-10">
         <div class="p-12 space-y-8">
-          <form
-            class="space-y-8"
-            @submit.prevent="submitForm"
-          >
-            <div
-              v-for="question in questions"
-              :key="question.key"
-              class="space-y-2"
-            >
+          <form class="space-y-8" @submit.prevent="submitForm">
+            <div v-for="question in questions" :key="question.key" class="space-y-2">
               <label class="block text-lg font-medium text-[#0C1014]">
                 {{ question.label }}{{ question.required ? ' *' : '' }}
               </label>
               <div v-if="question.component === 'textarea'">
-                <textarea
-                  v-model="form[question.key]"
-                  :rows="question.rows"
-                  :class="inputClasses"
-                />
+                <textarea v-model="form[question.key]" :rows="question.rows" :class="inputClasses" />
               </div>
               <div v-if="question.component === 'select'">
-                <select
-                  v-model="form[question.key]"
-                  :class="inputClasses"
-                >
-                  <option
-                    value=""
-                    disabled
-                  >
+                <select v-model="form[question.key]" :class="inputClasses">
+                  <option value="" disabled>
                     請選擇
                   </option>
-                  <option
-                    v-for="option in question.options"
-                    :key="option.value"
-                    :value="option.value"
-                  >
+                  <option v-for="option in question.options" :key="option.value" :value="option.value">
                     {{ option.label }}
                   </option>
                 </select>
               </div>
               <div v-if="question.component === 'checkbox'">
                 <div class="space-y-1">
-                  <label
-                    v-for="option in question.options"
-                    :key="option.value"
-                    class="inline-flex items-center mr-6 mb-2"
-                  >
-                    <input
-                      v-model="form[question.key]"
-                      type="checkbox"
-                      :value="option.value"
-                      class="form-checkbox h-5 w-5 text-[#E25353] border-[#E25353]"
-                    >
+                  <label v-for="option in question.options" :key="option.value"
+                    class="inline-flex items-center mr-6 mb-2">
+                    <input v-model="form[question.key]" type="checkbox" :value="option.value"
+                      class="form-checkbox h-5 w-5 text-[#E25353] border-[#E25353]">
                     <span class="ml-2 text-base">{{ option.label }}</span>
                   </label>
                 </div>
@@ -75,10 +46,8 @@
             </div>
 
             <div class="flex items-center justify-center pt-6">
-              <button
-                type="submit"
-                class="px-8 py-4 bg-[#E25353] text-white text-lg font-semibold rounded-md shadow-md hover:bg-[#E99797] focus:outline-none focus:ring-2 focus:ring-[#E25353] focus:ring-opacity-50 transform hover:scale-110 transition-all duration-300"
-              >
+              <button type="submit"
+                class="px-8 py-4 bg-[#E25353] text-white text-lg font-semibold rounded-md shadow-md hover:bg-[#E99797] focus:outline-none focus:ring-2 focus:ring-[#E25353] focus:ring-opacity-50 transform hover:scale-110 transition-all duration-300">
                 提交申請
               </button>
             </div>
@@ -152,7 +121,7 @@ export default {
   },
   methods: {
     async submitForm() {
-      const webhookUrl = 'https://discordapp.com/api/webhooks/1271519682020773958/r7p1FxLu0N1plBiJ54tOHbEkPnT8XwpGTrc6EQCpq49m7rNodHQWAHbYDK59Agk0HziR';
+      const webhookUrl = 'https://discordapp.com/api/webhooks/1271524771615477894/X_B-9Y2c-QiOWVE-c1BrAGn0vQfmb_utN6gG8QQTvkMy_WT9IgJT5_WFBqGcUjdaef-W';
 
       // 構建 Discord 消息的格式
       const message = {

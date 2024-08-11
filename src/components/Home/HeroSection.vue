@@ -4,7 +4,8 @@
     <img src="/premiere.png" alt="Premiere Image" class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-[#44474B] bg-opacity-60" />
     <div class="absolute inset-0 text-[#F0F0F0] flex flex-col items-center justify-center px-4">
-      <h1 class="font-semibold text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-center animate-fade-in-down">
+      <h1
+        class="font-pacifico font-semibold text-xl sm:text-5xl md:text-6xl lg:text-7xl text-center animate-fade-in-down">
         RC Studio
       </h1>
       <p class="font-semibold text-3xl sm:text-2xl mt-4 text-center animate-fade-in-up">
@@ -69,5 +70,9 @@ export default {
 
 .animate-fade-in-up {
   animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.font-pacifico {
+  font-family: 'Allura', cursive;
 }
 </style>

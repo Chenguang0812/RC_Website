@@ -10,16 +10,10 @@
         </div>
       </div>
       <div class="space-y-6">
-        <div
-          v-for="item in newsItems"
-          :key="item.id"
-          v-scroll-animation
-          class="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-500 opacity-0 translate-y-10"
-        >
-          <button
-            class="w-full text-left hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#E99797]"
-            @click="navigateTo(item.path)"
-          >
+        <div v-for="item in newsItems" :key="item.id" v-scroll-animation
+          class="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-500 opacity-0 translate-y-10">
+          <a :href="item.link" target="_blank"
+            class="block w-full  text-left hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#E99797]">
             <div class="flex">
               <div class="flex-1 p-4">
                 <h3 class="text-xl font-semibold mb-2">
@@ -30,14 +24,10 @@
                 </p>
               </div>
               <div class="w-1/5 flex-shrink-0">
-                <img
-                  :src="item.image"
-                  :alt="item.title"
-                  class="w-full h-full object-cover"
-                >
+                <img :src="item.image" :alt="item.title" class="w-full h-full object-cover">
               </div>
             </div>
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -55,29 +45,24 @@ export default {
           title: '最新》林德豐一部片剪了27天，跳抖肩舞懺悔。',
           image: '/道歉.png',
           date: '2024年8月1日 週四 下午4:37',
-          path: '/news/new1'
+          link: 'https://drive.google.com/file/d/1hi5-lJv-x7WlovFzi7CSeaU6G1PQWe9K/view?usp=sharing'
         },
         {
           id: 2,
           title: '最新》林德豐新影片上線，揭示剪輯背後的辛酸。',
           image: '/小鬼風.png',
           date: '2024年8月2日 週五 上午10:15',
-          path: '/news/new2'
+          link: '#'
         },
         {
           id: 3,
           title: 'RC Studio擴大團隊，招募新人才。',
           image: '/阿烜.png',
           date: '2024年8月3日 週六 下午2:00',
-          path: '/news/new3'
+          link: 'https://rcstudio.tw/joinUS'
         }
       ]
     };
-  },
-  methods: {
-    navigateTo(path) {
-      this.$router.push(path);
-    }
   }
 };
 </script>
