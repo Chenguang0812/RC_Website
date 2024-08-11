@@ -17,26 +17,26 @@
                     <form class="space-y-8" @submit.prevent="submitForm">
                         <div class="form-group space-y-2">
                             名稱 *
-                            <input v-model="form.name" id="name" type="text" required
+                            <input id="name" v-model="form.name" type="text" required
                                 class="mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-[#0C1014] text-lg p-3">
                         </div>
 
                         <div class="form-group space-y-2">
                             電子信箱 *
-                            <input v-model="form.email" id="email" type="email" required
+                            <input id="email" v-model="form.email" type="email" required
                                 class="mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-[#0C1014] text-lg p-3">
                         </div>
 
                         <div class="form-group space-y-2">
                             聯繫方式（電話、LINE、Discord）*
-                            <input v-model="form.phone" id="phone" type="tel" required
+                            <input id="phone" v-model="form.phone" type="tel" required
                                 class="mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-[#0C1014] text-lg p-3">
                         </div>
 
                         <div class="form-group space-y-2">
                             需求說明 *
-                            <textarea v-model="form.message" id="message" rows="4" required
-                                class="mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-[#0C1014] text-lg p-3"></textarea>
+                            <textarea id="message" v-model="form.message" rows="4" required
+                                class="mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-[#0C1014] text-lg p-3" />
                         </div>
 
                         <div class="flex items-center justify-center pt-6">

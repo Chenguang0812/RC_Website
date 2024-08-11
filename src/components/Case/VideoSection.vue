@@ -10,11 +10,11 @@
     </div>
 
     <!-- 標題 -->
-    <h2 class="text-4xl font-bold text-center text-white mb-12 relative z-10 animate-glitch" data-text="影視專欄">
+    <h2 class="text-4xl font-bold text-center text-white relative mb-3 z-10 animate-glitch" data-text="影視專欄">
       影視專欄
     </h2>
-    <h2 class="text-4xl font-bold text-center text-white mb-12 relative z-10 animate-glitch" data-text="影視專欄">
-      影視專欄
+    <h2 class="text-xl font-bold text-center text-white mb-12 relative z-10 ">
+      本月發燒XX部
     </h2>
     <!-- 內容容器 -->
     <div class="container mx-auto px-4 relative z-10">
