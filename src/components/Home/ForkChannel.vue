@@ -3,16 +3,23 @@
     <div class="max-w-6xl mx-auto">
       <div class="mb-8 flex items-center">
         <div class="w-2 h-8 bg-[#E25353] mr-4" />
-        <h2 class="font-bold text-4xl">
-          旗下頻道
-        </h2>
+        <h2 class="font-bold text-4xl">旗下頻道</h2>
       </div>
-      <div class="overflow-x-scroll custom-scrollbar" ref="channelContainer">
-        <div class="flex space-x-6 pb-4 inline-flex">
-          <a v-for="channel in channels" :key="channel.id" :href="channel.url" target="_blank" rel="noopener noreferrer"
-            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-500 flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-6">
-            <img :src="channel.image" :alt="channel.name"
-              class="w-full h-auto max-w-[150px] max-h-[150px] rounded-lg mb-6 object-cover">
+      <div ref="channelContainer" class="overflow-x-scroll custom-scrollbar">
+        <div class="flex space-x-6 pb-4">
+          <a
+            v-for="channel in channels"
+            :key="channel.id"
+            :href="channel.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-500 flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-6"
+          >
+            <img
+              :src="channel.image"
+              :alt="channel.name"
+              class="w-full h-auto max-w-[150px] max-h-[150px] rounded-lg mb-6 object-cover"
+            />
             <p class="text-center font-bold text-xl">{{ channel.name }}</p>
           </a>
         </div>
@@ -24,20 +31,61 @@
 
 <script>
 export default {
-  name: 'AffiliatedChannels',
+  name: "AffiliatedChannels",
   data() {
     return {
       channels: [
-        { id: 1, name: '亦凌YiLing', image: '/亦凌.jpg', url: 'https://www.youtube.com/@10_YiLing' },
-        { id: 2, name: '實況Online', image: '/實況Online.jpg', url: 'https://www.youtube.com/@RCStudio' },
-        { id: 3, name: 'BANWE', image: '/BANWE.jpg', url: 'https://www.youtube.com/@BANWE' },
-        { id: 4, name: '玫瑰雲端', image: '/玫瑰雲端.jpg', url: 'https://www.youtube.com/@RC_Drive' },
-        { id: 5, name: '尤教授的烤肉實驗室', image: '/烤肉.jpg', url: 'https://www.youtube.com/@holoXman/featured' },
-        { id: 6, name: 'BANWE的歌', image: '/BANWE的歌.jpg', url: 'https://www.youtube.com/watch?v=x0xpQMGGesg' },
-        { id: 7, name: '瑞克搖', image: '/瑞克.jpg', url: 'https://www.youtube.com/watch?v=xvFZjo5PgG0' },
-        { id: 8, name: '阿偉的狗', image: '/阿偉的狗.png', url: 'https://www.youtube.com/watch?v=09y0tPAeLG0' },
-      ]
-    }
+        {
+          id: 6,
+          name: "RC Studio工作室",
+          image: "/RC.jpg",
+          url: "https://www.youtube.com/@RC_Studio",
+        },
+        {
+          id: 1,
+          name: "亦凌YiLing",
+          image: "/亦凌.jpg",
+          url: "https://www.youtube.com/@10_YiLing",
+        },
+        {
+          id: 2,
+          name: "實況Online",
+          image: "/實況Online.jpg",
+          url: "https://www.youtube.com/@RCStudio",
+        },
+        {
+          id: 5,
+          name: "尤教授的烤肉實驗室",
+          image: "/烤肉.jpg",
+          url: "https://www.youtube.com/@holoXman/featured",
+        },
+        {
+          id: 3,
+          name: "BANWE",
+          image: "/BANWE.jpg",
+          url: "https://www.youtube.com/@BANWE",
+        },
+        {
+          id: 4,
+          name: "玫瑰雲端",
+          image: "/玫瑰雲端.jpg",
+          url: "https://www.youtube.com/@RC_Drive",
+        },
+
+        {
+          id: 7,
+          name: "瑞克搖",
+          image: "/瑞克.jpg",
+          url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+        },
+        {
+          id: 8,
+          name: "阿偉的狗",
+          image: "/阿偉的狗.png",
+          url: "https://www.youtube.com/watch?v=09y0tPAeLG0",
+        },
+      ],
+    };
   },
   mounted() {
     this.enableHorizontalScroll();
@@ -45,15 +93,15 @@ export default {
   methods: {
     enableHorizontalScroll() {
       const container = this.$refs.channelContainer;
-      container.addEventListener('wheel', (e) => {
+      container.addEventListener("wheel", (e) => {
         if (e.deltaY !== 0) {
           e.preventDefault();
           container.scrollLeft += e.deltaY;
         }
       });
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -74,7 +122,7 @@ export default {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #E25353;
+  background: #e25353;
   border-radius: 10px;
 }
 
@@ -85,6 +133,6 @@ export default {
 /* 針對Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #E25353 #f1f1f1;
+  scrollbar-color: #e25353 #f1f1f1;
 }
 </style>

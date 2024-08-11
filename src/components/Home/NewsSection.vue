@@ -9,12 +9,25 @@
           <div class="absolute bottom-0 right-0 w-full h-1 bg-[#E99797]" />
         </div>
       </div>
-      <div ref="newsContainer" class="overflow-hidden" style="height: 500px;">
-        <div ref="newsWrapper" class="space-y-6">
-          <div v-for="item in newsItems" :key="item.id"
-            class="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-500">
-            <a :href="item.link" target="_blank"
-              class="block w-full text-left hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#E99797]">
+      <div
+        ref="newsContainer"
+        class="overflow-hidden"
+        style="height: 500px;"
+      >
+        <div
+          ref="newsWrapper"
+          class="space-y-6"
+        >
+          <div
+            v-for="item in newsItems"
+            :key="item.id"
+            class="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-500"
+          >
+            <a
+              :href="item.link"
+              target="_blank"
+              class="block w-full text-left hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#E99797]"
+            >
               <div class="flex">
                 <div class="flex-1 p-4">
                   <h3 class="text-xl font-semibold mb-2">
@@ -25,7 +38,11 @@
                   </p>
                 </div>
                 <div class="w-1/5 flex-shrink-0">
-                  <img :src="item.image" :alt="item.title" class="w-full h-full object-cover">
+                  <img
+                    :src="item.image"
+                    :alt="item.title"
+                    class="w-full h-full object-cover"
+                  >
                 </div>
               </div>
             </a>

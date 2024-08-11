@@ -1,5 +1,4 @@
 <template>
-  
   <div class="bg-[#E3E3E3] p-10 flex flex-col md:flex-row items-start">
     <div class="flex-1 mt-4">
       <div class="flex items-center mb-4">
@@ -17,7 +16,7 @@
         </p>
       </div>
     </div>
-    <div class="w-32 h-32 mt-2  md:mx-0 ">
+    <div class="w-32 h-32 mt-2 md:mx-0">
       <img
         src="/LOGO.png"
         alt="Logo"
@@ -29,6 +28,6 @@
 
 <script>
 export default {
-  name: 'AboutUs'
-}
+  name: "AboutUs",
+};
 </script>

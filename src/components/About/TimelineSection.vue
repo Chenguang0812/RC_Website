@@ -4,17 +4,27 @@
     <h2 class="text-4xl font-bold mb-16 text-[#E25353] text-center">
       關於我們
     </h2>
-    <div ref="timelineWrapper" class="relative timeline-wrapper">
+    <div
+      ref="timelineWrapper"
+      class="relative timeline-wrapper"
+    >
       <div class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-8 h-8 bg-[#E25353] rotate-45" />
       <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-[#E99797] timeline-center-line" />
       <div class="timeline-container">
-        <div v-for="(event, index) in timeline" :key="index" class="timeline-item mb-16 flex"
-          :class="index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'">
-          <div class="w-5/12 py-4" :class="[
-          index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left',
-          'transform transition-all duration-1000 ease-in-out',
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-        ]">
+        <div
+          v-for="(event, index) in timeline"
+          :key="index"
+          class="timeline-item mb-16 flex"
+          :class="index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'"
+        >
+          <div
+            class="w-5/12 py-4"
+            :class="[
+              index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left',
+              'transform transition-all duration-1000 ease-in-out',
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+            ]"
+          >
             <h3 class="text-3xl font-bold mb-2 text-[#E25353]">
               {{ event.date }}
             </h3>
@@ -24,8 +34,10 @@
           </div>
           <div class="w-2/12 flex justify-center items-center relative">
             <div class="w-4 h-4 rounded-full bg-[#E25353] border-4 border-white shadow-lg z-10" />
-            <div class="absolute top-1/2 w-[41.666667%] h-0.5 bg-[#E99797] timeline-connect-line"
-              :class="index % 2 === 0 ? 'right-1/2' : 'left-1/2'" />
+            <div
+              class="absolute top-1/2 w-[41.666667%] h-0.5 bg-[#E99797] timeline-connect-line"
+              :class="index % 2 === 0 ? 'right-1/2' : 'left-1/2'"
+            />
           </div>
           <div class="w-5/12" />
         </div>

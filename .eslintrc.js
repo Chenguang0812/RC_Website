@@ -24,4 +24,7 @@ module.exports = {
       '@vitejs/plugin-vue',
     ],
   },
-};
+  rules: {
+    'vue/multi-word-component-names': 'off'
+  }
+}
