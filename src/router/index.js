@@ -3,7 +3,7 @@ import HomeView from '../Views/HomeView.vue';
 import AboutPage from '../Views/AboutPage.vue';
 import CasePage from '../Views/CasePage.vue'
 import JoinUS from '../Views/JoinUS.vue';
-import No from '../Views/no.vue'
+import No from '../Views/No.vue'
 
 const routes = [
   {
