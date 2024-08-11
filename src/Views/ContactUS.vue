@@ -8,7 +8,7 @@
 
 <script>
 import NavbarSection from "@/components/NavbarSection.vue";
-import Contact from "@/components/ContactUS/ContactUS.vue";
+import Contact from "@/components/ContactUS/Contact.vue";
 
 export default {
   name: "Contact",
