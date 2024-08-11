@@ -25,11 +25,11 @@
           </div>
           <div class="flex items-center space-x-3">
             <i class="fas fa-envelope text-gray-600" />
-            <p>fong125463@gmail.com</p>
+            <p class="break-all">fong125463@gmail.com</p>
           </div>
           <div class="flex items-start space-x-3">
             <i class="fas fa-map-marker-alt mt-1 text-gray-600" />
-            <p>臺中市北屯區大坑里東山路二段100巷10弄11號1樓</p>
+            <p class="break-words">臺中市北屯區大坑里東山路二段100巷10弄11號1樓</p>
           </div>
         </div>
 
@@ -41,68 +41,22 @@
             跟隨我們
           </h4>
 
-          <div class="flex space-x-6">
-            <a href="https://line.me/ti/p/hcaTOMPpzA" target="_blank" class="group">
+          <div class="flex flex-wrap gap-4">
+            <a
+              v-for="(social, index) in socials"
+              :key="index"
+              :href="social.link"
+              target="_blank"
+              class="group"
+            >
               <div
-                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
+                class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
               >
                 <i
-                  class="fab fa-line text-xl text-gray-700 group-hover:text-white transition-colors duration-300"
-                />
-              </div>
-            </a>
-            <a href="https://discord.gg/sHUv6TK2As" target="_blank" class="group">
-              <div
-                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
-              >
-                <i
-                  class="fab fa-discord text-xl text-gray-700 group-hover:text-white transition-colors duration-300"
-                />
-              </div>
-            </a>
-            <a href="https://www.youtube.com/@RC_Studio" target="_blank" class="group">
-              <div
-                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
-              >
-                <i
-                  class="fab fa-youtube text-xl text-gray-700 group-hover:text-white transition-colors duration-300"
-                />
-              </div>
-            </a>
-            <a href="https://rcstudio.tw/no" target="_blank" class="group">
-              <div
-                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
-              >
-                <i
-                  class="fab fa-facebook-f text-xl text-gray-700 group-hover:text-white transition-colors duration-300"
-                />
-              </div>
-            </a>
-
-            <a href="https://rcstudio.tw/no" target="_blank" class="group">
-              <div
-                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
-              >
-                <i
-                  class="fab fa-instagram text-xl text-gray-700 group-hover:text-white transition-colors duration-300"
-                />
-              </div>
-            </a>
-            <a href="https://rcstudio.tw/no" target="_blank" class="group">
-              <div
-                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
-              >
-                <i
-                  class="fab fa-twitter text-xl text-gray-700 group-hover:text-white transition-colors duration-300"
-                />
-              </div>
-            </a>
-            <a href="https://rcstudio.tw/no" target="_blank" class="group">
-              <div
-                class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
-              >
-                <i
-                  class="fab fa-twitch text-xl text-gray-700 group-hover:text-white transition-colors duration-300"
+                  :class="[
+                    'text-lg sm:text-xl text-gray-700 group-hover:text-white transition-colors duration-300',
+                    social.icon,
+                  ]"
                 />
               </div>
             </a>
@@ -125,6 +79,15 @@ export default {
   data() {
     return {
       currentYear: new Date().getFullYear(),
+      socials: [
+        { icon: "fab fa-line", link: "https://line.me/ti/p/hcaTOMPpzA" },
+        { icon: "fab fa-discord", link: "https://discord.gg/sHUv6TK2As" },
+        { icon: "fab fa-youtube", link: "https://www.youtube.com/@RC_Studio" },
+        { icon: "fab fa-facebook-f", link: "https://rcstudio.tw/no" },
+        { icon: "fab fa-instagram", link: "https://rcstudio.tw/no" },
+        { icon: "fab fa-twitter", link: "https://rcstudio.tw/no" },
+        { icon: "fab fa-twitch", link: "https://rcstudio.tw/no" },
+      ],
     };
   },
 };
@@ -132,4 +95,10 @@ export default {
 
 <style scoped>
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+@media (max-width: 640px) {
+  .space-x-3 > * + * {
+    margin-left: 0.5rem;
+  }
+}
 </style>
