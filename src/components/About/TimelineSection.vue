@@ -1,46 +1,70 @@
 <template>
-  <div class="h-16" />
-  <div class="my-12 p-8 bg-white">
-    <h2 class="text-4xl font-bold mb-16 text-[#E25353] text-center">關於我們</h2>
-    <div ref="timelineWrapper" class="relative timeline-wrapper">
-      <div
-        class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-8 h-8 bg-[#E25353] rotate-45 z-20"
-      />
-      <div
-        class="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-[#E99797] timeline-center-line z-10"
-      />
-      <div class="timeline-container">
+  <div class="my-12 p-4 sm:p-8 bg-white">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-16 text-[#E25353] text-center">
+      關於我們
+    </h2>
+
+    <!-- 桌面版時間線 -->
+    <div class="hidden sm:block">
+      <div ref="desktopTimelineWrapper" class="relative timeline-wrapper">
         <div
-          v-for="(event, index) in timeline"
-          :key="index"
-          class="timeline-item mb-16 flex"
-          :class="index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'"
-        >
+          class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-8 h-8 bg-[#E25353] rotate-45 z-20"
+        />
+        <div
+          class="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-[#E99797] timeline-center-line z-10"
+        />
+        <div class="timeline-container">
           <div
-            class="w-5/12 py-4"
-            :class="[
-              index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left',
-              'transform transition-all duration-1000 ease-in-out',
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16',
-            ]"
+            v-for="(event, index) in timeline"
+            :key="index"
+            class="timeline-item mb-16 flex"
+            :class="index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'"
           >
-            <h3 class="text-3xl font-bold mb-2 text-[#E25353]">
-              {{ event.date }}
-            </h3>
-            <p class="text-xl text-gray-600">
-              {{ event.description }}
-            </p>
-          </div>
-          <div class="w-2/12 flex justify-center items-center relative">
             <div
-              class="w-4 h-4 rounded-full bg-[#E25353] border-4 border-white shadow-lg z-20"
-            />
-            <div
-              class="absolute top-1/2 w-[41.666667%] h-0.5 bg-[#E99797] timeline-connect-line z-10"
-              :class="index % 2 === 0 ? 'right-1/2' : 'left-1/2'"
-            />
+              class="w-5/12 py-4"
+              :class="[index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left']"
+            >
+              <h3 class="text-3xl font-bold mb-2 text-[#E25353]">{{ event.date }}</h3>
+              <p class="text-xl text-gray-600">{{ event.description }}</p>
+            </div>
+            <div class="w-2/12 flex justify-center items-center relative">
+              <div
+                class="w-4 h-4 rounded-full bg-[#E25353] border-4 border-white shadow-lg z-20"
+              />
+              <div
+                class="absolute top-1/2 w-[41.666667%] h-0.5 bg-[#E99797] timeline-connect-line z-10"
+                :class="index % 2 === 0 ? 'right-1/2' : 'left-1/2'"
+              />
+            </div>
+            <div class="w-5/12" />
           </div>
-          <div class="w-5/12" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 手機版時間線 -->
+    <div class="sm:hidden">
+      <div ref="mobileTimelineWrapper" class="timeline-container relative">
+        <div
+          class="diamond absolute left-0 top-0 w-6 h-6 bg-[#E25353] rotate-45 transform -translate-x-1/2 -translate-y-1/2"
+        ></div>
+        <div class="timeline-line absolute left-0 top-0 bottom-0 w-px bg-[#E25353]"></div>
+        <div class="timeline-items space-y-8">
+          <div
+            v-for="(item, index) in timeline"
+            :key="index"
+            class="timeline-item relative pl-8 transform transition-all duration-500 ease-out"
+            :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'"
+            :style="{ transitionDelay: `${index * 200}ms` }"
+          >
+            <div class="timeline-content">
+              <h3 class="text-xl font-bold text-[#E25353] mb-2">{{ item.date }}</h3>
+              <p class="text-gray-600">{{ item.description }}</p>
+            </div>
+            <div
+              class="timeline-marker absolute left-0 top-0 w-4 h-px bg-[#E25353]"
+            ></div>
+          </div>
         </div>
       </div>
     </div>
@@ -49,7 +73,7 @@
 
 <script>
 export default {
-  name: "AnimatedTimeline",
+  name: "ResponsiveTimeline",
   data() {
     return {
       timeline: [
@@ -67,7 +91,10 @@ export default {
           description:
             "真誠對待每位員工、客戶。我們只負責的，只做對的事。誠中同業者，公平且合理的競爭",
         },
-        { date: "創意影片交給專業", description: "維持品質是基本，創意是專業的堅持" },
+        {
+          date: "創意影片交給專業",
+          description: "維持品質是基本，創意是專業的堅持",
+        },
         {
           date: "與客戶友善溝通",
           description: "客戶是我們的夥伴，維護與客戶的良好關係，是互相成長的關鍵",
@@ -85,7 +112,10 @@ export default {
   },
   methods: {
     checkVisibility() {
-      const element = this.$refs.timelineWrapper;
+      const element =
+        window.innerWidth >= 640
+          ? this.$refs.desktopTimelineWrapper
+          : this.$refs.mobileTimelineWrapper;
       if (element) {
         const rect = element.getBoundingClientRect();
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -112,11 +142,13 @@ export default {
 }
 
 .timeline-connect-line {
-  @apply w-0 transition-[width] duration-[1s] ease-out delay-[1.5s];
+  @apply w-0 transition-[width] duration-[1s] ease-out;
 }
 
-.timeline-item {
-  @apply opacity-0 translate-y-5 duration-500 ease-out delay-[2s];
+@media (min-width: 1024px) {
+  .timeline-item {
+    @apply opacity-0 translate-y-5 transition-all duration-500 ease-out;
+  }
 }
 
 .timeline-wrapper.animate .timeline-center-line {
@@ -131,19 +163,45 @@ export default {
   @apply opacity-100 translate-y-0;
 }
 
+.timeline-wrapper.animate .timeline-item:nth-child(1) {
+  transition-delay: 2s;
+}
+
 .timeline-wrapper.animate .timeline-item:nth-child(2) {
-  @apply delay-[2.2s];
+  transition-delay: 2.2s;
 }
 
 .timeline-wrapper.animate .timeline-item:nth-child(3) {
-  @apply delay-[2.4s];
+  transition-delay: 2.4s;
 }
 
 .timeline-wrapper.animate .timeline-item:nth-child(4) {
-  @apply delay-[2.6s];
+  transition-delay: 2.6s;
 }
 
 .timeline-wrapper.animate .timeline-item:nth-child(5) {
-  @apply delay-[2.8s];
+  transition-delay: 2.8s;
+}
+
+@media (max-width: 639px) {
+  .timeline-container {
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    position: relative;
+  }
+
+  .timeline-marker {
+    transform: translateY(0.9em);
+  }
+
+  .timeline-line {
+    @apply h-0 transition-[height] duration-[2s] ease-out;
+  }
+
+  .timeline-container.animate .timeline-line {
+    @apply h-full;
+  }
 }
 </style>
