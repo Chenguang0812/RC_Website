@@ -29,7 +29,7 @@
           >
             <span class="sr-only">Open main menu</span>
             <svg
-              :class="{ 'hidden': isOpen, 'block': !isOpen }"
+              :class="{ hidden: isOpen, block: !isOpen }"
               class="h-6 w-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -45,7 +45,7 @@
               />
             </svg>
             <svg
-              :class="{ 'block': isOpen, 'hidden': !isOpen }"
+              :class="{ block: isOpen, hidden: !isOpen }"
               class="h-6 w-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -65,10 +65,7 @@
       </div>
     </div>
 
-    <div
-      :class="{ 'block': isOpen, 'hidden': !isOpen }"
-      class="md:hidden"
-    >
+    <div :class="{ block: isOpen, hidden: !isOpen }" class="md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <button
           v-for="(item, index) in navItems"
@@ -88,9 +85,9 @@ export default {
   data() {
     return {
       isOpen: false,
-      title: 'RC Studio',
-      navItems: ['首頁', '關於我們', '整合行銷', '加入我們', '聯絡我們'],
-      navPaths: ['/', '/about', '/case', '/joinUS', '/contactUS']
+      title: "RC Studio",
+      navItems: ["回到主頁", "關於我們", "整合行銷", "加入我們", "聯絡我們"],
+      navPaths: ["/", "/about", "/case", "/joinUS", "/contactUS"],
     };
   },
   methods: {
@@ -101,7 +98,7 @@ export default {
       this.$router.push(path);
       window.scrollTo(0, 0);
       this.isOpen = false;
-    }
-  }
+    },
+  },
 };
 </script>

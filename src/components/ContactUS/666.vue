@@ -19,7 +19,7 @@
         <div class="p-12 space-y-8">
           <form class="space-y-8" @submit.prevent="submitForm">
             <div class="form-group space-y-2">
-              名稱 *
+              名稱（可附上藝名） *
               <input
                 id="name"
                 v-model="form.name"
@@ -41,7 +41,7 @@
             </div>
 
             <div class="form-group space-y-2">
-              聯繫方式（電話、LINE、Discord）*
+              聯絡方式（LINE、Discord、手機號碼皆可）*
               <input
                 id="phone"
                 v-model="form.phone"

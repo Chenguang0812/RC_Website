@@ -51,7 +51,7 @@ export default {
           id: 2,
           name: "實況Online",
           image: "/實況Online.jpg",
-          url: "https://www.youtube.com/@RCStudio",
+          url: "https://www.youtube.com/@PalyerOnline",
         },
         {
           id: 5,

@@ -115,7 +115,7 @@ export default {
         });
 
         if (response.status === 204) {
-          alert("表單已提交！我們將於3日內與您聯繫。");
+          alert("表單提交成功！請耐心等候，我們將於3日內與您聯繫。");
           this.resetForm();
         } else {
           console.log("響應錯誤:", response);

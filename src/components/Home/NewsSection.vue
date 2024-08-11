@@ -76,10 +76,10 @@ export default {
         },
         {
           id: 4,
-          title: "RC Studio擴大團隊，招募新人才。",
-          image: "/阿烜.png",
+          title: "RC擴大營業項目：唱跳RAP籃球",
+          image: "/亞洲舞王蔡徐坤.png",
           date: "2024年8月3日 週六 下午2:00",
-          link: "https://rcstudio.tw/No",
+          link: "https://www.youtube.com/watch?v=GLu5YwiAtC4",
         },
       ],
     };
