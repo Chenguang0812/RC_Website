@@ -2,7 +2,7 @@
   <div class="h-16"></div>
   <div class="relative w-full h-[78vh]">
     <img
-      src="/premiere.png"
+      src="/premiere.webp"
       sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px"
       alt="Premiere Image"
       class="w-full h-full object-cover"
