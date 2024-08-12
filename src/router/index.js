@@ -5,6 +5,7 @@ import CasePage from '../Views/CasePage.vue'
 import JoinUS from '../Views/JoinUS.vue'
 import No from '../Views/No.vue'
 
+
 const routes = [
   {
     path: '/',
@@ -30,6 +31,11 @@ const routes = [
     path: '/contactUS',
     name: 'ContactUS',
     component: () => import('../Views/ContactUS.vue'), // 确保路径正确
+  },
+  {
+    path: '/sitemap',
+    name: 'sitemap',
+    component: () => import('@/sitemap.xml'), // 确保路径正确
   },
   {
     path: '/No',
