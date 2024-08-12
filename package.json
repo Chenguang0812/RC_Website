@@ -41,8 +41,4 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
-  
-},
-"scripts": {
-  "preview": "vite preview --port 4173"
 }
