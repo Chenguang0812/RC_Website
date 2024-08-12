@@ -15,13 +15,13 @@
       </div>
     </div>
     <div class="w-32 h-32 mt-2 md:mx-0">
-      <img src="/LOGO.png" alt="Logo" class="w-full h-full object-contain" />
+      <img src="/LOGO.webp" alt="Logo" class="w-full h-full object-contain" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AboutUs',
-}
+  name: "AboutUs",
+};
 </script>
