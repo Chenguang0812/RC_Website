@@ -3,9 +3,10 @@
   <div class="relative w-full h-[78vh]">
     <img
       src="/premiere.webp"
-      sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px"
       alt="Premiere Image"
       class="w-full h-full object-cover"
+      loading="eager"
+      fetchpriority="high"
     />
 
     <div class="absolute inset-0 bg-[#44474B] bg-opacity-60"></div>
