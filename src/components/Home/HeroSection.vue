@@ -1,14 +1,17 @@
 <template>
   <div class="h-16"></div>
   <div class="relative w-full h-[78vh]">
-    <img
-      src="/premiere.webp"
-      alt="Premiere Image"
-      class="w-full h-full object-cover"
-      loading="eager"
-      fetchpriority="high"
-    />
-
+    <div class="image-container">
+      <img
+        src="/premiere.webp"
+        alt="Premiere Image"
+        class="w-full h-full object-cover"
+        :class="{ loaded: imageLoaded }"
+        loading="eager"
+        fetchpriority="high"
+        @load="imageLoaded = true"
+      />
+    </div>
     <div class="absolute inset-0 bg-[#44474B] bg-opacity-60"></div>
     <div
       class="absolute inset-0 text-[#F0F0F0] flex flex-col items-center justify-center px-4"
@@ -36,6 +39,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      imageLoaded: false,
+    };
+  },
   methods: {
     scrollToContent() {
       const windowHeight = window.innerHeight;
@@ -49,6 +57,23 @@ export default {
 </script>
 
 <style scoped>
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+
+.image-container img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-container img.loaded {
+  opacity: 1;
+}
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -78,7 +103,6 @@ export default {
 .animate-fade-in-up {
   animation: fadeInUp 1s ease-out 0.5s both;
 }
-
 .font-pacifico {
   font-family: "Allura", cursive;
 }
