@@ -9,9 +9,7 @@
         class="absolute inset-0 bg-gradient-to-r from-[#E25353] to-[#E99797] opacity-10 animate-wave"
       />
 
-      <h2
-        class="text-4xl font-bold my-8 text-[#E25353] text-center relative z-10"
-      >
+      <h2 class="text-4xl font-bold my-8 text-[#E25353] text-center relative z-10">
         我們的團隊
       </h2>
 
@@ -25,7 +23,7 @@
           :key="member.id"
           :ref="
             (el) => {
-              if (el) memberRefs[member.id] = el
+              if (el) memberRefs[member.id] = el;
             }
           "
           class="w-80 bg-white rounded-lg p-6 shadow-lg transform transition duration-500 hover:scale-105 hover:rotate-2"
@@ -57,90 +55,90 @@
 
 <script>
 export default {
-  name: 'TeamMembers',
+  name: "TeamMembers",
   data() {
     return {
       teamMembers: [
         {
           id: 1,
-          name: '亦凌YiLing',
-          position: '頂級老闆',
-          image: '/10.png',
+          name: "亦凌YiLing",
+          position: "頂級老闆",
+          image: "/10.png",
           isVisible: false,
         },
         {
           id: 2,
-          name: '卡卡滋Kazi',
-          position: '老闆女友',
-          image: '/卡卡.png',
+          name: "卡卡滋Kazi",
+          position: "老闆女友，阿阿阿",
+          image: "/卡卡.png",
           isVisible: false,
         },
         {
           id: 3,
-          name: '晨光Chenguang',
-          position: '無心+薪勞工',
-          image: '/柯文哲.jpg',
+          name: "晨光Chenguang",
+          position: "無心+薪勞工",
+          image: "/柯文哲.jpg",
           isVisible: false,
         },
         {
           id: 4,
-          name: '亨利Mr.H',
-          position: '剪輯師',
-          image: '/亨利.jpg',
+          name: "亨利Mr.H",
+          position: "精油推廣大使",
+          image: "/亨利.jpg",
           isVisible: false,
         },
         {
           id: 5,
-          name: '小風DeFeng',
-          position: '剪輯師',
-          image: '小風.jpg',
+          name: "小風DeFeng",
+          position: "拖片20幾天的南非爆炸頭",
+          image: "小風.jpg",
           isVisible: false,
         },
         {
           id: 6,
-          name: '綸弟Mutekinyan',
-          position: '剪輯師',
-          image: '/綸弟.png',
+          name: "綸弟Mutekinyan",
+          position: "猥褻+宅炮剪輯師",
+          image: "/綸弟.png",
           isVisible: false,
         },
       ],
       memberRefs: {},
       observer: null,
-    }
+    };
   },
   mounted() {
     this.$nextTick(() => {
       this.observer = new IntersectionObserver(this.handleIntersect, {
         root: this.$refs.containerRef,
-        rootMargin: '0px',
+        rootMargin: "0px",
         threshold: 0.1,
-      })
+      });
 
       this.teamMembers.forEach((member) => {
         if (this.memberRefs[member.id]) {
-          this.memberRefs[member.id].setAttribute('data-member-id', member.id)
-          this.observer.observe(this.memberRefs[member.id])
+          this.memberRefs[member.id].setAttribute("data-member-id", member.id);
+          this.observer.observe(this.memberRefs[member.id]);
         }
-      })
-    })
+      });
+    });
   },
   beforeUnmount() {
     if (this.observer) {
-      this.observer.disconnect()
+      this.observer.disconnect();
     }
   },
   methods: {
     handleIntersect(entries) {
       entries.forEach((entry) => {
-        const memberId = parseInt(entry.target.getAttribute('data-member-id'))
-        const memberIndex = this.teamMembers.findIndex((m) => m.id === memberId)
+        const memberId = parseInt(entry.target.getAttribute("data-member-id"));
+        const memberIndex = this.teamMembers.findIndex((m) => m.id === memberId);
         if (entry.isIntersecting) {
-          this.$set(this.teamMembers[memberIndex], 'isVisible', true)
+          this.$set(this.teamMembers[memberIndex], "isVisible", true);
         }
-      })
+      });
     },
   },
-}
+};
 </script>
 
 <style scoped>
