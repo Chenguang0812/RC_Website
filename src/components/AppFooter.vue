@@ -29,9 +29,7 @@
           </div>
           <div class="flex items-start space-x-3">
             <i class="fas fa-map-marker-alt mt-1 text-gray-600" />
-            <p class="break-words">
-              臺中市北屯區大坑里東山路二段100巷10弄11號1樓
-            </p>
+            <p class="break-words">臺中市北屯區大坑里東山路二段100巷10弄11號1樓</p>
           </div>
         </div>
 
@@ -77,26 +75,26 @@
 
 <script>
 export default {
-  name: 'AppFooter',
+  name: "AppFooter",
   data() {
     return {
       currentYear: new Date().getFullYear(),
       socials: [
-        { icon: 'fab fa-line', link: 'https://line.me/ti/p/hcaTOMPpzA' },
-        { icon: 'fab fa-discord', link: 'https://discord.gg/sHUv6TK2As' },
-        { icon: 'fab fa-youtube', link: 'https://www.youtube.com/@RC_Studio' },
-        { icon: 'fab fa-facebook-f', link: 'https://rcstudio.tw/no' },
-        { icon: 'fab fa-instagram', link: 'https://rcstudio.tw/no' },
-        { icon: 'fab fa-twitter', link: 'https://rcstudio.tw/no' },
-        { icon: 'fab fa-twitch', link: 'https://rcstudio.tw/no' },
+        { icon: "fab fa-line", link: "https://line.me/ti/p/hcaTOMPpzA" },
+        { icon: "fab fa-discord", link: "https://discord.gg/sHUv6TK2As" },
+        { icon: "fab fa-youtube", link: "https://www.youtube.com/@RC_Studio" },
+        { icon: "fab fa-facebook-f", link: "https://rcstudio.tw/no" },
+        { icon: "fab fa-instagram", link: "https://www.instagram.com/rc_studio.tw/" },
+        { icon: "fab fa-twitter", link: "https://rcstudio.tw/no" },
+        { icon: "fab fa-twitch", link: "https://rcstudio.tw/no" },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
 
 @media (max-width: 640px) {
   .space-x-3 > * + * {
