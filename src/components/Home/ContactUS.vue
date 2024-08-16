@@ -1,19 +1,23 @@
 <template>
-  <div class="bg-white py-8 px-4">
+  <div class="bg-white dark:bg-[#303030] py-8 px-4">
     <div class="max-w-2xl mx-auto">
       <div class="mb-12 relative flex justify-center">
-        <div class="bg-[#E0E0E0] -skew-x-12 inline-block">
-          <p class="text-3xl font-bold py-2 px-8 skew-x-12 inline-block relative z-10">
+        <div class="bg-[#E0E0E0] dark:bg-[#272727] -skew-x-12 inline-block">
+          <p
+            class="text-3xl font-bold py-2 px-8 skew-x-12 inline-block relative z-10 text-gray-900 dark:text-gray-100"
+          >
             聯絡我們
           </p>
-          <div class="absolute bottom-0 right-0 w-full h-1 bg-[#E99797]" />
+          <div class="absolute bottom-0 right-0 w-full h-1 bg-[#0091ff]" />
         </div>
       </div>
 
       <form class="space-y-6" @submit.prevent="submitForm">
         <!-- 表單字段 -->
         <div>
-          <label for="name" class="block text-sm font-medium text-gray-700"
+          <label
+            for="name"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
             >名稱（可附上藝名） *</label
           >
           <input
@@ -21,12 +25,14 @@
             v-model="form.name"
             type="text"
             required
-            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white"
+            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
           />
         </div>
 
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700"
+          <label
+            for="email"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
             >電子信箱 *</label
           >
           <input
@@ -34,12 +40,14 @@
             v-model="form.email"
             type="email"
             required
-            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white"
+            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
           />
         </div>
 
         <div>
-          <label for="phone" class="block text-sm font-medium text-gray-700"
+          <label
+            for="phone"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
             >聯絡方式（LINE、Discord、手機號碼皆可） *</label
           >
           <input
@@ -47,12 +55,14 @@
             v-model="form.phone"
             type="tel"
             required
-            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white"
+            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
           />
         </div>
 
         <div>
-          <label for="message" class="block text-sm font-medium text-gray-700"
+          <label
+            for="message"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
             >需求簡易說明 *</label
           >
           <textarea
@@ -60,14 +70,14 @@
             v-model="form.message"
             rows="4"
             required
-            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white"
+            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
           />
         </div>
 
         <!-- 提交按鈕 -->
         <button
           type="submit"
-          class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#E99797] hover:bg-[#e57f7f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E99797]"
+          class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#E99797] dark:bg-[#97b1e9] hover:bg-[#e57f7f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E99797] dark:bg-[#E99797] dark:hover:bg-[#e57f7f] dark:focus:ring-offset-gray-800"
         >
           提交
         </button>

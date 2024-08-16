@@ -1,12 +1,14 @@
 <template>
-  <div class="bg-white py-8 px-4">
+  <div class="bg-white dark:bg-[#303030] py-8 px-4">
     <div class="max-w-4xl mx-auto">
       <div class="mb-12 relative flex justify-center">
-        <div class="bg-[#E0E0E0] -skew-x-12 inline-block">
-          <p class="text-3xl font-bold py-2 px-8 skew-x-12 inline-block relative z-10">
+        <div class="bg-[#E0E0E0] dark:bg-[#2c2c2c] -skew-x-12 inline-block">
+          <p
+            class="text-3xl font-bold py-2 px-8 skew-x-12 inline-block relative z-10 dark:text-white"
+          >
             最新消息
           </p>
-          <div class="absolute bottom-0 right-0 w-full h-1 bg-[#E99797]" />
+          <div class="absolute bottom-0 right-0 w-full h-1 bg-[#0091ff]" />
         </div>
       </div>
       <div ref="newsContainer" class="h-[400px] overflow-y-auto custom-scrollbar">
@@ -14,19 +16,19 @@
           <div
             v-for="item in newsItems"
             :key="item.id"
-            class="bg-white shadow-md rounded-lg overflow-hidden transition-all duration-500 mb-4"
+            class="bg-white dark:bg-[#3f3f3f] shadow-md rounded-lg overflow-hidden mb-4"
           >
             <a
               :href="item.link"
               target="_blank"
-              class="block w-full text-left hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#E99797]"
+              class="block w-full text-left hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#E99797] dark:focus:ring-[#FF9999]"
             >
               <div class="flex">
                 <div class="flex-1 p-4">
-                  <h3 class="text-xl font-semibold mb-2">
+                  <h3 class="text-xl font-semibold mb-2 dark:text-white">
                     {{ item.title }}
                   </h3>
-                  <p class="text-gray-500 text-sm">
+                  <p class="text-gray-500 dark:text-gray-400 text-sm">
                     {{ item.date }}
                   </p>
                 </div>
@@ -88,21 +90,57 @@ export default {
 </script>
 
 <style scoped>
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #e99797 #f5f5f5;
+.overflow-x-scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
+  height: 8px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #f5f5f5;
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #e99797;
-  border-radius: 4px;
+  background: #e25353;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d14141;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #e25353 #f1f1f1;
+}
+
+/* Dark mode scrollbar */
+@media (prefers-color-scheme: dark) {
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #1e1e2e;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #f38ba8;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #eba0b3;
+  }
+
+  .custom-scrollbar {
+    scrollbar-color: #e99797 #d1d1d1;
+  }
+
+  .darkcustom-scrollbar {
+    scrollbar-color: #ac0000 #d1d1d1;
+  }
 }
 </style>

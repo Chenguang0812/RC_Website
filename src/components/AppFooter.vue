@@ -1,34 +1,34 @@
 <template>
   <footer
-    class="bg-gradient-to-b from-gray-100 to-gray-200 text-gray-700 py-12 font-sans"
+    class="bg-[#fdfdfd] dark:bg-[#3d3d3d] from-gray-100 to-gray-200 text-gray-700 dark:text-[#ffffff] py-12 font-sans"
   >
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <!-- 公司信息 -->
         <div class="space-y-4">
           <h4
-            class="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-gray-300 pb-2 inline-block"
+            class="text-2xl font-bold mb-4 text-gray-800 dark:text-[#ffffff] border-b-2 border-gray-300 dark:border-[#1a1a1a] pb-2 inline-block"
           >
             聯絡我們
           </h4>
           <div class="flex items-center space-x-3">
-            <i class="fas fa-phone-alt text-gray-600" />
+            <i class="fas fa-phone-alt text-gray-600 dark:text-[#ffffff]" />
             <p>0972-606-387</p>
           </div>
           <div class="flex items-center space-x-3">
-            <i class="fab fa-line text-gray-600 text-xl" />
+            <i class="fab fa-line text-gray-600 text-xl dark:text-[#ffffff]" />
             <p>BANWE</p>
           </div>
           <div class="flex items-center space-x-3">
-            <i class="fab fa-discord text-gray-600" />
+            <i class="fab fa-discord text-gray-600 dark:text-[#ffffff]" />
             <p>rc_yiling.</p>
           </div>
           <div class="flex items-center space-x-3">
-            <i class="fas fa-envelope text-gray-600" />
+            <i class="fas fa-envelope text-gray-600 dark:text-[#ffffff]" />
             <p class="break-all">fong125463@gmail.com</p>
           </div>
           <div class="flex items-start space-x-3">
-            <i class="fas fa-map-marker-alt mt-1 text-gray-600" />
+            <i class="fas fa-map-marker-alt mt-1 text-gray-600 dark:text-[#ffffff]" />
             <p class="break-words">臺中市北屯區大坑里東山路二段100巷10弄11號1樓</p>
           </div>
         </div>
@@ -36,7 +36,7 @@
         <!-- 社交媒體 -->
         <div class="space-y-4">
           <h4
-            class="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-gray-300 pb-2 inline-block"
+            class="text-2xl font-bold mb-4 text-gray-800 dark:text-[#ffffff] border-b-2 border-gray-300 dark:border-[#1a1a1a] pb-2 inline-block"
           >
             跟隨我們
           </h4>
@@ -50,7 +50,7 @@
               class="group"
             >
               <div
-                class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-300 rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
+                class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-300 dark:bg-[#ffffff] rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
               >
                 <i
                   :class="[
@@ -65,7 +65,7 @@
       </div>
       <!-- 版權聲明 -->
       <div class="mt-12 pt-8 border-t border-gray-300 text-center">
-        <p class="text-sm text-gray-600">
+        <p class="text-sm text-gray-600 dark:text-[#ffffff]">
           &copy; {{ currentYear }} Copyright RC Studio. All rights reserved.
         </p>
       </div>

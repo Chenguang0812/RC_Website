@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-[#E4E4E4] py-8 px-4">
+  <div class="bg-[#E4E4E4] dark:bg-[#1C1C1C] py-8 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="mb-8 flex items-center">
-        <div class="w-2 h-8 bg-[#E25353] mr-4" />
-        <h2 class="font-bold text-4xl">旗下頻道</h2>
+        <div class="w-2 h-8 bg-[#0091ff] mr-4" />
+        <h2 class="font-bold text-4xl text-gray-900 dark:text-[#e0e0e0]">旗下頻道</h2>
       </div>
       <div ref="channelContainer" class="overflow-x-scroll custom-scrollbar">
         <div class="flex space-x-6 pb-4">
@@ -13,20 +13,21 @@
             :href="channel.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-500 flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-6"
+            class="bg-white dark:bg-[#222222] rounded-lg shadow-md overflow-hidden hover:shadow-lg flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-6"
           >
             <img
               :src="channel.image"
               :alt="channel.name"
               class="w-full h-auto max-w-[150px] max-h-[150px] rounded-lg mb-6 object-cover"
             />
-            <p class="text-center font-bold text-xl">{{ channel.name }}</p>
+            <p class="text-center font-bold text-xl text-gray-900 dark:text-[#e0e0e0]">
+              {{ channel.name }}
+            </p>
           </a>
         </div>
       </div>
     </div>
   </div>
-  <div />
 </template>
 
 <script>
@@ -71,7 +72,6 @@ export default {
           image: "/玫瑰雲端.webp",
           url: "https://www.youtube.com/@RC_Drive",
         },
-
         {
           id: 7,
           name: "我是一隻浣熊",
@@ -130,9 +130,24 @@ export default {
   background: #d14141;
 }
 
-/* 針對Firefox */
+/* For Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: #e25353 #f1f1f1;
+}
+
+/* Dark mode scrollbar */
+@media (prefers-color-scheme: dark) {
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #ff6b6b;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #ff8787;
+  }
+
+  .custom-scrollbar {
+    scrollbar-color: #e99797 #d1d1d1;
+  }
 }
 </style>

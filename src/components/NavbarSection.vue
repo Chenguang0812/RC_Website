@@ -1,10 +1,12 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 bg-white z-50 shadow-md shadow-gray-500/50">
+  <nav
+    class="fixed top-0 left-0 right-0 bg-white dark:bg-[#383838] z-50 transition-all duration-300 ease-in-out shadow-md shadow-gray-500/50 dark:shadow-[#8d8d8d71]"
+  >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex-shrink-0 w-1/4">
           <button
-            class="fixed left-7 top-5 text-[#44474B] font-bold text-xl"
+            class="fixed left-7 top-5 text-[#44474B] dark:text-[#ffffff] font-bold text-xl"
             @click="navigateTo('/')"
           >
             {{ title }}
@@ -16,7 +18,7 @@
             <button
               v-for="(item, index) in navItems"
               :key="item"
-              class="text-[#44474B] hover:bg-gray-100 px-3 py-2 rounded-md text-lg font-bold"
+              class="text-[#44474B] dark:text-[#ffffff] hover:bg-gray-100 dark:hover:bg-[#3d3d3d] px-3 py-2 rounded-md text-lg font-bold transition-colors duration-200"
               @click="navigateTo(navPaths[index])"
             >
               {{ item }}
@@ -24,9 +26,10 @@
           </div>
         </div>
 
-        <div class="flex-shrink-0 w-1/4 flex justify-end">
+        <div class="flex-shrink-0 w-1/4 flex justify-end items-center">
+          <theme />
           <button
-            class="xl:hidden inline-flex items-center justify-center p-2 rounded-md text-[#44474B] hover:text-[#44474B] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            class="xl:hidden inline-flex items-center justify-center p-2 rounded-md text-[#383838] dark:text-[#ffffff] hover:bg-gray-100 dark:hover:bg-[#3d3d3d] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#383838] dark:focus:ring-[#ffffff] ml-2 transition-colors duration-200"
             @click="toggleNavbar"
           >
             <span class="sr-only">Open main menu</span>
@@ -66,13 +69,12 @@
         </div>
       </div>
     </div>
-
     <div :class="{ block: isOpen, hidden: !isOpen }" class="xl:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <button
           v-for="(item, index) in navItems"
           :key="item"
-          class="text-[#44474B] hover:bg-gray-100 block px-3 py-2 rounded-md text-base w-full text-left"
+          class="text-[#44474B] dark:text-[#ffffff] hover:bg-gray-100 dark:hover:bg-[#3d3d3d] block px-3 py-2 rounded-md text-base w-full text-left transition-colors duration-200"
           @click="navigateTo(navPaths[index])"
         >
           {{ item }}
@@ -83,7 +85,11 @@
 </template>
 
 <script>
+import Theme from "@/components/ThemeSection.vue";
 export default {
+  components: {
+    Theme,
+  },
   data() {
     return {
       isOpen: false,

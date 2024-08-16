@@ -28,7 +28,7 @@
         專業的影片剪輯工作室
       </p>
       <button
-        class="mt-8 bg-[#E99797] text-white py-2 px-6 rounded-full hover:bg-[#e57f7f] transition-colors duration-300 animate-bounce"
+        class="mt-8 bg-[#E99797] dark:bg-[#97b1e9] text-white py-2 px-6 rounded-full hover:bg-[#e57f7f] dark:hover:bg-[#97b1e9] transition-colors duration-300 animate-bounce"
         @click="scrollToContent"
       >
         了解更多
