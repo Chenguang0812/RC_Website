@@ -8,7 +8,10 @@
   <meta name="description" content="RC Studio是一間專注於剪輯與後製服務的創新公司。我們為客戶提供卓越的影片剪輯、視覺效果和聲音處理，RC Studio致力於成為您影片創作過程中的最佳夥伴。">
   <meta name="keywords"
     content="RC Studio, RC Studio剪輯, rcstudio剪輯, RCStudio, 剪輯 , 影視製作, 視覺效果, 聲音處理, 創意影片, 專業剪輯, 影音後製, 品牌推廣">
-  <meta name="application-name" content="RC Studio工作室">
+  <meta name="application-name" content="RC Studio">
+  <meta property="og:site_name" content="RC Studio">
+  <meta property="og:title" content="RC Studio｜影音剪輯、整合行銷服務">
+  <meta property="og:description" content="RC Studio提供專業的影片剪輯、視覺效果、聲音處理及整合行銷服務。無論是影視製作還是品牌推廣，我們都是您影片創作的最佳夥伴。">
   <title>RC Studio｜影音剪輯、整合行銷服務</title>
   <link rel="canonical" href="https://rcstudio.tw" />
   <link rel="icon" href="\LOGO.webp" type="image/webp" />
@@ -49,12 +52,6 @@
       "https://www.youtube.com/@RC_Studio"
     ]
   }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    if ('browserAction' in chrome) {
-        chrome.browserAction.setTitle({title: "您想要的网站名称"});
-    }
-});
   </script>
 </head>
 
@@ -68,7 +65,11 @@
       }
     })();
 
+    // 新增一个全局变量来存储网站名称
+    window.SITE_NAME = "RC Studio";
 
+    // 修改页面标题
+    document.title = window.SITE_NAME + " | 影音剪輯、整合行銷服務";
   </script>
   <div id="app"></div>
   <script type="module" src="/src/main.js" defer></script>
