@@ -8,7 +8,9 @@
           >
             最新消息
           </p>
-          <div class="absolute bottom-0 right-0 w-full h-1 bg-[#0091ff]" />
+          <div
+            class="absolute bottom-0 right-0 w-full h-1 bg-[#E25353] dark:bg-[#0091ff]"
+          />
         </div>
       </div>
       <div ref="newsContainer" class="h-[400px] overflow-y-auto custom-scrollbar">
@@ -118,29 +120,8 @@ export default {
 /* For Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #e25353 #f1f1f1;
+  scrollbar-color: #f1f1f1;
 }
 
 /* Dark mode scrollbar */
-@media (prefers-color-scheme: dark) {
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: #1e1e2e;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #f38ba8;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #eba0b3;
-  }
-
-  .custom-scrollbar {
-    scrollbar-color: #e99797 #d1d1d1;
-  }
-
-  .darkcustom-scrollbar {
-    scrollbar-color: #ac0000 #d1d1d1;
-  }
-}
 </style>

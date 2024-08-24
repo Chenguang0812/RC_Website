@@ -2,7 +2,7 @@
   <div class="bg-[#E4E4E4] dark:bg-[#1C1C1C] py-8 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="mb-8 flex items-center">
-        <div class="w-2 h-8 bg-[#0091ff] mr-4" />
+        <div class="w-2 h-8 bg-[#E25353] dark:bg-[#0091ff] mr-4" />
         <h2 class="font-bold text-4xl text-gray-900 dark:text-[#e0e0e0]">旗下頻道</h2>
       </div>
       <div ref="channelContainer" class="overflow-x-scroll custom-scrollbar">
@@ -133,21 +133,6 @@ export default {
 /* For Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #e25353 #f1f1f1;
-}
-
-/* Dark mode scrollbar */
-@media (prefers-color-scheme: dark) {
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #ff6b6b;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #ff8787;
-  }
-
-  .custom-scrollbar {
-    scrollbar-color: #e99797 #d1d1d1;
-  }
+  scrollbar-color: #f1f1f1;
 }
 </style>

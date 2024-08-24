@@ -8,7 +8,9 @@
           >
             聯絡我們
           </p>
-          <div class="absolute bottom-0 right-0 w-full h-1 bg-[#0091ff]" />
+          <div
+            class="absolute bottom-0 right-0 w-full h-1 bg-[#E25353] dark:bg-[#0091ff]"
+          />
         </div>
       </div>
 
@@ -77,7 +79,7 @@
         <!-- 提交按鈕 -->
         <button
           type="submit"
-          class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#E99797] dark:bg-[#97b1e9] hover:bg-[#e57f7f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E99797] dark:bg-[#E99797] dark:hover:bg-[#e57f7f] dark:focus:ring-offset-gray-800"
+          class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#E99797] dark:bg-[#97b1e9] hover:bg-[#e57f7f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E99797] dark:hover:bg-[#869dcf] dark:focus:ring-offset-gray-800"
         >
           提交
         </button>

@@ -2,10 +2,10 @@
   <!-- 成就展示區域：使用 ref 獲取 DOM 元素 -->
   <div
     ref="achievementsSection"
-    class="my-12 bg-white py-16 rounded-lg shadow-xl overflow-hidden"
+    class="my-12 bg-white dark:bg-[#303030] py-16 rounded-lg shadow-xl overflow-hidden"
   >
     <!-- 標題 -->
-    <h2 class="text-4xl font-bold mb-10 text-[#E25353] text-center">
+    <h2 class="text-4xl font-bold mb-10 text-[#E25353] dark:text-[#4DB8FF] text-center">
       我們的成就
     </h2>
     <!-- 成就項目網格：響應式布局 -->
@@ -19,7 +19,7 @@
       >
         <!-- 圓形背景 -->
         <div
-          class="bg-gradient-to-br from-[#E25353] to-[#E99797] rounded-full w-40 h-40 mx-auto flex items-center justify-center mb-6 shadow-lg relative overflow-hidden"
+          class="bg-gradient-to-br from-[#E25353] to-[#E99797] dark:from-[#5553e2] dark:to-[#97a3e9] rounded-full w-40 h-40 mx-auto flex items-center justify-center mb-6 shadow-lg relative overflow-hidden"
         >
           <!-- 動畫圓圈 -->
           <div class="achievement-circle" />
@@ -30,7 +30,7 @@
           </div>
         </div>
         <!-- 成就標籤 -->
-        <div class="text-[#E25353] font-semibold text-xl">
+        <div class="text-[#E25353] dark:text-[#4DB8FF] font-semibold text-xl">
           {{ achievement.label }}
         </div>
       </div>
@@ -40,69 +40,68 @@
 
 <script>
 export default {
-  name: 'AchievementsSection',
+  name: "AchievementsSection",
   data() {
     return {
       // 控制動畫是否可見
       isVisible: false,
       // 成就數據
       achievements: [
-        { id: 1, value: 500, suffix: '+', label: '完成專案', currentValue: 0 },
-        { id: 2, value: 3, suffix: '+', label: '行業經驗', currentValue: 0 },
-        { id: 3, value: 50, suffix: '+', label: '長期客戶', currentValue: 0 },
-        { id: 4, value: 10, suffix: '+', label: '員工人數', currentValue: 0 },
+        { id: 1, value: 500, suffix: "+", label: "完成專案", currentValue: 0 },
+        { id: 2, value: 3, suffix: "+", label: "行業經驗", currentValue: 0 },
+        { id: 3, value: 50, suffix: "+", label: "長期客戶", currentValue: 0 },
+        { id: 4, value: 10, suffix: "+", label: "員工人數", currentValue: 0 },
       ],
-    }
+    };
   },
   mounted() {
     // 組件掛載後添加滾動監聽器並檢查可見性
-    window.addEventListener('scroll', this.checkVisibility)
-    this.checkVisibility()
+    window.addEventListener("scroll", this.checkVisibility);
+    this.checkVisibility();
   },
   beforeUnmount() {
     // 組件卸載前移除滾動監聽器
-    window.removeEventListener('scroll', this.checkVisibility)
+    window.removeEventListener("scroll", this.checkVisibility);
   },
   methods: {
     // 數值動畫函數
     animateValue(achievement, duration) {
-      const start = 0
-      const end = achievement.value
-      const range = end - start
-      const increment = end > start ? 1 : -1
-      const stepTime = Math.abs(Math.floor(duration / range))
-      let current = start
+      const start = 0;
+      const end = achievement.value;
+      const range = end - start;
+      const increment = end > start ? 1 : -1;
+      const stepTime = Math.abs(Math.floor(duration / range));
+      let current = start;
 
       const timer = setInterval(() => {
-        current += increment
-        achievement.currentValue = current
+        current += increment;
+        achievement.currentValue = current;
         if (current === end) {
-          clearInterval(timer)
+          clearInterval(timer);
         }
-      }, stepTime)
+      }, stepTime);
     },
     // 檢查可見性函數
     checkVisibility() {
-      if (!this.$refs.achievementsSection) return
+      if (!this.$refs.achievementsSection) return;
 
-      const rect = this.$refs.achievementsSection.getBoundingClientRect()
-      const isCurrentlyVisible =
-        rect.top < window.innerHeight && rect.bottom >= 0
+      const rect = this.$refs.achievementsSection.getBoundingClientRect();
+      const isCurrentlyVisible = rect.top < window.innerHeight && rect.bottom >= 0;
 
       if (isCurrentlyVisible && !this.isVisible) {
-        this.isVisible = true
+        this.isVisible = true;
         this.achievements.forEach((achievement) => {
-          this.animateValue(achievement, Math.random() * 1500 + 1000)
-        })
+          this.animateValue(achievement, Math.random() * 1500 + 1000);
+        });
       } else if (!isCurrentlyVisible && this.isVisible) {
-        this.isVisible = false
+        this.isVisible = false;
         this.achievements.forEach((achievement) => {
-          achievement.currentValue = 0
-        })
+          achievement.currentValue = 0;
+        });
       }
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -136,8 +135,7 @@ export default {
 .achievement-item {
   transform: translateY(50px);
   opacity: 0;
-  transition:
-    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 

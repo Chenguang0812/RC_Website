@@ -6,10 +6,12 @@
     >
       <!-- 背景動畫元素 -->
       <div
-        class="absolute inset-0 bg-gradient-to-r from-[#E25353] to-[#E99797] opacity-10 animate-wave"
+        class="absolute inset-0 bg-gradient-to-r from-[#E25353] to-[#E99797] dark:from-[#5385e2] dark:to-[#7a8eff] opacity-10 dark:opacity-100 animate-wave"
       />
 
-      <h2 class="text-4xl font-bold my-8 text-[#E25353] text-center relative z-10">
+      <h2
+        class="text-4xl font-bold my-8 text-[#E25353] dark:text-[#303030] text-center relative z-10"
+      >
         我們的團隊
       </h2>
 
@@ -26,7 +28,7 @@
               if (el) memberRefs[member.id] = el;
             }
           "
-          class="w-80 bg-white rounded-lg p-6 shadow-lg transform transition duration-500 hover:scale-105 hover:rotate-2"
+          class="w-80 bg-white dark:bg-[#303030] rounded-lg p-6 shadow-lg transform transition duration-500 hover:scale-105 hover:rotate-2"
           :class="{ 'animate-slideIn': member.isVisible }"
         >
           <!-- 成員圖片 -->
@@ -40,11 +42,11 @@
             />
           </div>
           <!-- 成員姓名 -->
-          <h3 class="text-2xl font-bold mb-2 text-[#E25353]">
+          <h3 class="text-2xl font-bold mb-2 text-[#E25353] dark:text-[#4DB8FF]">
             {{ member.name }}
           </h3>
           <!-- 成員職位 -->
-          <p class="text-lg text-[#E99797]">
+          <p class="text-lg text-[#E99797] dark:text-[#4db8ffcb]">
             {{ member.position }}
           </p>
         </div>
