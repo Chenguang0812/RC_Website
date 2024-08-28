@@ -63,7 +63,7 @@ export default {
           title: "最新》林德豐再次拖片！將在8/28 20:00跳三振舞！？",
           image: "/IMG_1212.webp",
           date: "2024年8月28日 週三 下午5:58",
-          link: "#",
+          link: "https://rcstudio.tw/No",
         },
         {
           id: 2,
