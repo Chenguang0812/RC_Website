@@ -61,7 +61,7 @@ export default {
         {
           id: 1,
           title: "最新》林德豐再度拖片7天，引起公憤！跳三振舞道歉！？",
-          image: "/IMG_1212.webp",
+          image: "/風笑.webp",
           date: "2024年8月28日 週三 下午5:58",
           link:
             "https://drive.google.com/file/d/1R7B52dPgnTNvcBIW7sxWUe7-vIVXisLX/view?usp=sharing",
