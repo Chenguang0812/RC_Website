@@ -108,7 +108,6 @@ export default {
       const webhookUrl =
         "https://discordapp.com/api/webhooks/1271522136837591081/j8jOWK3SolTwzty0WdSIvZ8CNsYXTus0554loD7IBAN9l2UDRavREQH_FLbSFvYwdHXr";
 
-      // 構建 Discord 消息的格式
       const message = {
         content:
           `**聯絡我們表單提交**\n\n` +
