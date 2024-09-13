@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white dark:bg-[#303030] py-6 sm:py-8 px-3 sm:px-4">
-    <div class="w-full sm:max-w-4xl mx-auto">
-      <div class="mb-6 sm:mb-12 relative flex justify-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-8 sm:mb-12 relative flex justify-center">
         <div class="bg-[#E0E0E0] dark:bg-[#2c2c2c] -skew-x-12 inline-block">
           <p
             class="text-2xl sm:text-3xl font-bold py-2 px-6 sm:px-8 skew-x-12 inline-block relative z-10 dark:text-white"
@@ -13,10 +13,8 @@
           />
         </div>
       </div>
-      <div
-        class="w-full sm:w-auto max-h-[70vh] sm:h-[400px] overflow-y-auto custom-scrollbar"
-      >
-        <div class="pr-2 sm:pr-0">
+      <div class="h-[350px] sm:h-[400px] overflow-y-auto custom-scrollbar">
+        <div>
           <div
             v-for="item in newsItems"
             :key="item.id"
@@ -30,7 +28,7 @@
               <div class="flex">
                 <div class="flex-1 p-3 sm:p-4">
                   <h3
-                    class="text-base sm:text-xl font-semibold mb-1 sm:mb-2 dark:text-white"
+                    class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2 dark:text-white"
                   >
                     {{ item.title }}
                   </h3>
@@ -107,7 +105,7 @@ export default {
 
 <style scoped>
 .custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -127,12 +125,12 @@ export default {
 /* For Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #e25353 #f1f1f1;
+  scrollbar-color: #c2c2c2 #f1f1f1;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   .custom-scrollbar::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
   }
 }
 </style>
