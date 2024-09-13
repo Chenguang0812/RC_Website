@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-white dark:bg-[#303030] py-4 sm:py-8 px-2 sm:px-4">
-    <div class="w-full sm:max-w-4xl mx-auto">
-      <div class="mb-4 sm:mb-8 relative flex justify-center">
+  <div class="bg-white dark:bg-[#303030] py-6 sm:py-8 px-3 sm:px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-8 sm:mb-12 relative flex justify-center">
         <div class="bg-[#E0E0E0] dark:bg-[#2c2c2c] -skew-x-12 inline-block">
           <p
-            class="text-xl sm:text-3xl font-bold py-1 sm:py-2 px-4 sm:px-8 skew-x-12 inline-block relative z-10 dark:text-white"
+            class="text-2xl sm:text-3xl font-bold py-2 px-6 sm:px-8 skew-x-12 inline-block relative z-10 dark:text-white"
           >
             最新消息
           </p>
@@ -13,12 +13,12 @@
           />
         </div>
       </div>
-      <div class="h-[300px] sm:h-[400px] overflow-y-auto custom-scrollbar">
-        <div class="pr-2">
+      <div class="h-[350px] sm:h-[400px] overflow-y-auto custom-scrollbar">
+        <div class="w-[95%] sm:w-[95%] mx-auto">
           <div
             v-for="item in newsItems"
             :key="item.id"
-            class="bg-white dark:bg-[#3f3f3f] shadow-md rounded-lg overflow-hidden mb-3 sm:mb-4"
+            class="bg-white dark:bg-[#3f3f3f] shadow-md rounded-lg overflow-hidden mb-4"
           >
             <a
               :href="item.link"
@@ -26,9 +26,9 @@
               class="block w-full text-left hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#E99797] dark:focus:ring-[#FF9999]"
             >
               <div class="flex">
-                <div class="flex-1 p-2 sm:p-4">
+                <div class="flex-1 p-3 sm:p-4">
                   <h3
-                    class="text-sm sm:text-xl font-semibold mb-1 sm:mb-2 dark:text-white line-clamp-2"
+                    class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2 dark:text-white"
                   >
                     {{ item.title }}
                   </h3>
@@ -105,7 +105,7 @@ export default {
 
 <style scoped>
 .custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -128,16 +128,9 @@ export default {
   scrollbar-color: #c2c2c2 #f1f1f1;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   .custom-scrollbar::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
   }
-}
-
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 </style>
