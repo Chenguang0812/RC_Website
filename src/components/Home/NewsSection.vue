@@ -13,8 +13,8 @@
           />
         </div>
       </div>
-      <div class="overflow-y-auto custom-scrollbar pb-16">
-        <div>
+      <div class="h-[350px] sm:h-[400px] overflow-y-auto custom-scrollbar">
+        <div class="pr-2">
           <div
             v-for="item in newsItems"
             :key="item.id"
