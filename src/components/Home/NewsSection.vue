@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="h-[350px] sm:h-[400px] overflow-y-auto custom-scrollbar">
-        <div class="w-[95%] sm:w-[95%] mx-auto">
+        <div class="w-[90%] sm:w-[95%] mx-auto">
           <div
             v-for="item in newsItems"
             :key="item.id"
