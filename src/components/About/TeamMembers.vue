@@ -1,8 +1,7 @@
 <template>
-  <div class="flex justify-center my-12">
+  <div class="flex justify-center my-12 px-4 sm:px-0">
     <div
-      class="bg-white rounded-3xl shadow-2xl overflow-hidden relative"
-      style="width: 1120px"
+      class="bg-white rounded-3xl shadow-2xl overflow-hidden relative w-full max-w-[1120px] sm:w-[1120px]"
     >
       <!-- 背景動畫元素 -->
       <div
@@ -10,15 +9,15 @@
       />
 
       <h2
-        class="text-4xl font-bold my-8 text-[#E25353] dark:text-[#303030] text-center relative z-10"
+        class="text-3xl sm:text-4xl font-bold my-6 sm:my-8 text-[#E25353] dark:text-[#303030] text-center relative z-10"
       >
         我們的團隊
       </h2>
 
-      <!-- 團隊成員卡片 -->
+      <!-- 團隊成員卡片容器 -->
       <div
         ref="containerRef"
-        class="flex flex-wrap justify-center gap-8 relative z-10 max-h-[620px] overflow-y-auto px-6 pb-8"
+        class="flex flex-wrap justify-center gap-8 relative z-10 max-h-[70vh] sm:max-h-[620px] overflow-y-auto px-4 sm:px-6 pb-6 sm:pb-8"
       >
         <div
           v-for="member in teamMembers"
@@ -144,23 +143,35 @@ export default {
 </script>
 
 <style scoped>
-.animate-wave {
-  animation: wave 10s ease-in-out infinite;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-@keyframes slideIn {
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes fadeIn {
   from {
-    transform: translateY(50px) rotate(-5deg);
     opacity: 0;
+    transform: translateY(20px);
   }
-
   to {
-    transform: translateY(0) rotate(0deg);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.animate-slideIn {
-  animation: slideIn 0.8s ease-out forwards;
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
 }
 </style>
