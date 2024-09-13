@@ -13,11 +13,7 @@
           />
         </div>
       </div>
-      <div
-        ref="newsContainer"
-        class="h-[350px] sm:h-[400px] overflow-y-auto custom-scrollbar"
-        @scroll="handleScroll"
-      >
+      <div class="overflow-y-auto custom-scrollbar pb-16">
         <div>
           <div
             v-for="item in newsItems"
@@ -102,38 +98,7 @@ export default {
           link: "https://www.youtube.com/watch?v=GLu5YwiAtC4",
         },
       ],
-      isScrolling: false,
     };
-  },
-  methods: {
-    handleScroll(event) {
-      if (this.isScrolling) return;
-
-      const container = event.target;
-      const scrollPosition = container.scrollTop + container.clientHeight;
-      const scrollHeight = container.scrollHeight;
-
-      // 檢查是否滾動到底部
-      if (scrollHeight - scrollPosition <= 1) {
-        this.isScrolling = true;
-        this.scrollToNextComponent();
-      }
-    },
-    scrollToNextComponent() {
-      // 找到下一個組件並滾動到那裡
-      const nextComponent = this.$el.nextElementSibling;
-      if (nextComponent) {
-        nextComponent.scrollIntoView({ behavior: "smooth" });
-
-        // 重置滾動狀態
-        setTimeout(() => {
-          this.isScrolling = false;
-          this.$refs.newsContainer.scrollTop = 0;
-        }, 1000);
-      } else {
-        this.isScrolling = false;
-      }
-    },
   },
 };
 </script>
