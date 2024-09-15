@@ -30,7 +30,7 @@ export default {
       this.$refs.particleGround.appendChild(this.canvas);
       this.handleResize();
 
-      const particleCount = 200; // 增加粒子的数量
+      const particleCount = 150; // 增加粒子的数量
       for (let i = 0; i < particleCount; i++) {
         this.particles.push({
           x: Math.random() * this.canvas.width,

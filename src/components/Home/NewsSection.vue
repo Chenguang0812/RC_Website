@@ -1,15 +1,17 @@
 <template>
-  <div class="bg-white dark:bg-[#303030] py-6 sm:py-8 px-3 sm:px-4">
+  <div
+    class="bg-white dark:bg-[#2A2A2A] py-6 sm:py-8 px-3 sm:px-4 transition-colors duration-300"
+  >
     <div class="max-w-4xl mx-auto">
       <div class="mb-8 sm:mb-12 relative flex justify-center">
-        <div class="bg-[#E0E0E0] dark:bg-[#2c2c2c] -skew-x-12 inline-block">
+        <div class="bg-[#E0E0E0] dark:bg-[#3A3A3A] -skew-x-12 inline-block">
           <p
-            class="text-2xl sm:text-3xl font-bold py-2 px-6 sm:px-8 skew-x-12 inline-block relative z-10 dark:text-white"
+            class="text-2xl sm:text-3xl font-bold py-2 px-6 sm:px-8 skew-x-12 inline-block relative z-10 dark:text-[#FFFFFF]"
           >
             最新消息
           </p>
           <div
-            class="absolute bottom-0 right-0 w-full h-1 bg-[#E25353] dark:bg-[#0091ff]"
+            class="absolute bottom-0 right-0 w-full h-1 bg-[#E25353] dark:bg-[#c17fff]"
           />
         </div>
       </div>
@@ -18,21 +20,21 @@
           <div
             v-for="item in newsItems"
             :key="item.id"
-            class="bg-white dark:bg-[#3f3f3f] shadow-md rounded-lg overflow-hidden mb-4"
+            class="bg-white dark:bg-[#3A3A3A] shadow-md rounded-lg overflow-hidden mb-4 transition-all duration-300 hover:shadow-xl"
           >
             <a
               :href="item.link"
               target="_blank"
-              class="block w-full text-left hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#E99797] dark:focus:ring-[#FF9999]"
+              class="block w-full text-left hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#ff5050] dark:focus:ring-[#2c0b4b]"
             >
               <div class="flex">
                 <div class="flex-1 p-3 sm:p-4">
                   <h3
-                    class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2 dark:text-white"
+                    class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2 dark:text-[#FFFFFF]"
                   >
                     {{ item.title }}
                   </h3>
-                  <p class="text-gray-500 dark:text-gray-400 text-xs sm:text-sm">
+                  <p class="text-gray-500 dark:text-[#AAAAAA] text-xs sm:text-sm">
                     {{ item.date }}
                   </p>
                 </div>
@@ -113,19 +115,24 @@ export default {
   border-radius: 10px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #e25353;
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #d14141;
-}
-
 /* For Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: #c2c2c2 #f1f1f1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #4a5568;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #667eea;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #5a67d8;
+  }
 }
 
 @media (max-width: 640px) {

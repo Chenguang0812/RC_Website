@@ -5,7 +5,7 @@
     class="my-12 bg-white dark:bg-[#303030] py-16 rounded-lg shadow-xl overflow-hidden"
   >
     <!-- 標題 -->
-    <h2 class="text-4xl font-bold mb-10 text-[#E25353] dark:text-[#4DB8FF] text-center">
+    <h2 class="text-4xl font-bold mb-10 text-[#E25353] dark:text-[#c358e4] text-center">
       我們的成就
     </h2>
     <!-- 成就項目網格：響應式布局 -->
@@ -30,7 +30,7 @@
           </div>
         </div>
         <!-- 成就標籤 -->
-        <div class="text-[#E25353] dark:text-[#4DB8FF] font-semibold text-xl">
+        <div class="text-[#E25353] dark:text-[#ffffff] font-semibold text-xl">
           {{ achievement.label }}
         </div>
       </div>

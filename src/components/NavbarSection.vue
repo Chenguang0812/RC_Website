@@ -31,9 +31,8 @@
           </div>
 
           <div class="flex-shrink-0 w-1/4 flex justify-end items-center">
-            <div class="mr-2 xl:mr-0">
-              <theme />
-            </div>
+            <div class="mr-2 xl:mr-0"></div>
+            <theme />
           </div>
         </div>
       </div>

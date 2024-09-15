@@ -29,7 +29,7 @@
         總有一天我們會打敗火箭隊
       </p>
       <button
-        class="mt-8 bg-[#E99797] dark:bg-[#5c90ff] text-white py-2 px-6 rounded-full hover:bg-[#e57f7f] dark:hover:bg-[#97b1e9] transition-colors duration-300 animate-bounce"
+        class="mt-8 bg-[#E99797] dark:bg-[#5c67ff] text-white py-2 px-6 rounded-full hover:bg-[#e57f7f] dark:hover:bg-[#9c97e9] transition-colors duration-300 animate-bounce"
         @click="scrollToContent"
       >
         了解更多

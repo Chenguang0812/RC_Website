@@ -6,12 +6,12 @@
     <ParticleGround />
     <div class="container mx-auto px-4 py-24 relative z-10">
       <h2
-        class="text-6xl font-bold mb-5 text-center relative z-10 text-[#E25353] dark:text-blue-400"
+        class="text-6xl font-bold mb-5 text-center relative z-10 text-[#E25353] dark:text-[#9b69f8]"
       >
         聯絡我們
       </h2>
       <h2
-        class="text-2xl font-bold mb-16 text-center relative z-10 text-[#E25353] dark:text-blue-400"
+        class="text-2xl font-bold mb-16 text-center relative z-10 text-[#E25353] dark:text-[#9b69f8]"
       >
         找對專業，成就你的事業。<br />
         只有您不敢提的需求，沒有RC做不到的承諾。<br />
@@ -69,7 +69,7 @@
             <div class="flex items-center justify-center pt-6">
               <button
                 type="submit"
-                class="px-8 py-4 bg-[#E25353] dark:bg-blue-400 text-white text-lg font-semibold rounded-md shadow-md hover:bg-[#E99797] focus:outline-none focus:ring-2 focus:ring-[#E25353] focus:ring-opacity-50 transform hover:scale-110 transition-all duration-300"
+                class="px-8 py-4 bg-[#E25353] dark:bg-[#9b69f8] text-white text-lg font-semibold rounded-md shadow-md hover:bg-[#E99797] focus:outline-none focus:ring-2 focus:ring-[#E25353] focus:ring-opacity-50 transform hover:scale-110 transition-all duration-300"
               >
                 提交
               </button>

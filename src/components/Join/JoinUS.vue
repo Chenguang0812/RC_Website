@@ -3,15 +3,15 @@
   <div
     class="join-component relative bg-[#E3E3E3] dark:bg-[#303030] text-[#0C1014] dark:text-white overflow-hidden"
   >
-    <ParticleGround />
+    <ParticleGround :particleCount="100" />
     <div class="container mx-auto px-4 py-24 relative z-10">
       <h2
-        class="text-6xl font-bold mb-5 text-center relative z-10 text-[#E25353] dark:text-blue-400"
+        class="text-6xl font-bold mb-5 text-center relative z-10 text-[#E25353] dark:text-[#9b69f8]"
       >
         加入玫瑰帝國
       </h2>
       <h2
-        class="text-2xl font-bold mb-16 text-center relative z-10 text-[#E25353] dark:text-blue-400"
+        class="text-2xl font-bold mb-16 text-center relative z-10 text-[#E25353] dark:text-[#9b69f8]"
       >
         加入玫瑰帝國，<br />
         我們擁有良好的軍事裝備及糧食，<br />
@@ -82,7 +82,7 @@
             <div class="flex items-center justify-center pt-6">
               <button
                 type="submit"
-                class="px-8 py-4 bg-[#E25353] dark:bg-blue-400 text-white text-lg font-semibold rounded-md shadow-md hover:bg-[#E99797] focus:outline-none focus:ring-2 focus:ring-[#E25353] focus:ring-opacity-50 transform hover:scale-110 transition-all duration-300"
+                class="px-8 py-4 bg-[#E25353] dark:bg-[#9b69f8] text-white text-lg font-semibold rounded-md shadow-md hover:bg-[#E99797] focus:outline-none focus:ring-2 focus:ring-[#E25353] focus:ring-opacity-50 transform hover:scale-110 transition-all duration-300"
               >
                 提交申請
               </button>

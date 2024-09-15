@@ -1,7 +1,7 @@
 <template>
   <div class="my-12 p-4 sm:p-8 bg-white dark:bg-[#303030]">
     <h2
-      class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-16 text-[#E25353] dark:text-[#4DB8FF] text-center"
+      class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-16 text-[#E25353] dark:text-[#9a4dff] text-center"
     >
       關於我們
     </h2>
@@ -11,7 +11,7 @@
       <div ref="desktopTimelineWrapper" class="relative timeline-wrapper">
         <!-- 首先渲染中心线 -->
         <div
-          class="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-[#E99797] dark:bg-[#5CADDE] timeline-center-line h-full"
+          class="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-[#E99797] dark:bg-[#9a4dff] timeline-center-line h-full"
         ></div>
 
         <div class="timeline-container">
@@ -25,7 +25,7 @@
               class="w-5/12 py-4"
               :class="[index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left']"
             >
-              <h3 class="text-3xl font-bold mb-2 text-[#E25353] dark:text-[#4DB8FF]">
+              <h3 class="text-3xl font-bold mb-2 text-[#E25353] dark:text-[#9a4dff]">
                 {{ event.date }}
               </h3>
               <p class="text-xl text-gray-600 dark:text-[#E0E0E0]">
@@ -35,12 +35,12 @@
             <div class="w-2/12 flex justify-center items-center relative">
               <!-- 然后渲染连接线 -->
               <div
-                class="absolute top-1/2 w-[41.666667%] h-0.5 bg-[#E99797] dark:bg-[#5CADDE] timeline-connect-line"
+                class="absolute top-1/2 w-[41.666667%] h-0.5 bg-[#E99797] dark:bg-[#9a4dff] timeline-connect-line"
                 :class="index % 2 === 0 ? 'right-1/2' : 'left-1/2'"
               ></div>
               <!-- 最后渲染圆点 -->
               <div
-                class="w-2.5 h-2.5 rounded-full bg-[#E25353] dark:bg-[#4DB8FF] relative"
+                class="w-2.5 h-2.5 rounded-full bg-[#E25353] dark:bg-[#9a4dff] relative"
               ></div>
             </div>
             <div class="w-5/12"></div>
@@ -49,7 +49,7 @@
 
         <!-- 顶部的菱形 -->
         <div
-          class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-8 h-8 bg-[#E25353] dark:bg-[#4DB8FF] rotate-45"
+          class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-8 h-8 bg-[#E25353] dark:bg-[#9a4dff] rotate-45"
         ></div>
       </div>
     </div>
@@ -58,10 +58,10 @@
     <div class="sm:hidden">
       <div ref="mobileTimelineWrapper" class="timeline-container relative">
         <div
-          class="diamond absolute left-0 top-0 w-6 h-6 bg-[#E25353] dark:bg-[#4DB8FF] rotate-45 transform -translate-x-1/2 -translate-y-1/2"
+          class="diamond absolute left-0 top-0 w-6 h-6 bg-[#E25353] dark:bg-[#9a4dff] rotate-45 transform -translate-x-1/2 -translate-y-1/2"
         ></div>
         <div
-          class="timeline-line absolute left-0 top-0 bottom-0 w-px bg-[#E25353] dark:bg-[#5CADDE]"
+          class="timeline-line absolute left-0 top-0 bottom-0 w-px bg-[#E25353] dark:bg-[#9a4dff]"
         ></div>
         <div class="timeline-items space-y-8">
           <div
@@ -72,13 +72,13 @@
             :style="{ transitionDelay: `${index * 200}ms` }"
           >
             <div class="timeline-content">
-              <h3 class="text-xl font-bold text-[#E25353] dark:text-[#4DB8FF] mb-2">
+              <h3 class="text-xl font-bold text-[#E25353] dark:text-[#9a4dff] mb-2">
                 {{ item.date }}
               </h3>
               <p class="text-gray-600 dark:text-[#E0E0E0]">{{ item.description }}</p>
             </div>
             <div
-              class="timeline-marker absolute left-0 top-0 w-4 h-px bg-[#E25353] dark:bg-[#5CADDE]"
+              class="timeline-marker absolute left-0 top-0 w-4 h-px bg-[#E25353] dark:bg-[#9a4dff]"
             ></div>
           </div>
         </div>

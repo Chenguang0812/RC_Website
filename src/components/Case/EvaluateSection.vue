@@ -1,6 +1,8 @@
 <template>
   <!-- 主容器：設置背景色、內邊距和相對定位 -->
-  <div class="bg-[#E99797] py-16 overflow-hidden relative">
+  <div
+    class="bg-[#E99797] dark:bg-gray-800 py-16 overflow-hidden relative transition-colors duration-300"
+  >
     <!-- 彩色紙屑背景容器 -->
     <div class="absolute inset-0 overflow-hidden">
       <!-- 生成50個彩色紙屑 -->
@@ -15,7 +17,9 @@
     <!-- 內容容器 -->
     <div class="container mx-auto px-4 relative z-10">
       <!-- 標題 -->
-      <h2 class="text-4xl font-bold text-center text-white mb-12 soft-glow">
+      <h2
+        class="text-4xl font-bold text-center text-white mb-12 soft-glow dark:text-gray-200"
+      >
         用戶評價
       </h2>
       <!-- 評價輪播容器 -->
@@ -34,7 +38,7 @@
             >
               <!-- 評價卡片 -->
               <div
-                class="bg-white p-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:rotate-1"
+                class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:rotate-1"
               >
                 <!-- 用戶信息部分 -->
                 <div class="flex items-center mb-4">
@@ -42,28 +46,30 @@
                   <img
                     :src="review.avatar"
                     :alt="review.name"
-                    class="w-16 h-16 rounded-full mr-4 border-2 border-[#E25353] animate-bounce"
+                    class="w-16 h-16 rounded-full mr-4 border-2 border-[#E25353] dark:border-gray-800 animate-bounce"
                   />
                   <div>
                     <!-- 用戶名稱 -->
-                    <h3 class="text-[#E25353] text-xl font-semibold">
+                    <h3 class="text-[#E25353] dark:text-[#ffffff] text-xl font-semibold">
                       {{ review.name }}
                     </h3>
                     <!-- 用戶頭銜 -->
-                    <p class="text-gray-600">
+                    <p class="text-gray-600 dark:text-gray-400">
                       {{ review.title }}
                     </p>
                   </div>
                 </div>
                 <!-- 評價內容 -->
-                <p class="text-gray-800 italic mb-4">"{{ review.content }}"</p>
+                <p class="text-gray-800 dark:text-gray-300 italic mb-4">
+                  "{{ review.content }}"
+                </p>
                 <!-- 評分星星 -->
                 <div class="flex justify-center">
                   <span
                     v-for="star in 5"
                     :key="star"
                     class="text-yellow-400 text-2xl transform transition-all duration-300 hover:scale-125"
-                    :class="{ 'text-gray-300': star > review.rating }"
+                    :class="{ 'text-gray-300 dark:text-gray-600': star > review.rating }"
                     >★</span
                   >
                 </div>
@@ -85,53 +91,53 @@ export default {
       // 評價數據數組
       reviews: [
         {
-          name: '林德豐',
-          title: '畜生',
-          avatar: '/小風.webp',
-          content: 'RC Studio的老闆很坑，我才拖片20幾天就扣我薪水。',
+          name: "林德豐",
+          title: "畜生",
+          avatar: "/小風.webp",
+          content: "RC Studio的老闆很坑，我才拖片20幾天就扣我薪水。",
           rating: 5,
         },
         {
-          name: '林奕綸',
-          title: '性平委員',
-          avatar: '/綸弟.webp',
-          content: '雖然我被性平，但還是很喜歡RC Studio。',
+          name: "林奕綸",
+          title: "性平委員",
+          avatar: "/綸弟.webp",
+          content: "雖然我被性平，但還是很喜歡RC Studio。",
           rating: 4,
         },
         {
-          name: '蔡小姐',
-          title: '啊啊啊',
-          avatar: '/卡卡.webp',
-          content: '啊啊啊啊啊啊啊啊啊，啊啊啊啊啊啊啊啊啊！',
+          name: "蔡小姐",
+          title: "啊啊啊",
+          avatar: "/卡卡.webp",
+          content: "啊啊啊啊啊啊啊啊啊，啊啊啊啊啊啊啊啊啊！",
           rating: 5,
         },
       ],
       // 自動播放定時器
       autoplayInterval: null,
-    }
+    };
   },
   mounted() {
     // 組件掛載後啟動自動播放
-    this.startAutoplay()
+    this.startAutoplay();
   },
   beforeUnmount() {
     // 組件卸載前停止自動播放
-    this.stopAutoplay()
+    this.stopAutoplay();
   },
   methods: {
     // 開始自動播放
     startAutoplay() {
       this.autoplayInterval = setInterval(() => {
-        this.nextSlide()
-      }, 5000)
+        this.nextSlide();
+      }, 5000);
     },
     // 停止自動播放
     stopAutoplay() {
-      clearInterval(this.autoplayInterval)
+      clearInterval(this.autoplayInterval);
     },
     // 切換到下一張幻燈片
     nextSlide() {
-      this.currentIndex = (this.currentIndex + 1) % this.reviews.length
+      this.currentIndex = (this.currentIndex + 1) % this.reviews.length;
     },
     // 生成彩色紙屑的樣式
     confettiStyle(n) {
@@ -141,23 +147,23 @@ export default {
         transform: `rotate(${Math.random() * 360}deg)`,
         animationDelay: `${Math.random() * 5}s`,
         animationDuration: `${Math.random() * 3 + 5}s`,
-      }
+      };
     },
     // 隨機選擇彩色紙屑的顏色
     randomConfettiColor() {
       const colors = [
-        'bg-red-500',
-        'bg-yellow-500',
-        'bg-green-500',
-        'bg-blue-500',
-        'bg-indigo-500',
-        'bg-purple-500',
-        'bg-pink-500',
-      ]
-      return colors[Math.floor(Math.random() * colors.length)]
+        "bg-red-500",
+        "bg-yellow-500",
+        "bg-green-500",
+        "bg-blue-500",
+        "bg-indigo-500",
+        "bg-purple-500",
+        "bg-pink-500",
+      ];
+      return colors[Math.floor(Math.random() * colors.length)];
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -178,9 +184,14 @@ export default {
 
 /* 標題的柔和發光效果 */
 .soft-glow {
-  text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* 深色模式下的柔和發光效果 */
+@media (prefers-color-scheme: dark) {
+  .soft-glow {
+    text-shadow: 0 0 10px rgba(156, 163, 175, 0.5), 0 0 20px rgba(156, 163, 175, 0.3);
+  }
 }
 
 /* 三種不同形狀的彩色紙屑 */

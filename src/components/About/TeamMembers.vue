@@ -1,15 +1,15 @@
 <template>
   <div class="flex justify-center my-12 px-4 sm:px-0">
     <div
-      class="bg-white rounded-3xl shadow-2xl overflow-hidden relative w-full max-w-[1120px] sm:w-[1120px]"
+      class="bg-white dark:bg-[#1E1A2E] rounded-3xl shadow-2xl overflow-hidden relative w-full max-w-[1120px] sm:w-[1120px]"
     >
       <!-- 背景動畫元素 -->
       <div
-        class="absolute inset-0 bg-gradient-to-r from-[#E25353] to-[#E99797] dark:from-[#5385e2] dark:to-[#7a8eff] opacity-10 dark:opacity-100 animate-wave"
+        class="absolute inset-0 bg-gradient-to-r from-[#E25353] to-[#E99797] dark:from-[#4F46E5] dark:to-[#c17fff] opacity-10 dark:opacity-20 animate-wave"
       />
 
       <h2
-        class="text-3xl sm:text-4xl font-bold my-6 sm:my-8 text-[#E25353] dark:text-[#303030] text-center relative z-10"
+        class="text-3xl sm:text-4xl font-bold my-6 sm:my-8 text-[#E25353] dark:text-[#A78BFA] text-center relative z-10"
       >
         我們的團隊
       </h2>
@@ -27,7 +27,7 @@
               if (el) memberRefs[member.id] = el;
             }
           "
-          class="w-80 bg-white dark:bg-[#303030] rounded-lg p-6 shadow-lg transform transition duration-500 hover:scale-105 hover:rotate-2"
+          class="w-80 bg-white dark:bg-[#312947] rounded-lg p-6 shadow-lg transform transition duration-500 hover:scale-105 hover:rotate-2"
           :class="{ 'animate-slideIn': member.isVisible }"
         >
           <!-- 成員圖片 -->
@@ -41,11 +41,11 @@
             />
           </div>
           <!-- 成員姓名 -->
-          <h3 class="text-2xl font-bold mb-2 text-[#E25353] dark:text-[#4DB8FF]">
+          <h3 class="text-2xl font-bold mb-2 text-[#E25353] dark:text-[#A78BFA]">
             {{ member.name }}
           </h3>
           <!-- 成員職位 -->
-          <p class="text-lg text-[#E99797] dark:text-[#4db8ffcb]">
+          <p class="text-lg text-[#E99797] dark:text-[#8B5CF6]">
             {{ member.position }}
           </p>
         </div>

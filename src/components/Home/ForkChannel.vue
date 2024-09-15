@@ -2,7 +2,7 @@
   <div class="bg-[#E4E4E4] dark:bg-[#1C1C1C] py-8 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="mb-8 flex items-center">
-        <div class="w-2 h-8 bg-[#E25353] dark:bg-[#0091ff] mr-4" />
+        <div class="w-2 h-8 bg-[#E25353] dark:bg-[#8671ff] mr-4" />
         <h2 class="font-bold text-4xl text-gray-900 dark:text-[#e0e0e0]">旗下頻道</h2>
       </div>
       <div ref="channelContainer" class="overflow-x-scroll custom-scrollbar">
@@ -46,7 +46,7 @@ export default {
           id: 1,
           name: "亦凌YiLing",
           image: "/亦凌.webp",
-          url: "https://www.youtube.com/@10_YiLing",
+          url: "https://www.youtube.com/@RC_%E4%BA%A6%E5%87%8C",
         },
         {
           id: 2,
