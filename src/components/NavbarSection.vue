@@ -18,7 +18,7 @@
 
           <!-- Desktop navigation -->
           <div class="hidden xl:flex flex-grow justify-center w-1/2">
-            <div class="flex items-center justify-center space-x-4">
+            <div class="relative left-5 items-center justify-center space-x-4">
               <button
                 v-for="(item, index) in navItems"
                 :key="item"
@@ -35,7 +35,7 @@
           </div>
           <div class="mr-2 xl:mr-0">
             <!-- Add social icons here -->
-            <div class="absolute left-[105rem] top-3 items-center space-x-2 text-2xl">
+            <div class="relative top-0.5 right-60 items-center space-x-2 text-2xl">
               <a
                 v-for="(social, index) in socials"
                 :key="index"
@@ -61,6 +61,7 @@
     </nav>
 
     <!-- Mobile Sidebar (顯示於小螢幕) -->
+
     <nav
       v-if="isMobile"
       class="fixed top-0 left-0 right-0 bg-white dark:bg-[#383838] z-50 transition-all duration-300 ease-in-out shadow-md shadow-gray-500/50 dark:shadow-[#5a5a5a]"
@@ -95,6 +96,27 @@
                 />
               </div>
             </a>
+          </div>
+          <!-- Overlay -->
+          <div
+            v-if="isOpen"
+            class="fixed inset-0 bg-black bg-opacity-50 z-40"
+            @click="toggleNavbar"
+          ></div>
+          <div
+            :class="{ 'translate-x-0': isOpen, 'translate-x-full': !isOpen }"
+            class="fixed top-0 right-0 bottom-0 w-64 bg-white dark:bg-[#383838] shadow-xl overflow-y-auto transition-transform duration-300 ease-in-out z-50 rounded-l-3xl"
+          >
+            <div class="px-4 pt-20 pb-3 space-y-1">
+              <button
+                v-for="(item, index) in navItems"
+                :key="item"
+                class="text-[#44474B] dark:text-[#ffffff] hover:bg-[#e2e2e2] dark:hover:bg-[#4d4d4d] block px-3 py-2 rounded-md text-base w-full text-left transition-colors duration-200"
+                @click="navigateTo(navPaths[index])"
+              >
+                {{ item }}
+              </button>
+            </div>
           </div>
           <div class="flex items-center">
             <theme class="fixed right-16 top-4" />
@@ -138,22 +160,6 @@
               </svg>
             </button>
           </div>
-        </div>
-      </div>
-
-      <div
-        :class="{ 'translate-x-0': isOpen, '-translate-x-full': !isOpen }"
-        class="fixed top-16 left-0 w-64 h-full bg-white dark:bg-[#383838] overflow-y-auto transition-transform duration-300 ease-in-out"
-      >
-        <div class="px-2 pt-2 pb-3 space-y-1">
-          <button
-            v-for="(item, index) in navItems"
-            :key="item"
-            class="text-[#44474B] dark:text-[#ffffff] hover:bg-gray-100 dark:hover:bg-[#3d3d3d] block px-3 py-2 rounded-md text-base w-full text-left transition-colors duration-200"
-            @click="navigateTo(navPaths[index])"
-          >
-            {{ item }}
-          </button>
         </div>
       </div>
     </nav>

@@ -61,7 +61,7 @@
           class="diamond absolute left-0 top-0 w-6 h-6 bg-[#E25353] dark:bg-[#5c67ff] rotate-45 transform -translate-x-1/2 -translate-y-1/2"
         ></div>
         <div
-          class="timeline-line absolute left-0 top-0 bottom-0 w-px bg-[#E25353] dark:bg-#5c67ff]"
+          class="timeline-line absolute left-0 top-0 bottom-0 w-px bg-[#E25353] dark:bg-[#5c67ff]"
         ></div>
         <div class="timeline-items space-y-8">
           <div
@@ -72,13 +72,13 @@
             :style="{ transitionDelay: `${index * 200}ms` }"
           >
             <div class="timeline-content">
-              <h3 class="text-xl font-bold text-[#E25353] dark:text-[#9a4dff] mb-2">
+              <h3 class="text-xl font-bold text-[#ca4040] dark:text-[#5c67ff] mb-2">
                 {{ item.date }}
               </h3>
               <p class="text-gray-600 dark:text-[#E0E0E0]">{{ item.description }}</p>
             </div>
             <div
-              class="timeline-marker absolute left-0 top-0 w-4 h-px bg-[#E25353] dark:bg-[#9a4dff]"
+              class="timeline-marker absolute left-0 top-0 w-4 h-px bg-[#E25353] dark:bg-[#5c67ff]"
             ></div>
           </div>
         </div>

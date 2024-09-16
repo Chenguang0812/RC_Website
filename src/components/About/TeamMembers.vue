@@ -70,7 +70,7 @@ export default {
         {
           id: 2,
           name: "卡卡滋Kazi",
-          position: "老闆女友，阿阿阿",
+          position: "ㄚㄚㄚㄚㄚㄚ",
           image: "/卡卡.webp",
           isVisible: false,
         },
