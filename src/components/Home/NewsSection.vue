@@ -11,7 +11,7 @@
             最新消息
           </p>
           <div
-            class="absolute bottom-0 right-0 w-full h-1 bg-[#E25353] dark:bg-[#c17fff]"
+            class="absolute bottom-0 right-0 w-full h-1 bg-[#E25353] dark:bg-[#5c67ff]"
           />
         </div>
       </div>

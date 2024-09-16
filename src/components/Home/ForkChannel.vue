@@ -2,7 +2,7 @@
   <div class="bg-[#E4E4E4] dark:bg-[#1C1C1C] py-8 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="mb-8 flex items-center">
-        <div class="w-2 h-8 bg-[#E25353] dark:bg-[#8671ff] mr-4" />
+        <div class="w-2 h-8 bg-[#E25353] dark:bg-[#5c67ff] mr-4" />
         <h2 class="font-bold text-4xl text-gray-900 dark:text-[#e0e0e0]">旗下頻道</h2>
       </div>
       <div ref="channelContainer" class="overflow-x-scroll custom-scrollbar">
@@ -37,40 +37,40 @@ export default {
     return {
       channels: [
         {
-          id: 6,
+          id: 1,
           name: "RC Studio工作室",
           image: "/RC.webp",
           url: "https://www.youtube.com/@RC_Studio",
         },
         {
-          id: 1,
-          name: "亦凌YiLing",
+          id: 2,
+          name: "晨光",
+          image: "/晨光.webp",
+          url: "https://www.youtube.com/@RC_%E6%99%A8%E5%85%89",
+        },
+        {
+          id: 3,
+          name: "亦凌",
           image: "/亦凌.webp",
           url: "https://www.youtube.com/@RC_%E4%BA%A6%E5%87%8C",
         },
         {
-          id: 2,
+          id: 4,
+          name: "卡卡滋",
+          image: "/卡卡.webp",
+          url: "https://www.youtube.com/@RC_%E5%8D%A1%E5%8D%A1%E6%BB%8B",
+        },
+        {
+          id: 5,
           name: "實況Online",
           image: "/實況Online.webp",
           url: "https://www.youtube.com/@PalyerOnline",
         },
         {
-          id: 5,
+          id: 6,
           name: "尤教授的烤肉實驗室",
           image: "/烤肉.webp",
           url: "https://www.youtube.com/@holoXman/featured",
-        },
-        {
-          id: 3,
-          name: "BANWE",
-          image: "/BANWE.webp",
-          url: "https://www.youtube.com/@BANWE",
-        },
-        {
-          id: 4,
-          name: "玫瑰雲端",
-          image: "/玫瑰雲端.webp",
-          url: "https://www.youtube.com/@RC_Drive",
         },
         {
           id: 7,

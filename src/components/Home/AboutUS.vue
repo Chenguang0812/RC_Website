@@ -4,7 +4,7 @@
   >
     <div class="flex-1 mt-4">
       <div class="flex items-center mb-4">
-        <div class="w-2 h-10 bg-[#E25353] dark:bg-[#7f81ff] mr-4" />
+        <div class="w-2 h-10 bg-[#E25353] dark:bg-[#5c67ff] mr-4" />
         <div>
           <p class="text-[#000000] dark:text-[#FFFFFF] text-4xl font-bold">關於我們</p>
         </div>

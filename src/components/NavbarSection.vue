@@ -31,8 +31,30 @@
           </div>
 
           <div class="flex-shrink-0 w-1/4 flex justify-end items-center">
-            <div class="mr-2 xl:mr-0"></div>
-            <theme />
+            <theme class="fixed right-10 top-4" />
+          </div>
+          <div class="mr-2 xl:mr-0">
+            <!-- Add social icons here -->
+            <div class="absolute left-[105rem] top-3 items-center space-x-2 text-2xl">
+              <a
+                v-for="(social, index) in socials"
+                :key="index"
+                :href="social.link"
+                target="_blank"
+                class="group"
+              >
+                <div
+                  class="w-10 h-10 bg-gray-300 dark:bg-[#6B6B6B] rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
+                >
+                  <i
+                    :class="[
+                      ' text-gray-700 dark:text-[#383838] group-hover:text-white transition-colors duration-300',
+                      social.icon,
+                    ]"
+                  />
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -53,11 +75,30 @@
               {{ title }}
             </button>
           </div>
-
+          <!-- Add social icons here -->
+          <div class="fixed right-36 items-center space-x-2 text-2xl">
+            <a
+              v-for="(social, index) in socials"
+              :key="index"
+              :href="social.link"
+              target="_blank"
+              class="group"
+            >
+              <div
+                class="w-10 h-10 bg-gray-300 dark:bg-[#6B6B6B] rounded-full flex items-center justify-center group-hover:bg-gray-400 transition-colors duration-300"
+              >
+                <i
+                  :class="[
+                    ' text-gray-700 dark:text-[#383838] group-hover:text-white transition-colors duration-300',
+                    social.icon,
+                  ]"
+                />
+              </div>
+            </a>
+          </div>
           <div class="flex items-center">
-            <div class="mr-2">
-              <theme />
-            </div>
+            <theme class="fixed right-16 top-4" />
+
             <button
               class="inline-flex items-center justify-center p-2 rounded-md text-[#383838] dark:text-[#ffffff] hover:bg-gray-100 dark:hover:bg-[#3d3d3d] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#383838] dark:focus:ring-[#ffffff] transition-colors duration-200"
               @click="toggleNavbar"
@@ -117,12 +158,10 @@
       </div>
     </nav>
 
-    <!-- Main content wrapper -->
     <div
       :class="{ 'xl:ml-0 ml-64': isOpen && isMobile }"
       class="transition-margin duration-300 ease-in-out"
     >
-      <!-- Your main content goes here -->
       <slot></slot>
     </div>
   </div>
@@ -137,6 +176,8 @@ export default {
   },
   data() {
     return {
+      currentYear: new Date().getFullYear(),
+      socials: [{ icon: "fab fa-line", link: "https://line.me/ti/p/hcaTOMPpzA" }],
       isOpen: false,
       title: "RC Studio",
       navItems: ["回到主頁", "關於我們", "整合行銷", "加入我們", "聯絡我們"],

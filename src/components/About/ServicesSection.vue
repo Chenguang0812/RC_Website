@@ -2,14 +2,14 @@
   <div
     class="my-12 bg-white dark:bg-[#303030] py-16 rounded-lg shadow-xl overflow-hidden"
   >
-    <h2 class="text-4xl font-bold mb-12 text-[#E25353] dark:text-[#c358e4] text-center">
+    <h2 class="text-4xl font-bold mb-12 text-[#E25353] dark:text-[#5c67ff] text-center">
       我們的服務
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
       <div
         v-for="service in services"
         :key="service.id"
-        class="bg-gradient-to-br from-[#E25353] to-[#E99797] dark:from-[#6246EA] dark:to-[#8e58e4] shadow-lg rounded-lg p-6 text-white flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl service-card"
+        class="bg-gradient-to-br from-[#E25353] to-[#E99797] dark:from-[#5c67ff] dark:to-[#9098ff] shadow-lg rounded-lg p-6 text-white flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl service-card"
       >
         <div
           class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 service-icon"
@@ -80,7 +80,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-/* Styles remain the same */
-</style>

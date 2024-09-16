@@ -5,7 +5,7 @@
     class="my-12 bg-white dark:bg-[#303030] py-16 rounded-lg shadow-xl overflow-hidden"
   >
     <!-- 標題 -->
-    <h2 class="text-4xl font-bold mb-10 text-[#E25353] dark:text-[#c358e4] text-center">
+    <h2 class="text-4xl font-bold mb-10 text-[#E25353] dark:text-[#5c67ff] text-center">
       我們的成就
     </h2>
     <!-- 成就項目網格：響應式布局 -->
@@ -47,7 +47,7 @@ export default {
       isVisible: false,
       // 成就數據
       achievements: [
-        { id: 1, value: 500, suffix: "+", label: "完成專案", currentValue: 0 },
+        { id: 1, value: 1000, suffix: "+", label: "完成專案", currentValue: 0 },
         { id: 2, value: 3, suffix: "+", label: "行業經驗", currentValue: 0 },
         { id: 3, value: 50, suffix: "+", label: "長期客戶", currentValue: 0 },
         { id: 4, value: 10, suffix: "+", label: "員工人數", currentValue: 0 },
