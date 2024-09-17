@@ -15,7 +15,6 @@
       {{ particle.icon }}
     </div>
 
-    <!-- 標題 -->
     <h2
       class="text-4xl font-bold text-center text-white relative mb-3 z-10 animate-glitch"
       data-text="影視專欄"
@@ -25,13 +24,10 @@
     <h2 class="text-xl font-bold text-center text-white mb-12 relative z-10">
       RC累計創作超過1000部作品，累積影片總觀看數破億次！
     </h2>
-    <!-- 內容容器 -->
     <div class="container mx-auto px-4 relative z-10">
-      <!-- 視頻卡片網格 -->
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
       >
-        <!-- 視頻卡片 -->
         <div
           v-for="(video, index) in videos"
           :key="index"
@@ -40,7 +36,6 @@
           <div
             class="rounded-lg shadow-lg bg-white dark:bg-gray-800 max-w-sm overflow-hidden group"
           >
-            <!-- 視頻嵌入區域 -->
             <div class="relative pb-[56.25%] h-0 overflow-hidden">
               <iframe
                 class="absolute top-0 left-0 w-full h-full"
@@ -50,9 +45,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               />
-              <!-- 懸停播放圖標 -->
             </div>
-            <!-- 視頻信息 -->
             <div
               class="p-6 transform group-hover:translate-y-[-10px] transition-transform duration-300"
             >
@@ -64,7 +57,7 @@
               <p class="text-gray-700 dark:text-gray-300 text-base mb-4">
                 {{ video.Description }}
               </p>
-              <!-- "觀看完整影片" 按鈕 -->
+              <!-- "觀看完整影片" -->
               <a
                 class="inline-block px-6 py-2.5 bg-[#E25353] dark:bg-indigo-600 text-white text-xs uppercase rounded hover:bg-[#E99797] dark:hover:bg-indigo-700 transition-all duration-300 transform hover:scale-110 hover:rotate-3 relative overflow-hidden"
                 :href="video.button"
@@ -72,7 +65,6 @@
                 rel="noopener noreferrer"
               >
                 <span class="relative z-10">觀看完整影片</span>
-                <!-- 按鈕懸停效果 -->
                 <span
                   class="absolute inset-0 h-full w-full bg-gradient-to-r from-pink-500 to-yellow-500 dark:from-indigo-700 dark:to-purple-700 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
                 />
@@ -90,15 +82,14 @@ export default {
   name: "VideoColumn",
   data() {
     return {
-      // 存儲鼠標位置
       mousePosition: { x: 0, y: 0 },
-      // 存儲浮動粒子
       particles: [],
       videos: [
         {
           link: "https://www.youtube.com/embed/g0dKNvcEo08?si=t8YsAmx21VE77j9o",
           title: "皮卡嚕",
-          Description: "單部影片創造百萬流量🔥🔥🔥🔥🔥🔥🔥🔥🔥",
+          Description:
+            "單部影片創造百萬流量🔥                                           ",
           button: "https://youtu.be/g0dKNvcEo08?si=_U9yB2YWSMyhfvc6",
         },
         {
@@ -110,7 +101,8 @@ export default {
         {
           link: "https://www.youtube.com/embed/crVmX1jz63E?si=dySj5ZASoPS83tIk",
           title: "乖兒子",
-          Description: "賽事活動精華，瞄準目標受眾，引起共鳴🤩",
+          Description:
+            "賽事活動精華，瞄準目標受眾，引起共鳴🤩                                           ",
           button: "https://www.youtube.com/watch?v=7H7rtiTh4m0",
         },
         {
@@ -132,7 +124,6 @@ export default {
           button: "https://www.youtube.com/watch?v=0iDJ7agNpsc",
         },
       ],
-      // 定義浮動元素和背景元素
       floatingElements: [
         "🎭",
         "🎬",
@@ -151,11 +142,9 @@ export default {
     };
   },
   mounted() {
-    // 組件掛載時創建粒子
     this.createParticles();
   },
   methods: {
-    // 處理鼠標移動事件
     handleMouseMove(event) {
       const rect = this.$refs.container.getBoundingClientRect();
       this.mousePosition = {
@@ -163,7 +152,6 @@ export default {
         y: event.clientY - rect.top,
       };
     },
-    // 創建浮動粒子
     createParticles() {
       const allElements = [...this.floatingElements, ...this.backgroundElements];
       for (let i = 0; i < 50; i++) {
@@ -175,7 +163,6 @@ export default {
         });
       }
     },
-    // 計算粒子樣式
     getParticleStyle(particle) {
       const dx =
         (this.mousePosition.x / this.$refs.container.offsetWidth) * 100 - particle.x;
@@ -185,7 +172,7 @@ export default {
       const maxDistance = Math.sqrt(10000); // 最大距離（100^2 + 100^2）的平方根
       const scale = 1 - distance / maxDistance; // 距離越近，scale越大
 
-      // 稍微增加移動幅度
+      // 移動幅度
       const moveFactor = 1.5;
 
       return {
@@ -202,7 +189,6 @@ export default {
 </script>
 
 <style scoped>
-/* 定義故障效果動畫 */
 @keyframes glitch {
   0% {
     transform: translate(0);

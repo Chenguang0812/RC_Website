@@ -1,11 +1,9 @@
 <template>
-  <!-- 主容器：設置背景色、內邊距和相對定位 -->
   <div
     class="bg-[#E99797] dark:bg-gray-800 py-16 overflow-hidden relative transition-colors duration-300"
   >
-    <!-- 彩色紙屑背景容器 -->
+    <!-- 彩屑 -->
     <div class="absolute inset-0 overflow-hidden">
-      <!-- 生成50個彩色紙屑 -->
       <div
         v-for="n in 50"
         :key="n"
@@ -14,56 +12,45 @@
         :style="confettiStyle(n)"
       />
     </div>
-    <!-- 內容容器 -->
     <div class="container mx-auto px-4 relative z-10">
-      <!-- 標題 -->
       <h2
         class="text-4xl font-bold text-center text-white mb-12 soft-glow dark:text-gray-200"
       >
         用戶評價
       </h2>
-      <!-- 評價輪播容器 -->
       <div class="relative w-full max-w-3xl mx-auto">
         <div class="overflow-hidden">
-          <!-- 評價卡片容器：使用 flex 和 transform 實現輪播效果 -->
           <div
             class="flex transition-transform duration-500 ease-in-out"
             :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
           >
-            <!-- 遍歷評價數據生成評價卡片 -->
             <div
               v-for="(review, index) in reviews"
               :key="index"
               class="w-full flex-shrink-0 px-4"
             >
-              <!-- 評價卡片 -->
+              <!-- 評價 -->
               <div
                 class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:rotate-1 review-card"
               >
-                <!-- 用戶信息部分 -->
                 <div class="flex items-center mb-4">
-                  <!-- 用戶頭像 -->
                   <img
                     :src="review.avatar"
                     :alt="review.name"
                     class="w-16 h-16 rounded-full mr-4 border-2 border-[#E25353] dark:border-gray-800 animate-bounce"
                   />
                   <div>
-                    <!-- 用戶名稱 -->
                     <h3 class="text-[#E25353] dark:text-[#ffffff] text-xl font-semibold">
                       {{ review.name }}
                     </h3>
-                    <!-- 用戶頭銜 -->
                     <p class="text-gray-600 dark:text-gray-400">
                       {{ review.title }}
                     </p>
                   </div>
                 </div>
-                <!-- 評價內容 -->
                 <p class="text-gray-800 dark:text-gray-300 italic mb-4">
                   "{{ review.content }}"
                 </p>
-                <!-- 評分星星 -->
                 <div class="flex justify-center">
                   <span
                     v-for="star in 5"

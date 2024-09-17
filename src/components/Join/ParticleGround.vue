@@ -353,13 +353,13 @@ class Particle {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  position: relative; /* 確保表單是相對定位 */
+  position: relative;
   top: 0;
   width: 100%;
-  height: auto; /* 或指定具體的高度 */
-  display: flex; /* 如果使用 flexbox */
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 </style>

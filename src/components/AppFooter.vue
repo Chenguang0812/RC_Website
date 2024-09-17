@@ -4,7 +4,6 @@
   >
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <!-- 公司信息 -->
         <div class="space-y-4">
           <h4
             class="text-2xl font-bold mb-4 text-gray-800 dark:text-[#ffffff] border-b-2 border-gray-300 dark:border-[#1a1a1a] pb-2 inline-block"

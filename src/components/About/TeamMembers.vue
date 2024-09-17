@@ -3,7 +3,7 @@
     <div
       class="bg-white dark:bg-[#1E1A2E] rounded-3xl shadow-2xl overflow-hidden relative w-full max-w-[1120px] sm:w-[1120px]"
     >
-      <!-- 背景動畫元素 -->
+      <!-- 背景動畫 -->
       <div
         class="absolute inset-0 bg-gradient-to-r from-[#E25353] to-[#E99797] dark:from-[#5c67ff] dark:to-[#939bff] opacity-10 dark:opacity-20 animate-wave"
       />
@@ -14,7 +14,7 @@
         我們的團隊
       </h2>
 
-      <!-- 團隊成員卡片容器 -->
+      <!-- 團隊成員Card -->
       <div
         ref="containerRef"
         class="flex flex-wrap justify-center gap-8 relative z-10 max-h-[70vh] sm:max-h-[620px] overflow-y-auto px-4 sm:px-6 pb-6 sm:pb-8"

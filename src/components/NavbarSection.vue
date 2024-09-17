@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Desktop Navbar (顯示於大螢幕) -->
+    <!-- Desktop Navbar (大螢幕) -->
     <nav
       v-if="!isMobile"
       class="fixed top-0 left-0 right-0 bg-white dark:bg-[#383838] z-50 transition-all duration-300 ease-in-out shadow-md shadow-gray-500/50 dark:shadow-[#5a5a5a]"
@@ -34,7 +34,6 @@
             <theme class="fixed right-10 top-4" />
           </div>
           <div class="mr-2 xl:mr-0">
-            <!-- Add social icons here -->
             <div class="relative top-0 right-60 items-center space-x-2 text-2xl">
               <a
                 v-for="(social, index) in socials"
@@ -60,7 +59,7 @@
       </div>
     </nav>
 
-    <!-- Mobile Sidebar (顯示於小螢幕) -->
+    <!-- Mobile Sidebar (小螢幕) -->
 
     <nav
       v-if="isMobile"
@@ -76,7 +75,6 @@
               {{ title }}
             </button>
           </div>
-          <!-- Add social icons here -->
           <div class="fixed right-36 items-center space-x-2 text-2xl">
             <a
               v-for="(social, index) in socials"

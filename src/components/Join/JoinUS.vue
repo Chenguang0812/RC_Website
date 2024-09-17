@@ -348,9 +348,9 @@ export default {
 }
 
 .particles-container {
-  width: 100vw; /* 使用視窗的全寬 */
-  height: 175vh; /* 使用視窗的全高 */
-  position: absolute; /* 保持背景效果 */
+  width: 100vw;
+  height: 175vh;
+  position: absolute;
   top: 0;
   left: 0;
 }

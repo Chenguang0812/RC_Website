@@ -6,10 +6,9 @@
       關於我們
     </h2>
 
-    <!-- 桌面版時間線 -->
+    <!-- 桌面時間線 -->
     <div class="hidden sm:block">
       <div ref="desktopTimelineWrapper" class="relative timeline-wrapper">
-        <!-- 首先渲染中心线 -->
         <div
           class="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-[#E99797] dark:bg-[#5c67ff] timeline-center-line h-full"
         ></div>
@@ -33,12 +32,10 @@
               </p>
             </div>
             <div class="w-2/12 flex justify-center items-center relative">
-              <!-- 然后渲染连接线 -->
               <div
                 class="absolute top-1/2 w-[41.666667%] h-0.5 bg-[#E99797] dark:bg-[#5c67ff] timeline-connect-line"
                 :class="index % 2 === 0 ? 'right-1/2' : 'left-1/2'"
               ></div>
-              <!-- 最后渲染圆点 -->
               <div
                 class="w-2.5 h-2.5 rounded-full bg-[#E25353] dark:bg-[#5c67ff] relative"
               ></div>
@@ -47,14 +44,14 @@
           </div>
         </div>
 
-        <!-- 顶部的菱形 -->
+        <!-- 菱形 -->
         <div
           class="absolute left-1/2 transform -translate-x-1/2 -top-8 w-8 h-8 bg-[#E25353] dark:bg-[#5c67ff] rotate-45"
         ></div>
       </div>
     </div>
 
-    <!-- 手機版時間線（保持原样，但更新颜色） -->
+    <!-- 手機版時間線 -->
     <div class="sm:hidden">
       <div ref="mobileTimelineWrapper" class="timeline-container relative">
         <div

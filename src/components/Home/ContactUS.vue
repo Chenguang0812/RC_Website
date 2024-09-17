@@ -15,7 +15,6 @@
       </div>
 
       <form class="space-y-6" @submit.prevent="submitForm">
-        <!-- 表單字段 -->
         <div>
           <label
             for="name"
