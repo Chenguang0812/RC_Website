@@ -3,7 +3,7 @@
   <div
     class="join-component relative bg-[#E3E3E3] dark:bg-[#303030] text-[#0C1014] dark:text-white overflow-hidden"
   >
-    <ParticleGround :particleCount="100" />
+    <ParticleGround class="particles-container" />
     <div class="container mx-auto px-4 py-24 relative z-10">
       <h2
         class="text-6xl font-bold mb-5 text-center relative z-10 text-[#E25353] dark:text-[#5c67ff]"
@@ -345,5 +345,13 @@ export default {
   bottom: 10%;
   right: 10%;
   animation-delay: 4s;
+}
+
+.particles-container {
+  width: 100vw; /* 使用視窗的全寬 */
+  height: 175vh; /* 使用視窗的全高 */
+  position: absolute; /* 保持背景效果 */
+  top: 0;
+  left: 0;
 }
 </style>

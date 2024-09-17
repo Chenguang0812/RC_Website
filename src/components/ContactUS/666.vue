@@ -4,7 +4,7 @@
   <div
     class="contact-component bg-[#E3E3E3] dark:bg-[#303030] text-[#0C1014] overflow-hidden"
   >
-    <ParticleGround />
+    <ParticleGround class="particles-container" />
     <div id="app"></div>
 
     <div class="container mx-auto px-4 py-24 relative z-10">
@@ -168,5 +168,13 @@ export default {
   color: #e25353;
   top: -0.75rem;
   font-size: 0.75rem;
+}
+
+.particles-container {
+  width: 100vw; /* 使用視窗的全寬 */
+  height: 100vh; /* 使用視窗的全高 */
+  position: absolute; /* 保持背景效果 */
+  top: 0;
+  left: 0;
 }
 </style>

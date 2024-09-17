@@ -21,14 +21,14 @@ export default {
         maxSpeedY: 0.7,
         directionX: "center",
         directionY: "center",
-        density: 20000,
+        density: 30000,
         dotColor: "#666666",
         lineColor: "#666666",
         particleRadius: 7,
         lineWidth: 1,
         curvedLines: false,
         proximity: 100,
-        parallax: false,
+        parallax: true,
         parallaxMultiplier: 5,
       },
       canvas: null,
@@ -261,11 +261,6 @@ class Particle {
           );
         }
       }
-      if (!this.paused) {
-        setTimeout(() => {
-          this.raf = requestAnimationFrame(this.draw);
-        }, 1000 / 30); // 設置每秒 30 幀
-      }
     }
     ctx.stroke();
     ctx.closePath();
@@ -352,11 +347,19 @@ class Particle {
 
 <style scoped>
 .particles-container {
-  width: 100vw; /* 使用視窗的全寬 */
-  height: 175vh; /* 使用視窗的全高 */
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  position: absolute; /* 保持背景效果 */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative; /* 確保表單是相對定位 */
   top: 0;
-  left: 0;
+  width: 100%;
+  height: auto; /* 或指定具體的高度 */
+  display: flex; /* 如果使用 flexbox */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  position: relative;
 }
 </style>
