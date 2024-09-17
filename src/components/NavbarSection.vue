@@ -35,7 +35,7 @@
           </div>
           <div class="mr-2 xl:mr-0">
             <!-- Add social icons here -->
-            <div class="relative top-0.5 right-60 items-center space-x-2 text-2xl">
+            <div class="relative top-0 right-60 items-center space-x-2 text-2xl">
               <a
                 v-for="(social, index) in socials"
                 :key="index"

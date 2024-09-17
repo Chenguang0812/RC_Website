@@ -38,7 +38,7 @@
             >
               <!-- 評價卡片 -->
               <div
-                class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:rotate-1"
+                class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:rotate-1 review-card"
               >
                 <!-- 用戶信息部分 -->
                 <div class="flex items-center mb-4">
@@ -205,5 +205,15 @@ export default {
 
 .confetti:nth-child(3n + 2) {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* 新增：確保評價卡片在放大時保持圓角 */
+.review-card {
+  transform-origin: center;
+  overflow: hidden;
+}
+
+.review-card:hover {
+  border-radius: 0.5rem; /* 8px */
 }
 </style>

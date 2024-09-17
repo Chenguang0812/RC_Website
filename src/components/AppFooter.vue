@@ -81,7 +81,7 @@ export default {
       currentYear: new Date().getFullYear(),
       socials: [
         { icon: "fab fa-line", link: "https://line.me/ti/p/hcaTOMPpzA" },
-        { icon: "fab fa-discord", link: "https://discord.gg/sHUv6TK2As" },
+        { icon: "fab fa-discord", link: "https://discord.gg/pAVt7AcU9z" },
         { icon: "fab fa-youtube", link: "https://www.youtube.com/@RC_Studio" },
         { icon: "fab fa-facebook-f", link: "https://rcstudio.tw/no" },
         { icon: "fab fa-instagram", link: "https://www.instagram.com/rc_studio.tw/" },
