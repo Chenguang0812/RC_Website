@@ -1,14 +1,24 @@
 <template>
   <div
-    class="bg-[#E4E4E4] bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 py-8 px-4"
+    ref="container"
+    class="bg-gradient-to-br from-[#fc6d6d] to-[#FFC0CB] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 py-8 px-4 overflow-hidden relative"
+    @mousemove="handleMouseMove"
   >
-    <div class="max-w-6xl mx-auto">
+    <!-- 浮動元素 -->
+    <div
+      v-for="(particle, index) in particles"
+      :key="index"
+      class="absolute text-2xl transition-all duration-1000 ease-out"
+      :style="getParticleStyle(particle)"
+    >
+      {{ particle.icon }}
+    </div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
       <div class="mb-2 flex items-center">
-        <!-- Changed mb-8 to mb-2 -->
         <div class="w-2 h-8 bg-[#E25353] dark:bg-[#5c67ff] mr-4" />
         <h2 class="font-bold text-4xl text-gray-900 dark:text-[#e0e0e0]">合作業主</h2>
       </div>
-      <!-- Added subtitle -->
       <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 ml-6">
         Youtuber長期合作，協助品牌經營
       </p>
@@ -20,7 +30,7 @@
             :href="channel.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-6"
+            class="bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-6 transform transition duration-300 hover:rotate-2 hover:-translate-y-2"
           >
             <img
               :src="channel.image"
@@ -42,6 +52,8 @@ export default {
   name: "AffiliatedChannels",
   data() {
     return {
+      mousePosition: { x: 0, y: 0 },
+      particles: [],
       channels: [
         {
           id: 1,
@@ -86,12 +98,65 @@ export default {
           url: "https://www.youtube.com/@ChaoJ",
         },
       ],
+      floatingElements: [
+        "🎭",
+        "🎬",
+        "🎥",
+        "📽️",
+        "🍿",
+        "🎞️",
+        "📺",
+        "🎙️",
+        "🎵",
+        "🦄",
+        "✨",
+        "💫",
+      ],
+      backgroundElements: ["🎈", "🎊", "🎉", "🌟", "🎀", "🧨", "🪅", "🎇", "🎆"],
     };
   },
   mounted() {
+    this.createParticles();
     this.enableHorizontalScroll();
   },
   methods: {
+    handleMouseMove(event) {
+      const rect = this.$refs.container.getBoundingClientRect();
+      this.mousePosition = {
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top,
+      };
+    },
+    createParticles() {
+      const allElements = [...this.floatingElements, ...this.backgroundElements];
+      for (let i = 0; i < 50; i++) {
+        this.particles.push({
+          x: Math.random() * 100,
+          y: Math.random() * 100,
+          icon: allElements[Math.floor(Math.random() * allElements.length)],
+          speed: 0.5 + Math.random() * 1,
+        });
+      }
+    },
+    getParticleStyle(particle) {
+      const dx =
+        (this.mousePosition.x / this.$refs.container.offsetWidth) * 100 - particle.x;
+      const dy =
+        (this.mousePosition.y / this.$refs.container.offsetHeight) * 100 - particle.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const maxDistance = Math.sqrt(10000);
+      const scale = 1 - distance / maxDistance;
+      const moveFactor = 1.5;
+
+      return {
+        left: `${particle.x}%`,
+        top: `${particle.y}%`,
+        transform: `translate(${dx * scale * moveFactor}px, ${
+          dy * scale * moveFactor
+        }px) scale(${0.5 + scale * 0.5})`,
+        opacity: 0.3 + scale * 0.7,
+      };
+    },
     enableHorizontalScroll() {
       const container = this.$refs.channelContainer;
       container.addEventListener("wheel", (e) => {
