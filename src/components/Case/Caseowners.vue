@@ -3,10 +3,15 @@
     class="bg-[#E4E4E4] bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 py-8 px-4"
   >
     <div class="max-w-6xl mx-auto">
-      <div class="mb-8 flex items-center">
+      <div class="mb-2 flex items-center">
+        <!-- Changed mb-8 to mb-2 -->
         <div class="w-2 h-8 bg-[#E25353] dark:bg-[#5c67ff] mr-4" />
         <h2 class="font-bold text-4xl text-gray-900 dark:text-[#e0e0e0]">合作業主</h2>
       </div>
+      <!-- Added subtitle -->
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 ml-6">
+        Youtuber長期合作，協助品牌經營
+      </p>
       <div ref="channelContainer" class="overflow-x-scroll custom-scrollbar">
         <div class="flex space-x-6 pb-4">
           <a
