@@ -38,7 +38,7 @@
           <h4
             class="text-2xl font-bold mb-4 text-gray-800 dark:text-[#ffffff] border-b-2 border-gray-300 dark:border-[#1a1a1a] pb-2 inline-block"
           >
-            跟隨我們
+            追隨我們
           </h4>
 
           <div class="flex flex-wrap gap-4">
@@ -83,10 +83,10 @@ export default {
         { icon: "fab fa-line", link: "https://line.me/ti/p/hcaTOMPpzA" },
         { icon: "fab fa-discord", link: "https://discord.gg/pAVt7AcU9z" },
         { icon: "fab fa-youtube", link: "https://www.youtube.com/@RC_Studio" },
-        { icon: "fab fa-facebook-f", link: "https://rcstudio.tw/no" },
-        { icon: "fab fa-instagram", link: "https://www.instagram.com/rc_studio.tw/" },
-        { icon: "fab fa-twitter", link: "https://rcstudio.tw/no" },
         { icon: "fab fa-twitch", link: "https://rcstudio.tw/no" },
+        { icon: "fab fa-facebook-f", link: "https://rcstudio.tw/no" },
+        { icon: "fab fa-instagram", link: "https://rcstudio.tw/no" },
+        { icon: "fab fa-twitter", link: "https://rcstudio.tw/no" },
       ],
     };
   },

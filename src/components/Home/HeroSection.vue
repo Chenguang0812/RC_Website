@@ -3,7 +3,7 @@
   <div class="relative w-full h-[78vh]">
     <div class="image-container">
       <img
-        src="/premiere.webp"
+        src="/image.webp"
         alt="Premiere Image"
         class="w-full h-full object-cover"
         :class="{ loaded: imageLoaded }"
