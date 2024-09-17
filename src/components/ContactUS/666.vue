@@ -1,9 +1,12 @@
 <template>
   <div class="h-16" />
+
   <div
     class="contact-component bg-[#E3E3E3] dark:bg-[#303030] text-[#0C1014] overflow-hidden"
   >
     <ParticleGround />
+    <div id="app"></div>
+
     <div class="container mx-auto px-4 py-24 relative z-10">
       <h2
         class="text-6xl font-bold mb-5 text-center relative z-10 text-[#E25353] dark:text-[#5c67ff]"
