@@ -47,9 +47,9 @@ export default {
       isVisible: false,
       // 成就數據
       achievements: [
-        { id: 1, value: 1000, suffix: "+", label: "完成專案", currentValue: 0 },
-        { id: 2, value: 3, suffix: "+", label: "行業經驗", currentValue: 0 },
-        { id: 3, value: 50, suffix: "+", label: "長期客戶", currentValue: 0 },
+        { id: 1, value: 6, suffix: "+", label: "行業經驗", currentValue: 0 },
+        { id: 2, value: 1000, suffix: "+", label: "完成專案", currentValue: 0 },
+        { id: 3, value: 1, suffix: "+", label: "累計觀看數", currentValue: 0 },
         { id: 4, value: 10, suffix: "+", label: "員工人數", currentValue: 0 },
       ],
     };

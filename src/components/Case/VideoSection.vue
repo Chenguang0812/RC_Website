@@ -23,7 +23,7 @@
       影視專欄
     </h2>
     <h2 class="text-xl font-bold text-center text-white mb-12 relative z-10">
-      林德豐掉進後室前的最後一句話：RC太會剪片了！
+      RC累計創作超過1000部作品，累積影片總觀看數破億次！
     </h2>
     <!-- 內容容器 -->
     <div class="container mx-auto px-4 relative z-10">
@@ -96,45 +96,39 @@ export default {
       particles: [],
       videos: [
         {
-          link:
-            "https://www.youtube.com/embed/k2_3Ka3_IEw?si=ZD0XGX17JLe-gRCI&amp;controls=0",
-          title: "反骨柔柔",
-          Description: "公開超渣前男友!!各位姐妹小心👻手機裡竟然都是跟別人的影片...😨",
-          button: "https://www.youtube.com/watch?v=k2_3Ka3_IEw",
+          link: "https://www.youtube.com/embed/g0dKNvcEo08?si=t8YsAmx21VE77j9o",
+          title: "皮卡嚕",
+          Description: "單部影片創造百萬流量🔥🔥🔥🔥🔥🔥🔥🔥🔥",
+          button: "https://youtu.be/g0dKNvcEo08?si=_U9yB2YWSMyhfvc6",
         },
         {
-          link:
-            "https://www.youtube.com/embed/LWL2i_uW7do?si=gLJPmd4DgZx3sdaT&amp;controls=0",
+          link: "https://www.youtube.com/embed/nuE-fjTwAcA?si=RI0Dj64irT2wpOlQ",
           title: "雪兔",
-          Description: "【空之要塞：啟航】創新跑酷與射擊玩法一定要來體驗！！",
+          Description: "工商業配加上精緻剪輯，促成與廣告廠商的合作順暢，觀眾也看得開心💫",
           button: "https://www.youtube.com/watch?v=LWL2i_uW7do",
         },
         {
-          link:
-            "https://www.youtube.com/embed/7H7rtiTh4m0?si=_-BjDHIiJbh-Iez7&amp;controls=0",
-          title: "小妞",
-          Description: "我被床戰隊友陷害了，哈哈哈哈哈哈哈哈哈哈哈哈哈",
+          link: "https://www.youtube.com/embed/crVmX1jz63E?si=dySj5ZASoPS83tIk",
+          title: "乖兒子",
+          Description: "賽事活動精華，瞄準目標受眾，引起共鳴🤩",
           button: "https://www.youtube.com/watch?v=7H7rtiTh4m0",
         },
         {
-          link:
-            "https://www.youtube.com/embed/_HHXvDfXfug?si=Pl1WQDx1zsXWFPNQ&amp;controls=0",
-          title: "ROALX",
-          Description: "你可以只用輪盤上轉到的槍枝獲得勝利嗎？？？？",
+          link: "https://www.youtube.com/embed/rGBfEnAZpjw?si=qYyPDLel8U9CXW8o",
+          title: "戴舒萱",
+          Description: "生活日常搭上快節奏剪輯也有好流量！打造專屬自己的影片內容✅",
           button: "https://www.youtube.com/watch?v=_HHXvDfXfug",
         },
         {
-          link:
-            "https://www.youtube.com/embed/fzngN3zOWHU?si=iymtoDCF0haqdFBS&amp;controls=0",
-          title: "RY",
-          Description: "【RY】不存在的樓層？嚇到螢幕都在抖！| 蛋仔派對",
+          link: "https://www.youtube.com/embed/W6AnL9PFCLg?si=j8TEJ7AcXqf2Fz8F",
+          title: "小妞",
+          Description: "挑戰企劃配上創意剪輯，做出改變引發關注👀",
           button: "https://www.youtube.com/watch?v=fzngN3zOWHU",
         },
         {
-          link:
-            "https://www.youtube.com/embed/0iDJ7agNpsc?si=D3vJE5v8F8-g04mH&amp;controls=0",
-          title: "WuWei無為",
-          Description: "為什麼這遊戲還沒倒！混亂不堪但又好笑好玩的環境就是我們要的啦！",
+          link: "https://www.youtube.com/embed/bhLH4EktBfQ?si=42a4eaCITYRdLDkL",
+          title: "卯咪",
+          Description: "遊戲精華搞笑剪輯，能讓人開懷一笑的影片也能讓粉絲數量一飛衝天🚀",
           button: "https://www.youtube.com/watch?v=0iDJ7agNpsc",
         },
       ],

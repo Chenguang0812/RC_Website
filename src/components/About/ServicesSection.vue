@@ -35,20 +35,20 @@ export default {
       services: [
         {
           id: 1,
-          name: "影片剪輯",
+          name: "影音後製",
           description: "專業的影片剪輯服務，為您的作品賦予生命力。",
           icon: "/trim.webp",
         },
         {
           id: 2,
-          name: "特效製作",
-          description: "高品質的視覺特效，讓您的影片更具吸引力。",
+          name: "商業設計",
+          description: "高品質的視覺設計，讓您的作品更具吸引力。",
           icon: "/magic-wand.webp",
         },
         {
           id: 3,
-          name: "後期製作",
-          description: "全方位的後期製作服務，為您的專案錦上添花。",
+          name: "網紅經紀",
+          description: "簽約及專業技能培訓，工商及代言等服務媒合。",
           icon: "/video.webp",
         },
       ],
