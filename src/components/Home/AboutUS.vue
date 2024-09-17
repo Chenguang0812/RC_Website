@@ -18,7 +18,7 @@
     </div>
     <div class="w-32 h-32 mt-2 md:mx-0">
       <img
-        src="/LOGO.webp"
+        src="/玫瑰.webp"
         alt="Logo"
         class="w-full h-full object-contain dark:filter dark:brightness-90 dark:contrast-125"
       />

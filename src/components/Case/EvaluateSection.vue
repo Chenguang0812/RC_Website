@@ -206,14 +206,4 @@ export default {
 .confetti:nth-child(3n + 2) {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
-
-/* 新增：確保評價卡片在放大時保持圓角 */
-.review-card {
-  transform-origin: center;
-  overflow: hidden;
-}
-
-.review-card:hover {
-  border-radius: 0.5rem; /* 8px */
-}
 </style>
