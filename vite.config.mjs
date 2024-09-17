@@ -11,5 +11,5 @@ export default defineConfig({
     },
   },
   plugins: [vue()],
-  base: '/', // 確保基本路徑設置正確
+  base: '/',
 })
