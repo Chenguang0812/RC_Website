@@ -51,11 +51,6 @@
                 allowfullscreen
               />
               <!-- 懸停播放圖標 -->
-              <div
-                class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <i class="fas fa-play text-white text-4xl animate-pulse" />
-              </div>
             </div>
             <!-- 視頻信息 -->
             <div
