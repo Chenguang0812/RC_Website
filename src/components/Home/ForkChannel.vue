@@ -45,7 +45,7 @@ export default {
         {
           id: 2,
           name: "亦凌",
-          image: "/亦凌.webp",
+          image: "/亦凌.png",
           url: "https://www.youtube.com/@RC_%E4%BA%A6%E5%87%8C",
         },
         {
@@ -63,7 +63,7 @@ export default {
         {
           id: 5,
           name: "亦凌YiLing",
-          image: "/亦凌.png",
+          image: "/channels4_profile.webp",
           url: "https://www.youtube.com/@10_YiLing",
         },
         {
