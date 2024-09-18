@@ -63,7 +63,7 @@ export default {
         {
           id: 5,
           name: "亦凌YiLing",
-          image: "/channels4_profile.webp",
+          image: "/亦凌.png",
           url: "https://www.youtube.com/@10_YiLing",
         },
         {
