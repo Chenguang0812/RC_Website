@@ -75,7 +75,7 @@
               {{ title }}
             </button>
           </div>
-          <div class="fixed right-36 items-center space-x-2 text-2xl">
+          <div class="fixed right-40 items-center space-x-2 text-2xl">
             <a
               v-for="(social, index) in socials"
               :key="index"

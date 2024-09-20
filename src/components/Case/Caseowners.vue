@@ -15,19 +15,24 @@
     </div>
 
     <div class="max-w-6xl mx-auto relative z-10">
-      <div
-        class="w-full text-4xl font-bold text-center text-white relative mb-3 z-10 animate-glitch"
+      <h2
+        class="text-4xl font-bold text-center text-white relative mb-3 z-10 animate-glitch"
+        data-text="合作業主"
       >
         合作業主
+      </h2>
+      <div class="flex justify-center space-x-4 mb-6">
+        <div
+          class="inline-block px-6 py-2.5 bg-[#E25353] dark:bg-indigo-600 text-white text-xs rounded-full"
+        >
+          <span class="relative z-10">YTR長期合作</span>
+        </div>
+        <div
+          class="inline-block px-6 py-2.5 bg-[#E25353] dark:bg-indigo-600 text-white text-xs rounded-full"
+        >
+          <span class="relative z-10">協助品牌經營</span>
+        </div>
       </div>
-      <div
-        class="inline-block px-6 py-2.5 bg-[#E25353] dark:bg-indigo-600 text-white text-xs rounded hover:bg-[#E99797] dark:hover:bg-indigo-700 hover:rotate-3 relative overflow-hidden"
-      >
-        <span class="relative z-10">觀看完整影片</span>
-      </div>
-      <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 ml-6">
-        Youtuber長期合作，協助品牌經營
-      </p>
       <div ref="channelContainer" class="overflow-x-scroll custom-scrollbar">
         <div class="flex space-x-6 pb-4">
           <a
@@ -188,24 +193,10 @@ export default {
   height: 8px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #e25353;
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #d14141;
-}
-
 /* For Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #f1f1f1;
+  scrollbar-color: #969696 #f1f1f1;
 }
 
 @keyframes glitch {
@@ -229,6 +220,7 @@ export default {
   }
 }
 
+.animate-glitch::before,
 .animate-glitch::after {
   content: attr(data-text);
   position: absolute;

@@ -32,7 +32,7 @@
                 v-model="form.name"
                 type="text"
                 required
-                class="mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-lg p-3"
+                class="mt-2 block w-full rounded-md text-black bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-lg p-3"
               />
             </div>
 
@@ -43,7 +43,7 @@
                 v-model="form.email"
                 type="email"
                 required
-                class="mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-lg p-3"
+                class="mt-2 block w-full rounded-md text-black bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-lg p-3"
               />
             </div>
 
@@ -54,7 +54,7 @@
                 v-model="form.phone"
                 type="tel"
                 required
-                class="mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-lg p-3"
+                class="mt-2 block w-full rounded-md text-black bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-lg p-3"
               />
             </div>
 
@@ -65,7 +65,7 @@
                 v-model="form.message"
                 rows="4"
                 required
-                class="mt-2 block w-full rounded-md bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-lg p-3"
+                class="mt-2 block w-full rounded-md text-black bg-[#F0F0F0] border-[#E25353] focus:border-[#E25353] focus:ring focus:ring-[#E25353] focus:ring-opacity-50 text-lg p-3"
               />
             </div>
 

@@ -56,7 +56,6 @@
               <p class="text-gray-700 dark:text-gray-300 text-base mb-4">
                 {{ video.Description }}
               </p>
-              <!-- "觀看完整影片" -->
               <a
                 class="inline-block px-6 py-2.5 bg-[#E25353] dark:bg-indigo-600 text-white text-xs uppercase rounded hover:bg-[#E99797] dark:hover:bg-indigo-700 transition-all duration-300 transform hover:scale-110 hover:rotate-3 relative overflow-hidden"
                 :href="video.button"
@@ -87,8 +86,7 @@ export default {
         {
           link: "https://www.youtube.com/embed/g0dKNvcEo08?si=t8YsAmx21VE77j9o",
           title: "皮卡嚕",
-          Description:
-            "單部影片創造百萬流量🔥                                           ",
+          Description: "單部影片創造百萬流量🔥                                   ",
           button: "https://youtu.be/g0dKNvcEo08?si=_U9yB2YWSMyhfvc6",
         },
         {
@@ -100,8 +98,7 @@ export default {
         {
           link: "https://www.youtube.com/embed/crVmX1jz63E?si=dySj5ZASoPS83tIk",
           title: "乖兒子",
-          Description:
-            "賽事活動精華，瞄準目標受眾，引起共鳴🤩                                           ",
+          Description: "賽事活動精華，瞄準目標受眾，引起共鳴🤩       ",
           button: "https://youtu.be/crVmX1jz63E?si=OTrLBCbMSnOTiQ3E",
         },
         {
@@ -168,10 +165,8 @@ export default {
       const dy =
         (this.mousePosition.y / this.$refs.container.offsetHeight) * 100 - particle.y;
       const distance = Math.sqrt(dx * dx + dy * dy);
-      const maxDistance = Math.sqrt(10000); // 最大距離（100^2 + 100^2）的平方根
-      const scale = 1 - distance / maxDistance; // 距離越近，scale越大
-
-      // 移動幅度
+      const maxDistance = Math.sqrt(10000);
+      const scale = 1 - distance / maxDistance;
       const moveFactor = 1.5;
 
       return {

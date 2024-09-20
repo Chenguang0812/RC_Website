@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[#E99797] dark:bg-gray-800 py-16 overflow-hidden relative transition-colors duration-300"
+    class="py-16 overflow-hidden relative transition-colors duration-300 bg-[#f58989] dark:bg-gray-800"
   >
     <!-- 彩屑 -->
     <div class="absolute inset-0 overflow-hidden">

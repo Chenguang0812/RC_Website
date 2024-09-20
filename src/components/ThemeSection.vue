@@ -6,7 +6,7 @@
     >
       <div
         v-if="isDarkMode"
-        class="rounded-full w-5 h-5 border-gray-700 dark:bg-gray-700 relative dark:ml-[3rem] pointer-events-none transition-all duration-300 ease-out"
+        class="rounded-full w-5 h-5 border-gray-700 dark:bg-[#494949] relative dark:ml-[3rem] pointer-events-none transition-all duration-300 ease-out"
       ></div>
       <div
         v-else
