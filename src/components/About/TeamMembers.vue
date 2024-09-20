@@ -64,7 +64,7 @@ export default {
           id: 1,
           name: "亦凌YiLing",
           position: "頂級老闆",
-          image: "/10.webp",
+          image: "/亦凌.webp",
           isVisible: false,
         },
         {
@@ -78,7 +78,7 @@ export default {
           id: 3,
           name: "晨光Chenguang",
           position: "無心+薪勞工",
-          image: "/柯文哲.webp",
+          image: "/晨光.webp",
           isVisible: false,
         },
         {

@@ -1,6 +1,6 @@
 <template>
   <div class="h-16"></div>
-  <div class="relative w-full h-[78vh]">
+  <div class="relative w-full h-[76vh]">
     <div class="image-container">
       <img
         src="/image.webp"
