@@ -20,9 +20,18 @@
     >
       影視專欄
     </h2>
-    <h2 class="text-xl font-bold text-center text-white mb-12 relative z-10">
-      RC累計創作超過1000部作品，累積影片總觀看數破億次！
-    </h2>
+    <div class="flex justify-center space-x-4 mb-6">
+      <div
+        class="inline-block px-6 py-2.5 bg-[#E25353] dark:bg-indigo-600 text-white text-xs rounded-full"
+      >
+        <span class="relative z-10">YTR長期合作</span>
+      </div>
+      <div
+        class="inline-block px-6 py-2.5 bg-[#E25353] dark:bg-indigo-600 text-white text-xs rounded-full"
+      >
+        <span class="relative z-10">協助品牌經營</span>
+      </div>
+    </div>
     <div class="container mx-auto px-4 relative z-10">
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
