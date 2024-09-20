@@ -1,6 +1,9 @@
 <template>
-  <div ref="container" class="pt-16 overflow-hidden relative mt-12">
-    @mousemove="handleMouseMove" >
+  <div
+    ref="container"
+    class="pt-16 overflow-hidden relative mt-12"
+    @mousemove="handleMouseMove"
+  >
     <!-- 浮動元素 -->
     <div
       v-for="(particle, index) in particles"
@@ -93,7 +96,7 @@ export default {
         {
           link: "https://www.youtube.com/embed/g0dKNvcEo08?si=t8YsAmx21VE77j9o",
           title: "皮卡嚕",
-          Description: "單部影片創造百萬流量🔥                                    ",
+          Description: "單部影片創造百萬流量🔥                                         ",
           button: "https://youtu.be/g0dKNvcEo08?si=_U9yB2YWSMyhfvc6",
         },
         {
@@ -117,7 +120,7 @@ export default {
         {
           link: "https://www.youtube.com/embed/W6AnL9PFCLg?si=j8TEJ7AcXqf2Fz8F",
           title: "小妞",
-          Description: "挑戰企劃家創意剪輯，做出改變引發關注👀        ",
+          Description: "挑戰企劃加創意剪輯，做出改變引發關注👀    ",
           button: "https://youtu.be/W6AnL9PFCLg?si=04lPTUMaH53y8BIp",
         },
         {
