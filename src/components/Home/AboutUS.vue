@@ -16,7 +16,7 @@
         </p>
       </div>
     </div>
-    <div class="w-48 h-48 mt-2 md:mx-0">
+    <div class="w-52 h-52 mt-2 md:mx-0">
       <img
         src="/a7y6o-j1upn.webp"
         alt="Logo"

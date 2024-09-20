@@ -1,5 +1,4 @@
 <template>
-  <!-- 成就展示 用 ref 取 DOM -->
   <div
     ref="achievementsSection"
     class="my-12 bg-white dark:bg-[#303030] py-16 rounded-lg shadow-xl overflow-hidden"
@@ -15,15 +14,14 @@
         :class="{ animate: isVisible }"
       >
         <div
-          class="bg-gradient-to-br from-[#E25353] to-[#E99797] dark:from-[#5553e2] dark:to-[#97a3e9] rounded-full w-40 h-40 mx-auto flex items-center justify-center mb-6 shadow-lg relative overflow-hidden"
+          class="bg-gradient-to-br from-[#E25353] to-[#E99797] dark:from-[#5553e2] dark:to-[#97a3e9] rounded-full w-32 h-32 mx-auto flex items-center justify-center mb-4 shadow-lg relative overflow-hidden"
         >
           <div class="achievement-circle" />
-          <div class="text-5xl font-bold text-white relative z-10">
-            <span>{{ achievement.currentValue }}</span
-            >{{ achievement.suffix }}
+          <div class="text-white relative z-10 text-3xl font-bold">
+            {{ achievement.value }}
           </div>
         </div>
-        <div class="text-[#E25353] dark:text-[#ffffff] font-semibold text-xl">
+        <div class="text-[#E25353] dark:text-[#ffffff] font-semibold text-xl mt-2">
           {{ achievement.label }}
         </div>
       </div>
@@ -38,10 +36,10 @@ export default {
     return {
       isVisible: false,
       achievements: [
-        { id: 1, value: 6, suffix: "+", label: "行業經驗", currentValue: 0 },
-        { id: 2, value: 1000, suffix: "+", label: "完成專案", currentValue: 0 },
-        { id: 3, value: 1, suffix: "+", label: "累計觀看數", currentValue: 0 },
-        { id: 4, value: 10, suffix: "+", label: "員工人數", currentValue: 0 },
+        { id: 1, label: "行業經驗", value: "6年+" },
+        { id: 2, label: "完成專案", value: "1000+" },
+        { id: 3, label: "累計觀看數", value: "破億次" },
+        { id: 4, label: "員工人數", value: "10+" },
       ],
     };
   },
@@ -53,22 +51,6 @@ export default {
     window.removeEventListener("scroll", this.checkVisibility);
   },
   methods: {
-    animateValue(achievement, duration) {
-      const start = 0;
-      const end = achievement.value;
-      const range = end - start;
-      const increment = end > start ? 1 : -1;
-      const stepTime = Math.abs(Math.floor(duration / range));
-      let current = start;
-
-      const timer = setInterval(() => {
-        current += increment;
-        achievement.currentValue = current;
-        if (current === end) {
-          clearInterval(timer);
-        }
-      }, stepTime);
-    },
     checkVisibility() {
       if (!this.$refs.achievementsSection) return;
 
@@ -77,14 +59,8 @@ export default {
 
       if (isCurrentlyVisible && !this.isVisible) {
         this.isVisible = true;
-        this.achievements.forEach((achievement) => {
-          this.animateValue(achievement, Math.random() * 1500 + 1000);
-        });
       } else if (!isCurrentlyVisible && this.isVisible) {
         this.isVisible = false;
-        this.achievements.forEach((achievement) => {
-          achievement.currentValue = 0;
-        });
       }
     },
   },
@@ -97,7 +73,6 @@ export default {
   0% {
     clip-path: circle(0% at 50% 50%);
   }
-
   100% {
     clip-path: circle(100% at 50% 50%);
   }
@@ -134,20 +109,17 @@ export default {
 .achievement-item:nth-child(1) {
   transition-delay: 0.1s;
 }
-
 .achievement-item:nth-child(2) {
   transition-delay: 0.2s;
 }
-
 .achievement-item:nth-child(3) {
   transition-delay: 0.3s;
 }
-
 .achievement-item:nth-child(4) {
   transition-delay: 0.4s;
 }
 
-/* 懸停 */
+/* 懸停效果 */
 .achievement-item:hover .rounded-full {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;

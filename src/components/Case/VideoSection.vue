@@ -96,32 +96,32 @@ export default {
           link: "https://www.youtube.com/embed/nuE-fjTwAcA?si=RI0Dj64irT2wpOlQ",
           title: "雪兔",
           Description: "工商業配加上精緻剪輯，促成與廣告廠商的合作順暢，觀眾也看得開心💫",
-          button: "https://www.youtube.com/watch?v=LWL2i_uW7do",
+          button: "https://youtu.be/nuE-fjTwAcA?si=4987K1xBJkH_owzm",
         },
         {
           link: "https://www.youtube.com/embed/crVmX1jz63E?si=dySj5ZASoPS83tIk",
           title: "乖兒子",
           Description:
             "賽事活動精華，瞄準目標受眾，引起共鳴🤩                                           ",
-          button: "https://www.youtube.com/watch?v=7H7rtiTh4m0",
+          button: "https://youtu.be/crVmX1jz63E?si=OTrLBCbMSnOTiQ3E",
         },
         {
           link: "https://www.youtube.com/embed/rGBfEnAZpjw?si=qYyPDLel8U9CXW8o",
           title: "戴舒萱",
           Description: "生活日常搭上快節奏剪輯也有好流量！打造專屬自己的影片內容✅",
-          button: "https://www.youtube.com/watch?v=_HHXvDfXfug",
+          button: "https://youtu.be/rGBfEnAZpjw?si=qTDj4ElZ0UXcDC8o",
         },
         {
           link: "https://www.youtube.com/embed/W6AnL9PFCLg?si=j8TEJ7AcXqf2Fz8F",
           title: "小妞",
           Description: "挑戰企劃配上創意剪輯，做出改變引發關注👀",
-          button: "https://www.youtube.com/watch?v=fzngN3zOWHU",
+          button: "https://youtu.be/W6AnL9PFCLg?si=04lPTUMaH53y8BIp",
         },
         {
           link: "https://www.youtube.com/embed/bhLH4EktBfQ?si=42a4eaCITYRdLDkL",
           title: "卯咪",
           Description: "遊戲精華搞笑剪輯，能讓人開懷一笑的影片也能讓粉絲數量一飛衝天🚀",
-          button: "https://www.youtube.com/watch?v=0iDJ7agNpsc",
+          button: "https://youtu.be/bhLH4EktBfQ?si=GrLoOOGvHRBQOi2V",
         },
       ],
       floatingElements: [
