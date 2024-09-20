@@ -21,7 +21,7 @@ import { ref, onMounted } from "vue";
 import { usePreferredDark, useStorage } from "@vueuse/core";
 
 const preferredDark = usePreferredDark();
-const theme = useStorage("theme", "light"); // Changed default to 'light'
+const theme = useStorage("theme", "dark"); // Changed default to 'light'
 const isDarkMode = ref(theme.value === "dark");
 const mounted = ref(false);
 

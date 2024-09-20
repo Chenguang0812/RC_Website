@@ -1,9 +1,6 @@
 <template>
-  <div
-    ref="container"
-    class="py-16 overflow-hidden relative transition-colors duration-500 mt-16"
-    @mousemove="handleMouseMove"
-  >
+  <div ref="container" class="pt-16 overflow-hidden relative mt-12">
+    @mousemove="handleMouseMove" >
     <!-- 浮動元素 -->
     <div
       v-for="(particle, index) in particles"
@@ -20,7 +17,7 @@
     >
       影視專欄
     </h2>
-    <div class="flex justify-center space-x-4 mb-6 relative z-20">
+    <div class="flex justify-center space-x-4 relative z-20">
       <div
         class="inline-block px-6 py-2.5 bg-[#E25353] dark:bg-indigo-600 text-white text-sm rounded-full"
       >

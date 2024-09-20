@@ -1,7 +1,7 @@
 <template>
   <div
     ref="container"
-    class="py-8 px-4 overflow-hidden relative"
+    class="py-16 overflow-hidden relative"
     @mousemove="handleMouseMove"
   >
     <!-- 浮動元素 -->
