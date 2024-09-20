@@ -16,11 +16,11 @@
         </p>
       </div>
     </div>
-    <div class="w-60 h-60 md:mx-0 md:-mt-20 self-start">
+    <div class="w-40 h-40 md:mx-0 self-start flex-shrink-0">
       <img
-        src="/a7y6o-j1upn.webp"
+        src="/LOGO2.png"
         alt="Logo"
-        class="object-contain dark:filter dark:brightness-90 dark:contrast-125 mt-10"
+        class="w-full h-full object-contain dark:filter dark:brightness-90 dark:contrast-125"
       />
     </div>
   </div>
