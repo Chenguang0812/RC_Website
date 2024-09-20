@@ -1,7 +1,7 @@
 <template>
   <div
     ref="container"
-    class="w-full bg-gradient-to-br from-[#fc6d6d] to-[#FFC0CB] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 py-8 px-4 overflow-hidden relative"
+    class="bg-gradient-to-br from-[#fc6d6d] to-[#FFC0CB] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 py-8 px-4 overflow-hidden relative"
     @mousemove="handleMouseMove"
   >
     <!-- 浮動元素 -->
@@ -14,24 +14,15 @@
       {{ particle.icon }}
     </div>
 
-    <div class="relative z-20">
-      <!-- 標題部分 -->
-      <div class="max-w-6xl mx-auto mb-7">
-        <div class="flex items-center">
-          <!-- <div class="w-2 h-8 bg-[#E25353] dark:bg-[#5c67ff] mr-4" />
-          <h2 class="font-bold text-4xl text-gray-900 dark:text-[#e0e0e0]">合作業主</h2> -->
-          <img :src="XieZhuPinPaiJingYingDeTuPian" />
-        </div>
-        <p class="text-sm text-gray-600 dark:text-gray-400 ml-6">
-          Youtuber長期合作，協助品牌經營
-        </p>
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="mb-2 flex items-center">
+        <div class="w-2 h-8 bg-[#E25353] dark:bg-[#5c67ff] mr-4" />
+        <h2 class="font-bold text-4xl text-gray-900 dark:text-[#e0e0e0]">合作業主</h2>
       </div>
-
-      <!-- 頻道列表 -->
-      <div
-        ref="channelContainer"
-        class="max-w-6xl mx-auto overflow-x-scroll custom-scrollbar"
-      >
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 ml-6">
+        Youtuber長期合作，協助品牌經營
+      </p>
+      <div ref="channelContainer" class="overflow-x-scroll custom-scrollbar">
         <div class="flex space-x-6 pb-4">
           <a
             v-for="channel in channels"
@@ -55,6 +46,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: "AffiliatedChannels",
@@ -157,13 +149,12 @@ export default {
       const moveFactor = 1.5;
 
       return {
-        left: ${particle.x}%,
-        top: ${particle.y}%,
+        left: `${particle.x}%`,
+        top: `${particle.y}%`,
         transform: `translate(${dx * scale * moveFactor}px, ${
           dy * scale * moveFactor
         }px) scale(${0.5 + scale * 0.5})`,
         opacity: 0.3 + scale * 0.7,
-        zIndex: 10,
       };
     },
     enableHorizontalScroll() {
