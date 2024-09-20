@@ -1,7 +1,7 @@
 <template>
   <div
     ref="container"
-    class="bg-gradient-to-br from-[#E25353] via-[#E99797] to-[#FFC0CB] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 py-16 overflow-hidden relative transition-colors duration-500 mt-7"
+    class="py-16 overflow-hidden relative transition-colors duration-500 mt-7"
     @mousemove="handleMouseMove"
   >
     <!-- 浮動元素 -->

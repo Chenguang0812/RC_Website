@@ -1,7 +1,7 @@
 <template>
   <div
     ref="container"
-    class="bg-gradient-to-br from-[#fc6d6d] to-[#FFC0CB] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 py-8 px-4 overflow-hidden relative"
+    class="py-8 px-4 overflow-hidden relative"
     @mousemove="handleMouseMove"
   >
     <!-- 浮動元素 -->
@@ -15,9 +15,18 @@
     </div>
 
     <div class="max-w-6xl mx-auto relative z-10">
-      <div class="mb-2 flex items-center">
-        <div class="w-2 h-8 bg-[#E25353] dark:bg-[#5c67ff] mr-4" />
-        <h2 class="font-bold text-4xl text-gray-900 dark:text-[#e0e0e0]">合作業主</h2>
+      <div
+        class="w-full text-4xl font-bold text-center text-white relative mb-3 z-10 animate-glitch"
+      >
+        合作業主
+      </div>
+      <div
+        class="inline-block px-6 py-2.5 bg-[#E25353] dark:bg-indigo-600 text-white text-xs uppercase rounded hover:bg-[#E99797] dark:hover:bg-indigo-700 transition-all duration-300 transform hover:scale-110 hover:rotate-3 relative overflow-hidden"
+      >
+        <span class="relative z-10">觀看完整影片</span>
+        <span
+          class="absolute inset-0 h-full w-full bg-gradient-to-r from-pink-500 to-yellow-500 dark:from-indigo-700 dark:to-purple-700 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+        />
       </div>
       <p class="text-sm text-gray-600 dark:text-gray-400 mb-6 ml-6">
         Youtuber長期合作，協助品牌經營
@@ -200,5 +209,66 @@ export default {
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: #f1f1f1;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.animate-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.animate-glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.animate-glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(10px, 9999px, 66px, 0);
+  }
+  100% {
+    clip: rect(78px, 9999px, 30px, 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(57px, 9999px, 93px, 0);
+  }
+  100% {
+    clip: rect(16px, 9999px, 80px, 0);
+  }
 }
 </style>
