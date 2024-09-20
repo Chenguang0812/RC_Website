@@ -24,12 +24,12 @@
       <div
         class="inline-block px-6 py-2.5 bg-[#E25353] dark:bg-indigo-600 text-white text-xs rounded-full"
       >
-        <span class="relative z-10">YTR長期合作</span>
+        <span class="relative z-10">累計超過1000部作品</span>
       </div>
       <div
         class="inline-block px-6 py-2.5 bg-[#E25353] dark:bg-indigo-600 text-white text-xs rounded-full"
       >
-        <span class="relative z-10">協助品牌經營</span>
+        <span class="relative z-10">影片總觀看數破億次</span>
       </div>
     </div>
     <div class="container mx-auto px-4 relative z-10">
