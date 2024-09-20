@@ -51,7 +51,7 @@ export default {
         {
           id: 3,
           name: "卡卡滋",
-          image: "/卡卡.webp",
+          image: "/kaka.png",
           url: "https://www.youtube.com/@RC_%E5%8D%A1%E5%8D%A1%E6%BB%8B",
         },
         {
