@@ -120,7 +120,7 @@ export default {
         {
           link: "https://www.youtube.com/embed/W6AnL9PFCLg?si=j8TEJ7AcXqf2Fz8F",
           title: "小妞",
-          Description: "挑戰企劃配上創意剪輯，做出改變引發關注👀",
+          Description: "挑戰企劃家創意剪輯，做出改變引發關注👀        ",
           button: "https://youtu.be/W6AnL9PFCLg?si=04lPTUMaH53y8BIp",
         },
         {
