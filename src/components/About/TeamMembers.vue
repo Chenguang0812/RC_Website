@@ -64,7 +64,7 @@ export default {
           id: 1,
           name: "亦凌YiLing",
           position: "頂級老闆",
-          image: "/亦凌.webp",
+          image: "/亦凌.png",
           isVisible: false,
         },
         {
