@@ -87,7 +87,7 @@ export default {
         {
           name: "乖兒子",
           title: "特戰輻能玩家",
-          avatar: "/綸弟.webp",
+          avatar: "/乖兒子.webp",
           content: "謝謝RC協助我突破10萬訂閱！",
           rating: 5,
         },
@@ -108,7 +108,7 @@ export default {
         {
           name: "小妞",
           title: "斂財小丑",
-          avatar: "/亦凌.png",
+          avatar: "/小妞.webp",
           content: "訂閱小妞！訂閱小妞！訂閱小妞！訂閱小妞！",
           rating: 5,
         },
