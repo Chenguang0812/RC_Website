@@ -3,7 +3,6 @@
     <NavbarSection />
     <div class="container mx-auto px-4 py-8">
       <TimelineSection />
-      <TeamMembers />
       <ServicesSection />
       <AchievementsSection />
     </div>
@@ -13,7 +12,6 @@
 <script>
 import NavbarSection from "@/components/NavbarSection.vue";
 import TimelineSection from "@/components/About/TimelineSection.vue";
-import TeamMembers from "@/components/About/TeamMembers.vue";
 import ServicesSection from "@/components/About/ServicesSection.vue";
 import AchievementsSection from "@/components/About/AchievementsSection.vue";
 
@@ -22,7 +20,6 @@ export default {
   components: {
     NavbarSection,
     TimelineSection,
-    TeamMembers,
     ServicesSection,
     AchievementsSection,
   },

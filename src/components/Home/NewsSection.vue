@@ -64,6 +64,13 @@ export default {
       newsItems: [
         {
           id: 1,
+          title: "最新》乖兒子與RC合作半年後突破10萬訂閱！",
+          image: "/乖兒子.webp",
+          date: "2024年9月7日 週六 下午2:00",
+          link: "https://youtu.be/82JpHaBMlYc?si=I2wvO1KJ-AXEZFJr",
+        },
+        {
+          id: 2,
           title: "最新》林德豐再度拖片7天，引起公憤！跳三振舞道歉！？",
           image: "/風笑.webp",
           date: "2024年8月28日 週三 下午5:58",
@@ -71,33 +78,20 @@ export default {
             "https://drive.google.com/file/d/1R7B52dPgnTNvcBIW7sxWUe7-vIVXisLX/view?usp=sharing",
         },
         {
-          id: 2,
+          id: 3,
           title: "最新》林德豐一部片剪了27天，跳抖肩舞懺悔。",
           image: "/道歉.webp",
           date: "2024年8月5日 週六 下午1:15",
           link:
             "https://drive.google.com/file/d/1hi5-lJv-x7WlovFzi7CSeaU6G1PQWe9K/view?usp=sharing",
         },
-        {
-          id: 3,
-          title: "最新》林德豐新影片上線，揭示剪輯背後的辛酸。",
-          image: "/小鬼風.webp",
-          date: "2024年8月3日 週六 下午2:00",
-          link: "https://rcstudio.tw/No",
-        },
+
         {
           id: 4,
           title: "RC Studio擴大團隊，招募新人才。",
-          image: "/阿烜.webp",
+          image: "/RC.webp",
           date: "2024年8月2日 週五 上午10:15",
           link: "https://rcstudio.tw/joinUS",
-        },
-        {
-          id: 5,
-          title: "RC Studio擴大營業項目：唱、跳、RAP、籃球",
-          image: "/亞洲舞王蔡徐坤.webp",
-          date: "2024年8月1日 週四 下午4:37",
-          link: "https://www.youtube.com/watch?v=GLu5YwiAtC4",
         },
       ],
     };

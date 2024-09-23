@@ -183,7 +183,7 @@ export default {
       currentYear: new Date().getFullYear(),
       socials: [{ icon: "fab fa-line", link: "https://line.me/ti/p/hcaTOMPpzA" }],
       isOpen: false,
-      title: "RC Studio",
+      title: "𝐑𝐂 𝐒𝐭𝐮𝐝𝐢𝐨",
       navItems: ["回到主頁", "關於我們", "整合行銷", "加入我們", "聯絡我們"],
       navPaths: ["/", "/about", "/case", "/joinUS", "/contactUS"],
       isMobile: window.innerWidth < 1280, // 以 1280px 作為區分

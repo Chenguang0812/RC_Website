@@ -19,14 +19,14 @@
       <h1
         class="font-pacifico font-semibold text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-center animate-fade-in-down"
       >
-        RC Studio
+        𝐑𝐂 𝐒𝐭𝐮𝐝𝐢𝐨
       </h1>
       <p class="font-semibold text-2xl sm:text-2xl mt-4 text-center animate-fade-in-up">
         Re-Created it.
       </p>
       <p class="font-semibold text-lg sm:text-lg mt-4 text-center animate-fade-in-up">
-        專業的影片剪輯工作室<br />
-        總有一天我們會打敗火箭隊
+        專業的媒體行銷公司<br />
+        我們立志於用創意打造媒體新高峰
       </p>
       <button
         class="mt-8 bg-[#E99797] dark:bg-[#5c67ff] text-white py-2 px-6 rounded-full hover:bg-[#e57f7f] dark:hover:bg-[#9c97e9] transition-colors duration-300 animate-bounce"
