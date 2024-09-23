@@ -1,9 +1,12 @@
 <template>
-  <div class="bg-[#E4E4E4] dark:bg-[#1C1C1C] py-8 px-4">
+  <div
+    class="bg-primary-white-100 dark:bg-[#303030] py-8 px-4 mb-10 rounded-lg shadow-xl overflow-hidden"
+  >
     <div class="max-w-6xl mx-auto">
-      <div class="mb-8 flex items-center">
-        <div class="w-2 h-8 bg-[#E25353] dark:bg-[#5c67ff] mr-4" />
-        <h2 class="font-bold text-4xl text-gray-900 dark:text-[#e0e0e0]">旗下頻道</h2>
+      <div class="mb-8">
+        <h2 class="text-center font-bold text-4xl text-[#E25353] dark:text-[#5c67ff]">
+          旗下頻道
+        </h2>
       </div>
       <div ref="channelContainer" class="overflow-x-scroll custom-scrollbar">
         <div class="flex space-x-6 pb-4">
@@ -13,7 +16,7 @@
             :href="channel.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-white dark:bg-[#222222] rounded-lg shadow-md overflow-hidden hover:shadow-lg flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-6"
+            class="bg-white dark:bg-[#222222] rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-6"
           >
             <img
               :src="channel.image"

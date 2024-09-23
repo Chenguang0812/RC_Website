@@ -113,34 +113,28 @@ export default {
           rating: 5,
         },
       ],
-      // 自動播放定時器
       autoplayInterval: null,
     };
   },
   mounted() {
-    // 組件掛載後啟動自動播放
     this.startAutoplay();
   },
   beforeUnmount() {
-    // 組件卸載前停止自動播放
     this.stopAutoplay();
   },
   methods: {
-    // 開始自動播放
     startAutoplay() {
       this.autoplayInterval = setInterval(() => {
         this.nextSlide();
       }, 5000);
     },
-    // 停止自動播放
     stopAutoplay() {
       clearInterval(this.autoplayInterval);
     },
-    // 切換到下一張幻燈片
     nextSlide() {
       this.currentIndex = (this.currentIndex + 1) % this.reviews.length;
     },
-    // 生成彩色紙屑的樣式
+    // 彩色紙屑
     confettiStyle(n) {
       return {
         left: `${Math.random() * 100}%`,
