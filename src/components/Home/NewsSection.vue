@@ -82,7 +82,7 @@ export default {
           image: "/風笑.webp",
           date: "2024年8月28日",
           link:
-            "https://drive.google.com/file/d/1R7B52dPgnTNvcBIW7sxWUe7-vIVXisLX/view?usp=sharing",
+            "https://drive.google.com/file/d/1wO2KOmrVh8IsaqOioU_cdA9xzYcuRoap/view?usp=sharing",
         },
         {
           id: 4,
