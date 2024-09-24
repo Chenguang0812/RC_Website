@@ -1,28 +1,29 @@
 <template>
-  <div class="bg-[#E3E3E3] dark:bg-[#1E1E1E] p-10 rounded-xl shadow-lg">
-    <h2 class="text-4xl font-bold text-center mb-3 text-gray-800 dark:text-white">
-      影音製作合作流程
-    </h2>
-    <h3
-      class="text-2xl font-semibold text-center mb-12 text-[#E25353] dark:text-[#5c67ff]"
-    >
-      PRODUCTION PROCESS
-    </h3>
-    <div class="flex justify-between items-start">
-      <div
-        v-for="(step, index) in steps"
-        :key="step.id"
-        class="flex flex-col items-center flex-1 px-2 group"
+  <div
+    class="bg-[#E3E3E3] dark:bg-[#1E1E1E] p-10 flex flex-col items-center md:justify-center transition-colors duration-300"
+  >
+    <div class="bg-[#d6d6d6] dark:bg-[#272727] -skew-x-12 inline-block mb-10">
+      <p
+        class="text-3xl font-bold py-2 px-8 skew-x-12 inline-block text-gray-900 dark:text-gray-100 text-center"
       >
-        <div
-          class="w-28 h-28 rounded-full flex items-center justify-center mb-4 bg-gradient-to-br from-[#E25353] to-[#E99797] dark:from-[#5553e2] dark:to-[#97a3e9] shadow-md transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg"
-        >
-          <p class="text-2xl font-bold text-white">{{ index + 1 }}</p>
-        </div>
-        <p
-          class="text-xl font-medium text-center text-black dark:text-white transition-all duration-300 group-hover:text-[#E25353]"
-        >
-          {{ step.text }}
+        影音製作合作流程
+      </p>
+      <div class="absolute bottom-0 right-0 w-full h-1 bg-[#E25353] dark:bg-[#5c67ff]" />
+    </div>
+
+    <div class="flex flex-wrap justify-center space-x-10 pb-4">
+      <div
+        v-for="process in process"
+        :key="process.name"
+        class="flex flex-col items-center"
+      >
+        <img
+          :src="process.image"
+          :alt="process.name"
+          class="w-full h-auto max-w-[150px] max-h-[150px] rounded-lg mb-4 object-cover"
+        />
+        <p class="text-center font-bold text-xl text-[#101010] dark:text-[#e0e0e0]">
+          {{ process.name }}
         </p>
       </div>
     </div>
@@ -31,35 +32,35 @@
 
 <script>
 export default {
-  name: "ProductionProcess",
   data() {
     return {
-      steps: [
-        { id: 1, text: "溝通需求" },
-        { id: 2, text: "影片報價" },
-        { id: 3, text: "簽訂契約" },
-        { id: 4, text: "剪輯影片" },
-        { id: 5, text: "交付款項" },
+      process: [
+        {
+          image: "/需求討論.png",
+          name: "1.需求討論",
+        },
+        {
+          image: "/報價.png",
+          name: "2.價格商議",
+        },
+        {
+          image: "/簽約.png",
+          name: "3.簽訂合約",
+        },
+        {
+          image: "/交付作品.png",
+          name: "4.交付作品",
+        },
+        {
+          image: "/校稿確認.png",
+          name: "5.校稿確認",
+        },
+        {
+          image: "/交付款項.png",
+          name: "6.交付款項",
+        },
       ],
     };
   },
 };
 </script>
-
-<style scoped>
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.flex > div {
-  animation: fadeInScale 0.6s ease-out forwards;
-  animation-delay: calc(var(--index, 0) * 0.1s);
-}
-</style>

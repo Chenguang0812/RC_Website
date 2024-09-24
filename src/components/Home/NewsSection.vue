@@ -4,7 +4,7 @@
   >
     <div class="max-w-4xl mx-auto">
       <div class="mb-8 sm:mb-12 relative flex justify-center">
-        <div class="bg-[#E0E0E0] dark:bg-[#3A3A3A] -skew-x-12 inline-block">
+        <div class="bg-[#E0E0E0] dark:bg-[#272727] -skew-x-12 inline-block">
           <p
             class="text-2xl sm:text-3xl font-bold py-2 px-6 sm:px-8 skew-x-12 inline-block relative z-10 dark:text-[#FFFFFF]"
           >

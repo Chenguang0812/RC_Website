@@ -13,15 +13,16 @@
         class="rounded-full border-gray-300 border-[1px] w-5 h-5 bg-white relative dark:ml-0 pointer-events-none transition-all duration-300 ease-out"
       ></div>
     </button>
+
+    <slot></slot>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, provide } from "vue";
 import { usePreferredDark, useStorage } from "@vueuse/core";
 
-const preferredDark = usePreferredDark();
-const theme = useStorage("theme", "dark"); // Changed default to 'light'
+const theme = useStorage("theme", "dark");
 const isDarkMode = ref(theme.value === "dark");
 const mounted = ref(false);
 
@@ -37,6 +38,9 @@ onMounted(() => {
   mounted.value = true;
   setThemeClass();
 });
+
+// 提供 isDarkMode 供子組件使用
+provide("isDarkMode", isDarkMode);
 
 const toggleTheme = () => {
   theme.value = theme.value === "dark" ? "light" : "dark";
