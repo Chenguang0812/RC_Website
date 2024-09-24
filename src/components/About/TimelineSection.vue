@@ -27,8 +27,12 @@
               <h3 class="text-3xl font-bold mb-2 text-[#E25353] dark:text-[#5c67ff]">
                 {{ event.date }}
               </h3>
-              <p class="text-xl text-gray-600 dark:text-[#E0E0E0]">
-                {{ event.description }}
+              <p
+                v-for="(line, lineIndex) in event.description"
+                :key="lineIndex"
+                class="text-xl text-gray-600 dark:text-[#E0E0E0]"
+              >
+                {{ line }}
               </p>
             </div>
             <div class="w-2/12 flex justify-center items-center relative">
@@ -72,7 +76,13 @@
               <h3 class="text-xl font-bold text-[#ca4040] dark:text-[#5c67ff] mb-2">
                 {{ item.date }}
               </h3>
-              <p class="text-gray-600 dark:text-[#E0E0E0]">{{ item.description }}</p>
+              <p
+                v-for="(line, lineIndex) in item.description"
+                :key="lineIndex"
+                class="text-gray-600 dark:text-[#E0E0E0]"
+              >
+                {{ line }}
+              </p>
             </div>
             <div
               class="timeline-marker absolute left-0 top-0 w-4 h-px bg-[#E25353] dark:bg-[#5c67ff]"
@@ -92,25 +102,31 @@ export default {
       timeline: [
         {
           date: "企業理念",
-          description: "用創意打造媒體新高峰，為每位客戶創造獨一無二的影片品質",
+          description: ["用創意打造媒體新高峰", "為每位客戶創造獨一無二的影片品質"],
         },
         {
           date: "經營理念",
-          description:
-            "精益求精，貫徹責任。遇到挑戰愈發堅強精神，遵守時間觀念，獲得顧客之信賴",
+          description: [
+            "精益求精，貫徹責任",
+            "遇到挑戰愈發堅強精神",
+            "遵守時間觀念，獲得顧客之信賴",
+          ],
         },
         {
           date: "誠信正直",
-          description:
-            "我們始終堅持誠實與信任。真誠地對待每位員工和客戶，並且說到做到，確保言行一致",
+          description: [
+            "我們始終堅持誠實與信任",
+            "真誠地對待每位員工和客戶",
+            "並且說到做到，確保言行一致",
+          ],
         },
         {
           date: "創意影片交給專業",
-          description: "維持品質是基本，創意是專業的堅持",
+          description: ["維持品質是基本", "創意是專業的堅持"],
         },
         {
           date: "與客戶友善溝通",
-          description: "客戶是我們的夥伴，維護雙方良好關係，是互相成長的關鍵",
+          description: ["客戶是我們的夥伴", "維護雙方良好的關係", "是互相成長的重要關鍵"],
         },
       ],
       isVisible: false,

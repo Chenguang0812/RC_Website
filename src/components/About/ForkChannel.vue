@@ -1,33 +1,57 @@
 <template>
-  <div
-    class="bg-primary-white-100 dark:bg-[#303030] py-8 px-4 mb-10 rounded-lg shadow-xl overflow-hidden"
-  >
-    <div class="max-w-6xl mx-auto">
-      <div class="mb-8">
-        <h2 class="text-center font-bold text-4xl text-[#E25353] dark:text-[#5c67ff]">
-          旗下頻道
-        </h2>
-      </div>
-      <div ref="channelContainer" class="overflow-x-scroll custom-scrollbar">
-        <div class="flex space-x-6 pb-4">
-          <a
-            v-for="channel in channels"
-            :key="channel.id"
-            :href="channel.url"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-white dark:bg-[#222222] rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex-shrink-0 w-64 h-64 flex flex-col items-center justify-center p-6"
+  <div class="flex justify-center my-12 px-4 sm:px-0">
+    <div
+      class="bg-white dark:bg-[#1E1A2E] rounded-3xl shadow-2xl overflow-hidden relative w-full max-w-[1120px] sm:w-[1120px]"
+    >
+      <!-- 背景動畫 -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-[#E25353] to-[#E99797] dark:from-[#5c67ff] dark:to-[#939bff] opacity-10 dark:opacity-20 animate-wave"
+      />
+
+      <h2
+        class="text-3xl sm:text-4xl font-bold my-6 sm:my-8 text-[#E25353] dark:text-[#5c67ff] text-center relative z-10"
+      >
+        旗下頻道
+      </h2>
+
+      <!-- 團隊成員Card -->
+      <div
+        ref="containerRef"
+        class="flex flex-wrap gap-8 relative z-10 max-h-[70vh] sm:max-h-[620px] overflow-y-auto px-4 sm:px-6 pb-6 sm:pb-8"
+      >
+        <a
+          v-for="member in teamMembers"
+          :key="member.id"
+          :href="member.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          :ref="
+            (el) => {
+              if (el) memberRefs[member.id] = el;
+            }
+          "
+          class="w-80 bg-white dark:bg-[#222547] rounded-lg p-6 shadow-lg transform transition duration-500 hover:scale-105 hover:rotate-2 no-underline"
+          :class="{ 'animate-slideIn': member.isVisible }"
+        >
+          <!-- 成員圖片 -->
+          <div
+            class="w-75 h-75 flex items-center justify-center mb-6 overflow-hidden rounded-lg"
           >
             <img
-              :src="channel.image"
-              :alt="channel.name"
-              class="w-full h-auto max-w-[150px] max-h-[150px] rounded-lg mb-6 object-cover"
+              :src="member.image"
+              :alt="member.name"
+              class="object-cover h-full w-full transition duration-500 hover:scale-110"
             />
-            <p class="text-center font-bold text-xl text-gray-900 dark:text-[#e0e0e0]">
-              {{ channel.name }}
-            </p>
-          </a>
-        </div>
+          </div>
+          <!-- 成員姓名 -->
+          <h3 class="text-2xl font-bold mb-2 text-[#E25353] dark:text-[#5c67ff]">
+            {{ member.name }}
+          </h3>
+          <!-- 成員職位 -->
+          <p class="text-lg text-[#E99797] dark:text-[#717bff]">
+            {{ member.position }}
+          </p>
+        </a>
       </div>
     </div>
   </div>
@@ -35,71 +59,107 @@
 
 <script>
 export default {
-  name: "AffiliatedChannels",
+  name: "TeamMembers",
   data() {
     return {
-      channels: [
+      teamMembers: [
         {
           id: 1,
           name: "RC Studio工作室",
-          image: "/RC.webp",
-          url: "https://www.youtube.com/@RC_Studio",
+          position: "頂級老闆",
+          image: "/LOGO.png",
+          link: "https://www.youtube.com/@RC_Studio",
+          isVisible: false,
         },
         {
           id: 2,
           name: "亦凌",
+          position: "ㄚㄚㄚㄚㄚㄚ",
           image: "/亦凌.png",
-          url: "https://www.youtube.com/@RC_%E4%BA%A6%E5%87%8C",
+          link: "https://www.youtube.com/@RC_亦凌",
+          isVisible: false,
         },
         {
           id: 3,
           name: "卡卡滋",
-          image: "/kaka.png",
-          url: "https://www.youtube.com/@RC_%E5%8D%A1%E5%8D%A1%E6%BB%8B",
+          position: "無心+薪勞工",
+          image: "/卡卡.webp",
+          link: "https://www.youtube.com/@RC_卡卡滋",
+          isVisible: false,
         },
         {
           id: 4,
           name: "晨光",
+          position: "精油推廣大使",
           image: "/晨光.webp",
-          url: "https://www.youtube.com/@RC_%E6%99%A8%E5%85%89",
+          link: "https://www.youtube.com/@RC_晨光",
+          isVisible: false,
         },
         {
           id: 5,
           name: "亦凌YiLing",
+          position: "拖片20幾天的南非爆炸頭",
           image: "/channels4_profile.webp",
-          url: "https://www.youtube.com/@10_YiLing",
+          link: "https://www.youtube.com/@10_YiLing",
+          isVisible: false,
         },
         {
           id: 6,
           name: "實況Online",
+          position: "猥褻+宅炮剪輯師",
           image: "/實況Online.webp",
-          url: "https://www.youtube.com/@PalyerOnline",
+          link: "https://www.youtube.com/@PalyerOnline",
+          isVisible: false,
         },
         {
           id: 7,
           name: "尤教授的烤肉實驗室",
+          position: "猥褻+宅炮剪輯師",
           image: "/烤肉.webp",
-          url: "https://www.youtube.com/@holoXman/featured",
+          link: "https://www.youtube.com/@holoXman",
+          isVisible: false,
         },
         {
           id: 8,
           name: "我是一隻浣熊",
+          position: "猥褻+宅炮剪輯師",
           image: "/浣熊.webp",
-          url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+          link: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+          isVisible: false,
         },
       ],
+      memberRefs: {},
+      observer: null,
     };
   },
   mounted() {
-    this.enableHorizontalScroll();
+    this.$nextTick(() => {
+      this.observer = new IntersectionObserver(this.handleIntersect, {
+        root: this.$refs.containerRef,
+        rootMargin: "0px",
+        threshold: 0.1,
+      });
+
+      this.teamMembers.forEach((member) => {
+        if (this.memberRefs[member.id]) {
+          this.memberRefs[member.id].setAttribute("data-member-id", member.id);
+          this.observer.observe(this.memberRefs[member.id]);
+        }
+      });
+    });
+  },
+  beforeUnmount() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   },
   methods: {
-    enableHorizontalScroll() {
-      const container = this.$refs.channelContainer;
-      container.addEventListener("wheel", (e) => {
-        if (e.deltaY !== 0) {
-          e.preventDefault();
-          container.scrollLeft += e.deltaY;
+    handleIntersect(entries) {
+      entries.forEach((entry) => {
+        const memberId = parseInt(entry.target.getAttribute("data-member-id"));
+        const memberIndex = this.teamMembers.findIndex((m) => m.id === memberId);
+        if (entry.isIntersecting) {
+          this.$set(this.teamMembers[memberIndex], "isVisible", true);
         }
       });
     },
@@ -108,34 +168,35 @@ export default {
 </script>
 
 <style scoped>
-.overflow-x-scroll {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  height: 8px;
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #e25353;
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #d14141;
-}
-
-/* For Firefox */
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #f1f1f1;
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
 }
 </style>

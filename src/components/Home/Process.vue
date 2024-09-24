@@ -2,13 +2,17 @@
   <div
     class="bg-[#E3E3E3] dark:bg-[#1E1E1E] p-10 flex flex-col items-center md:justify-center transition-colors duration-300"
   >
-    <div class="bg-[#d6d6d6] dark:bg-[#272727] -skew-x-12 inline-block mb-10">
-      <p
-        class="text-3xl font-bold py-2 px-8 skew-x-12 inline-block text-gray-900 dark:text-gray-100 text-center"
-      >
-        影音製作合作流程
-      </p>
-      <div class="absolute bottom-0 right-0 w-full h-1 bg-[#E25353] dark:bg-[#5c67ff]" />
+    <div class="mb-12 relative flex justify-center">
+      <div class="bg-[#dadada] dark:bg-[#272727] -skew-x-12 inline-block">
+        <p
+          class="text-3xl font-bold py-2 px-8 skew-x-12 inline-block relative z-10 text-gray-900 dark:text-gray-100"
+        >
+          影音製作合作流程
+        </p>
+        <div
+          class="absolute bottom-0 right-0 w-full h-1 bg-[#E25353] dark:bg-[#5c67ff]"
+        />
+      </div>
     </div>
 
     <div class="flex flex-wrap justify-center space-x-10 pb-4">

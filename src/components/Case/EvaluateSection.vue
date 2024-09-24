@@ -37,7 +37,7 @@
                   <img
                     :src="review.avatar"
                     :alt="review.name"
-                    class="w-16 h-16 rounded-full mr-4 border-2 border-[#E25353] dark:border-gray-800 animate-bounce"
+                    class="w-16 h-16 rounded-full mr-4 border-2 border-[#E25353] dark:border-indigo-600 animate-bounce"
                   />
                   <div>
                     <h3 class="text-[#E25353] dark:text-[#ffffff] text-xl font-semibold">

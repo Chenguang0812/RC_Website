@@ -26,7 +26,7 @@
             v-model="form.name"
             type="text"
             required
-            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
+            class="mt-1 block w-full rounded-md border-[#E99797] shadow-lg focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
           />
         </div>
 
@@ -41,7 +41,7 @@
             v-model="form.email"
             type="email"
             required
-            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
+            class="mt-1 block w-full rounded-md border-[#E99797] shadow-lg focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
           />
         </div>
 
@@ -56,7 +56,7 @@
             v-model="form.phone"
             type="tel"
             required
-            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
+            class="mt-1 block w-full rounded-md border-[#E99797] shadow-lg focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
           />
         </div>
 
@@ -71,14 +71,14 @@
             v-model="form.message"
             rows="4"
             required
-            class="mt-1 block w-full rounded-md border-[#E99797] shadow-sm focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
+            class="mt-1 block w-full rounded-md border-[#E99797] shadow-lg focus:border-[#E99797] py-3 px-4 text-base bg-white dark:bg-[#3d3d3d] dark:text-gray-100 dark:border-gray-600"
           />
         </div>
 
         <!-- 提交按鈕 -->
         <button
           type="submit"
-          class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#E99797] dark:bg-[#5c67ff] hover:bg-[#e57f7f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E99797] dark:hover:bg-[#9098ff] dark:focus:ring-offset-gray-800"
+          class="w-full py-3 px-4 border border-transparent rounded-md shadow-lg text-base font-medium text-white bg-[#E99797] dark:bg-[#5c67ff] hover:bg-[#e57f7f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E99797] dark:hover:bg-[#9098ff] dark:focus:ring-offset-gray-800"
         >
           提交
         </button>
