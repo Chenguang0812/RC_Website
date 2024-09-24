@@ -26,7 +26,7 @@
       </p>
       <p class="font-semibold text-lg sm:text-lg mt-4 text-center animate-fade-in-up">
         專業的媒體行銷公司<br />
-        我們立志於用創意打造媒體新高峰
+        我們致力於用創意打造媒體新高峰
       </p>
       <button
         class="mt-8 bg-[#E99797] dark:bg-[#5c67ff] text-white py-2 px-6 rounded-full hover:bg-[#e57f7f] dark:hover:bg-[#9c97e9] transition-colors duration-300 animate-bounce"
