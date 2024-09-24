@@ -9,12 +9,12 @@
 
     <div class="container mx-auto px-4 py-24 relative z-10">
       <h2
-        class="text-6xl font-bold mb-5 text-center relative z-10 text-[#E25353] dark:text-[#5c67ff]"
+        class="text-5xl sm:text-6xl font-bold mb-5 text-center relative z-10 text-[#E25353] dark:text-[#5c67ff]"
       >
         聯絡我們
       </h2>
       <h2
-        class="text-2xl font-bold mb-16 text-center relative z-10 text-[#E25353] dark:text-[#5c67ff]"
+        class="md:text-xl lg:text-2xl font-bold mb-8 sm:mb-16 text-center relative z-10 text-[#E25353] dark:text-[#5c67ff]"
       >
         找對專業，成就你的事業<br />
         只有您不敢提的需求，沒有RC做不到的承諾<br />
