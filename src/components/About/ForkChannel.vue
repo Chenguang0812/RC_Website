@@ -106,7 +106,7 @@ export default {
         {
           id: 6,
           name: "實況Online",
-          position: "分享遊戲圈的大小事",
+          position: "分享遊戲圈大小事",
           image: "/實況Online.webp",
           link: "https://www.youtube.com/@PalyerOnline",
           isVisible: false,
