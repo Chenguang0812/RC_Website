@@ -65,22 +65,22 @@ export default {
         {
           id: 1,
           title: "最新》RC Studio擴大團隊，招募新人才。",
-          image: "/RC.webp",
-          date: "2024年9月24日 週五 上午10:15",
+          image: "/LOGO.png",
+          date: "2024年9月24日",
           link: "https://rcstudio.tw/joinUS",
         },
         {
           id: 2,
           title: "乖兒子與RC合作半年後突破10萬訂閱！",
           image: "/乖兒子.webp",
-          date: "2024年9月7日 週六 下午2:00",
+          date: "2024年9月7日",
           link: "https://youtu.be/82JpHaBMlYc?si=I2wvO1KJ-AXEZFJr",
         },
         {
           id: 3,
           title: "林德豐再度拖片7天，引起公憤！跳三振舞道歉！？",
           image: "/風笑.webp",
-          date: "2024年8月28日 週三 下午5:58",
+          date: "2024年8月28日",
           link:
             "https://drive.google.com/file/d/1R7B52dPgnTNvcBIW7sxWUe7-vIVXisLX/view?usp=sharing",
         },
@@ -88,7 +88,7 @@ export default {
           id: 4,
           title: "林德豐一部片剪了27天，跳抖肩舞懺悔。",
           image: "/道歉.webp",
-          date: "2024年8月5日 週六 下午1:15",
+          date: "2024年8月5日",
           link:
             "https://drive.google.com/file/d/1hi5-lJv-x7WlovFzi7CSeaU6G1PQWe9K/view?usp=sharing",
         },
