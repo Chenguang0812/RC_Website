@@ -65,8 +65,8 @@ export default {
       teamMembers: [
         {
           id: 1,
-          name: "RC Studio工作室",
-          position: "頂級老闆",
+          name: "RC Studio",
+          position: "RC娛樂官方頻道",
           image: "/LOGO.png",
           link: "https://www.youtube.com/@RC_Studio",
           isVisible: false,
@@ -74,7 +74,7 @@ export default {
         {
           id: 2,
           name: "亦凌",
-          position: "ㄚㄚㄚㄚㄚㄚ",
+          position: "給你滿滿的Punchline",
           image: "/亦凌.png",
           link: "https://www.youtube.com/@RC_亦凌",
           isVisible: false,
@@ -82,7 +82,7 @@ export default {
         {
           id: 3,
           name: "卡卡滋",
-          position: "無心+薪勞工",
+          position: "RC御用外交官",
           image: "/卡卡.webp",
           link: "https://www.youtube.com/@RC_卡卡滋",
           isVisible: false,
@@ -90,7 +90,7 @@ export default {
         {
           id: 4,
           name: "晨光",
-          position: "精油推廣大使",
+          position: "一位喜歡上廁所的Boy",
           image: "/晨光.webp",
           link: "https://www.youtube.com/@RC_晨光",
           isVisible: false,
@@ -98,7 +98,7 @@ export default {
         {
           id: 5,
           name: "亦凌YiLing",
-          position: "拖片20幾天的南非爆炸頭",
+          position: "致力於製作Minecraft企劃影片",
           image: "/channels4_profile.webp",
           link: "https://www.youtube.com/@10_YiLing",
           isVisible: false,
@@ -106,7 +106,7 @@ export default {
         {
           id: 6,
           name: "實況Online",
-          position: "猥褻+宅炮剪輯師",
+          position: "分享遊戲圈的大小事",
           image: "/實況Online.webp",
           link: "https://www.youtube.com/@PalyerOnline",
           isVisible: false,
@@ -114,7 +114,7 @@ export default {
         {
           id: 7,
           name: "尤教授的烤肉實驗室",
-          position: "猥褻+宅炮剪輯師",
+          position: "Hololive翻譯精華",
           image: "/烤肉.webp",
           link: "https://www.youtube.com/@holoXman",
           isVisible: false,
@@ -122,9 +122,9 @@ export default {
         {
           id: 8,
           name: "我是一隻浣熊",
-          position: "猥褻+宅炮剪輯師",
+          position: "點我可以看好康的",
           image: "/浣熊.webp",
-          link: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+          link: "https://reurl.cc/5dVkNz",
           isVisible: false,
         },
       ],
