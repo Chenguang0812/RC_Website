@@ -113,7 +113,7 @@ export default {
           ],
         },
         {
-          date: "誠信正直",
+          date: "正直誠信",
           description: [
             "我們始終堅持誠實與信任",
             "真誠地對待每位員工和客戶",
