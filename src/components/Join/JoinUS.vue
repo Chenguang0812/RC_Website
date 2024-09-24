@@ -8,14 +8,14 @@
       <h2
         class="text-6xl font-bold mb-5 text-center relative z-10 text-[#E25353] dark:text-[#5c67ff]"
       >
-        加入RC帝國
+        加入𝐑𝐂帝國
       </h2>
       <h2
         class="text-2xl font-bold mb-16 text-center relative z-10 text-[#E25353] dark:text-[#5c67ff]"
       >
-        加入RC帝國，<br />
-        我們擁有良好的軍事裝備及糧食，<br />
-        抵抗林德豐攻擊。
+        加入RC帝國<br />
+        我們擁有良好的軍事裝備及糧食<br />
+        抵抗林德豐攻擊
       </h2>
 
       <div

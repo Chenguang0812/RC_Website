@@ -16,8 +16,8 @@
       <h2
         class="text-2xl font-bold mb-16 text-center relative z-10 text-[#E25353] dark:text-[#5c67ff]"
       >
-        找對專業，成就你的事業。<br />
-        只有您不敢提的需求，沒有RC做不到的承諾。<br />
+        找對專業，成就你的事業<br />
+        只有您不敢提的需求，沒有RC做不到的承諾<br />
         我們致力於成為您影片創作過程中的最佳夥伴！
       </h2>
       <div

@@ -19,7 +19,7 @@
       <h1
         class="font-pacifico font-semibold text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-center animate-fade-in-down"
       >
-        𝐑𝐂 𝐒𝐭𝐮𝐝𝐢𝐨
+        𝑹𝑪 𝑺𝒕𝒖𝒅𝒊𝒐
       </h1>
       <p class="font-semibold text-2xl sm:text-2xl mt-4 text-center animate-fade-in-up">
         Re-Created it.
