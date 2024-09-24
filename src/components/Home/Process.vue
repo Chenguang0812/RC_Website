@@ -7,7 +7,7 @@
         <p
           class="text-3xl font-bold py-2 px-8 skew-x-12 inline-block relative z-10 text-gray-900 dark:text-gray-100"
         >
-          影音製作合作流程
+          影音後製合作流程
         </p>
         <div
           class="absolute bottom-0 right-0 w-full h-1 bg-[#E25353] dark:bg-[#5c67ff]"
