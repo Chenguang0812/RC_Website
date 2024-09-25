@@ -1,7 +1,7 @@
 <template>
   <div
     ref="container"
-    class="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden relative"
+    class="py-16 overflow-hidden relative"
     @mousemove="handleMouseMove"
   >
     <!-- 浮動元素 -->
@@ -14,7 +14,7 @@
       {{ particle.icon }}
     </div>
 
-    <div class="max-w-5xl mx-auto relative z-10">
+    <div class="max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-0">
       <h2
         class="text-4xl font-bold text-center text-white relative mb-3 z-10 animate-glitch"
         data-text="合作業主"
