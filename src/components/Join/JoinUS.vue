@@ -210,7 +210,7 @@ export default {
   methods: {
     async submitForm() {
       const webhookUrl =
-        "https://discordapp.com/api/webhooks/1271524771615477894/X_B-9Y2c-QiOWVE-c1BrAGn0vQfmb_utN6gG8QQTvkMy_WT9IgJT5_WFBqGcUjdaef-W";
+        "https://discord.com/api/webhooks/1366807081348370453/rxDR0QWPQ_H2PoVlDdPEoV7epka4IVedRk4KsTKSBZjpkdlelP4bxmAYdImOfZOBwuaF";
 
       // 構建 Discord 消息的格式
       const message = {
