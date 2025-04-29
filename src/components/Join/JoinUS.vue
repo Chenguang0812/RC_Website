@@ -209,8 +209,7 @@ export default {
   },
   methods: {
     async submitForm() {
-      const webhookUrl =
-        "https://discord.com/api/webhooks/1366807081348370453/rxDR0QWPQ_H2PoVlDdPEoV7epka4IVedRk4KsTKSBZjpkdlelP4bxmAYdImOfZOBwuaF";
+      const webhookUrl = "他媽的這裡放連結";
 
       // 構建 Discord 消息的格式
       const message = {
