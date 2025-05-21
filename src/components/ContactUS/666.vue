@@ -104,7 +104,7 @@ export default {
   methods: {
     async submitForm() {
       const webhookUrl =
-        "https://discordapp.com/api/webhooks/1271522136837591081/j8jOWK3SolTwzty0WdSIvZ8CNsYXTus0554loD7IBAN9l2UDRavREQH_FLbSFvYwdHXr";
+        "https://discord.com/api/webhooks/1374670757493473352/17AIByUxu1adfC9sRbE2aYIl1UnNJmOcHs5IG5c4MJ9xdVehyq6Zej24L0b2A6mtDAFY";
 
       const message = {
         content:
