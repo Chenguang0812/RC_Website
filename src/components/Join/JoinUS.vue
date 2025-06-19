@@ -27,6 +27,7 @@
               <label class="block text-lg font-medium text-[#0C1014] dark:text-white">
                 {{ question.label }}{{ question.required ? " *" : "" }}
               </label>
+
               <div v-if="question.component === 'textarea'">
                 <textarea
                   v-model="form[question.key]"
@@ -35,6 +36,7 @@
                   :required="question.required"
                 />
               </div>
+
               <div v-if="question.component === 'input'">
                 <input
                   v-model="form[question.key]"
@@ -43,6 +45,7 @@
                   :required="question.required"
                 />
               </div>
+
               <div v-if="question.component === 'select'">
                 <select
                   v-model="form[question.key]"
@@ -59,6 +62,7 @@
                   </option>
                 </select>
               </div>
+
               <div v-if="question.component === 'checkbox'">
                 <div class="space-y-1">
                   <label
@@ -71,7 +75,6 @@
                       type="checkbox"
                       :value="option.value"
                       class="form-checkbox h-5 w-5 text-[#E25353] border-[#E25353]"
-                      :required="question.required && form[question.key].length === 0"
                     />
                     <span class="ml-2 text-base">{{ option.label }}</span>
                   </label>
@@ -209,34 +212,21 @@ export default {
   },
   methods: {
     async submitForm() {
-      const webhookUrl =
-        "https://discord.com/api/webhooks/1383357598635397120/5bxWjE4A2Eudd9cShcaKjt_z159pkvIm3VXptnQ0WTLXAneV2Z6w92lVE_OKRNB_R_nO";
+      const backendUrl = "https://rc-backend-7zm0.onrender.com/";
 
-      // 構建 Discord 消息的格式
-      const message = {
-        content:
-          `**表單提交**\n\n` +
-          `**姓名:** ${this.form.name}\n` +
-          `**年齡:** ${this.form.age}\n` +
-          `**性別:** ${this.form.gender}\n` +
-          `**工作經驗:** ${this.form.experience}\n` +
-          `**作品集:** ${this.form.portfolio}\n` +
-          `**目前工作:** ${this.form.currentJob}\n` +
-          `**專業技能:** ${this.form.skills.join(", ")}\n` +
-          `**應徵職務:** ${this.form.position}\n` +
-          `**自我介紹:** ${this.form.introduction}\n` +
-          `**可上線時間:** ${this.form.availableTime}\n` +
-          `**聯絡方式:** ${this.form.contact}\n` +
-          `**問題:** ${this.form.questions || "無"}`,
-      };
+      // 手動檢查 checkbox 欄位
+      if (this.form.skills.length === 0) {
+        alert("請至少選擇一項專業技能！");
+        return;
+      }
 
       try {
-        const response = await fetch(webhookUrl, {
+        const response = await fetch(backendUrl, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(message),
+          body: JSON.stringify(this.form),
         });
 
         if (response.ok) {
@@ -245,7 +235,8 @@ export default {
           );
           this.resetForm();
         } else {
-          throw new Error("提交失敗");
+          const err = await response.text();
+          throw new Error(err || "提交失敗");
         }
       } catch (error) {
         console.error("提交錯誤:", error);
