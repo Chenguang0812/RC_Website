@@ -103,26 +103,16 @@ export default {
   },
   methods: {
     async submitForm() {
-      const webhookUrl =
-        "https://discord.com/api/webhooks/1374670757493473352/17AIByUxu1adfC9sRbE2aYIl1UnNJmOcHs5IG5c4MJ9xdVehyq6Zej24L0b2A6mtDAFY";
-
-      const message = {
-        content:
-          `**聯絡我們表單提交**\n\n` +
-          `**名稱:** ${this.form.name}\n` +
-          `**電子信箱:** ${this.form.email}\n` +
-          `**連絡電話:** ${this.form.phone}\n` +
-          `**需求說明:** ${this.form.message}`,
-      };
+      const backendUrl = "https://272f7ca0d07b.ngrok-free.app/contact"; // 改成後端 API
 
       try {
-        const response = await axios.post(webhookUrl, message, {
+        const response = await axios.post(backendUrl, this.form, {
           headers: {
             "Content-Type": "application/json",
           },
         });
 
-        if (response.status === 204) {
+        if (response.data.success) {
           alert("表單提交成功！請耐心等候，我們將於3日內與您聯繫。");
           this.resetForm();
         } else {

@@ -88,7 +88,7 @@ export default {
           id: 4,
           name: "戴舒萱",
           image: "/戴舒萱.webp",
-          url: "https://www.youtube.com/@susiewooenglish",
+          url: "https://www.youtube.com/@susiewoo",
         },
         {
           id: 5,
@@ -100,7 +100,7 @@ export default {
           id: 6,
           name: "小妞",
           image: "/小妞.webp",
-          url: "https://www.youtube.com/@XiaoNiu1207",
+          url: "https://www.youtube.com/@%E5%B0%8F%E5%A6%9E",
         },
         {
           id: 7,

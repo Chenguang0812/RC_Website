@@ -212,7 +212,7 @@ export default {
   },
   methods: {
     async submitForm() {
-      const backendUrl = "https://rc-backend-7zm0.onrender.com/";
+      const backendUrl = "https://272f7ca0d07b.ngrok-free.app/send";
 
       // 手動檢查 checkbox 欄位
       if (this.form.skills.length === 0) {
